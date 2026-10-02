@@ -22,12 +22,9 @@ export function NewsPreview() {
           </div>
 
           <div className="max-w-md">
-            <span className="inline-block px-2.5 py-0.5 bg-[var(--ivory)] border border-[var(--line)] text-[10px] font-mono tracking-wider uppercase text-[var(--muted)] mb-2 font-medium">
-              Editorial Dispatches &bull; Placeholders
-            </span>
             <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed">
-              Future student achievements, termly showcases, competitions, and
-              administrative notices will be published here.
+              Highlights and showcases from student life, academic inquiry, and
+              community traditions at Deeper Real Vision Academy.
             </p>
           </div>
         </div>
@@ -40,13 +37,13 @@ export function NewsPreview() {
               className="flex flex-col justify-between group border-b md:border-b-0 pb-8 md:pb-0 border-[var(--line)]"
             >
               <div>
-                {/* Visual Thumbnail Placeholder */}
+                {/* Visual Thumbnail Frame */}
                 <div className="relative mb-6 overflow-hidden border border-[var(--line)] bg-white p-1.5 transition-transform duration-200 group-hover:-translate-y-0.5 shadow-2xs">
                   <PlaceholderFrame
                     aspectRatio="video"
                     theme="light"
                     label={story.category}
-                    sublabel="Event / Activity Photography Slot"
+                    sublabel="Deeper Real Vision Academy"
                     badge={story.tag}
                     showOverlayMotif={false}
                   />

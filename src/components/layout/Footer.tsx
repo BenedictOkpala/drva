@@ -31,7 +31,7 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
               A purposeful learning community dedicated to sound values,
               attentive care, and steady academic growth across Creche,
               Nursery, Primary, and Junior Secondary stages.
@@ -40,7 +40,7 @@ export function Footer() {
             <div className="pt-2">
               <div className="inline-block py-1.5 px-3 bg-[var(--navy-dark)] border border-slate-700/80">
                 <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400 block">
-                  HISTORICAL MOTTO
+                  MOTTO
                 </span>
                 <span className="font-serif italic text-sm text-slate-200">
                   {SCHOOL_INFO.motto}
@@ -83,30 +83,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Programmes */}
+          {/* Educational Stages */}
           <div className="lg:col-span-2 space-y-4">
             <h3 className="text-xs font-mono uppercase tracking-[0.2em] font-semibold text-white">
               Educational Stages
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/academics#creche" className="hover:text-white transition-colors">
-                  Creche (3m &ndash; 18m)
+                  Creche
                 </Link>
               </li>
               <li>
                 <Link href="/academics#nursery" className="hover:text-white transition-colors">
-                  Nursery (18m &ndash; 5y)
+                  Nursery
                 </Link>
               </li>
               <li>
                 <Link href="/academics#primary" className="hover:text-white transition-colors">
-                  Primary (5y &ndash; 11y)
+                  Primary
                 </Link>
               </li>
               <li>
                 <Link href="/academics#junior-secondary" className="hover:text-white transition-colors">
-                  Junior Sec. (JSS1 &ndash; JSS3)
+                  Junior Secondary (JSS1–JSS3)
                 </Link>
               </li>
               <li className="pt-1">
@@ -117,47 +117,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Information & Placeholders (Explicitly flagged) */}
+          {/* School Office & Location */}
           <div className="lg:col-span-4 space-y-4">
             <h3 className="text-xs font-mono uppercase tracking-[0.2em] font-semibold text-white">
-              School Office & Location
+              School Location
             </h3>
 
-            <div className="p-4 bg-[var(--navy-dark)] border border-slate-700/80 space-y-3.5 text-xs">
+            <div className="p-5 bg-[var(--navy-dark)] border border-slate-700/80 space-y-4 text-xs">
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
                   {SCHOOL_CONTACT.address.label}
                 </span>
-                <span className="text-slate-300 font-mono">
+                <p className="text-white font-medium text-sm">
                   {SCHOOL_CONTACT.address.value}
-                </span>
+                </p>
+                <p className="text-slate-400 text-xs mt-1">
+                  Federal Capital Territory, Nigeria. Campus visits by scheduled appointment.
+                </p>
               </div>
 
-              <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block">
-                  {SCHOOL_CONTACT.admissionsPhone.label}
+              <div className="pt-3 border-t border-slate-800">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
+                  Admissions Enquiries
                 </span>
-                <span className="text-slate-300 font-mono">
-                  {SCHOOL_CONTACT.admissionsPhone.value}
-                </span>
-              </div>
-
-              <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block">
-                  {SCHOOL_CONTACT.email.label}
-                </span>
-                <span className="text-slate-300 font-mono">
-                  {SCHOOL_CONTACT.email.value}
-                </span>
-              </div>
-
-              <div>
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block">
-                  {SCHOOL_CONTACT.socials.label}
-                </span>
-                <span className="text-slate-300 font-mono">
-                  {SCHOOL_CONTACT.socials.value}
-                </span>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1.5 text-white hover:text-[var(--blue-soft)] font-medium transition-colors"
+                >
+                  <span>Submit an online enquiry</span>
+                  <span>&rarr;</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -171,7 +160,7 @@ export function Footer() {
           <div className="flex items-center gap-4 sm:gap-6 text-[11px]">
             <span>Motto: {SCHOOL_INFO.motto}</span>
             <span className="text-slate-600">|</span>
-            <span className="text-slate-400">Creche &bull; Nursery &bull; Primary &bull; Junior Secondary</span>
+            <span className="text-slate-400">Kabusa, Abuja</span>
           </div>
         </div>
       </div>

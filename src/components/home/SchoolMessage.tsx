@@ -16,9 +16,9 @@ export function SchoolMessage() {
                 <PlaceholderFrame
                   aspectRatio="portrait"
                   theme="light"
-                  label="Leadership Portrait"
-                  sublabel="Reserved for School Leadership Photography"
-                  badge="OFFICE OF THE HEAD OF SCHOOL"
+                  label="School Leadership"
+                  sublabel="Deeper Real Vision Academy &bull; Kabusa, Abuja"
+                  badge="LEADERSHIP & VALUES"
                   captionLines={[
                     "LEADERSHIP WITH PURPOSE.",
                     "COMMITTED TO INTEGRITY.",
@@ -51,11 +51,6 @@ export function SchoolMessage() {
               From our school to{" "}
               <span className="italic font-normal">your family.</span>
             </h2>
-
-            {/* Editorial Placeholder Marker */}
-            <div className="inline-block px-3 py-1 bg-[var(--ivory)] border border-[var(--line)] text-[10px] font-mono tracking-wider uppercase text-[var(--muted)]">
-              Provisional Address &mdash; Official Leadership Message To Be Supplied
-            </div>
 
             <div className="space-y-4 text-base sm:text-lg text-[var(--ink)]/85 leading-relaxed font-normal">
               <p>

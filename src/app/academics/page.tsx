@@ -44,21 +44,21 @@ export default function AcademicsPage() {
                   className="flex items-center justify-between p-2 hover:bg-[var(--ivory)] text-[var(--navy)] font-medium transition-colors"
                 >
                   <span>01. Creche</span>
-                  <span className="text-[var(--muted)] text-[10px]">3m &ndash; 18m</span>
+                  <span className="text-[var(--muted)] text-[10px]">Infant Care</span>
                 </a>
                 <a
                   href="#nursery"
                   className="flex items-center justify-between p-2 hover:bg-[var(--ivory)] text-[var(--navy)] font-medium transition-colors"
                 >
                   <span>02. Nursery</span>
-                  <span className="text-[var(--muted)] text-[10px]">18m &ndash; 5y</span>
+                  <span className="text-[var(--muted)] text-[10px]">Early Years</span>
                 </a>
                 <a
                   href="#primary"
                   className="flex items-center justify-between p-2 hover:bg-[var(--ivory)] text-[var(--navy)] font-medium transition-colors"
                 >
                   <span>03. Primary</span>
-                  <span className="text-[var(--muted)] text-[10px]">5y &ndash; 11y</span>
+                  <span className="text-[var(--muted)] text-[10px]">Primary Years</span>
                 </a>
                 <a
                   href="#junior-secondary"
@@ -85,9 +85,6 @@ export default function AcademicsPage() {
                   <span className="text-xs font-mono tracking-widest uppercase text-[var(--navy)]">
                     INFANT & TODDLER CARE
                   </span>
-                  <span className="text-[11px] font-mono tracking-wider px-2 py-0.5 bg-[var(--ivory)] border border-[var(--line)] text-[var(--muted)]">
-                    {creche.ageRange}
-                  </span>
                 </div>
 
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
@@ -103,7 +100,7 @@ export default function AcademicsPage() {
 
                 {/* Focus Matrix */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[var(--line)]">
-                  {creche.provisionalFocus.map((focus, idx) => (
+                  {creche.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
                       className="p-3 bg-[var(--ivory)] border border-[var(--line)] text-xs sm:text-sm text-[var(--navy)] flex items-center gap-2.5"
@@ -112,14 +109,6 @@ export default function AcademicsPage() {
                       <span>{focus}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Reserved Notice */}
-                <div className="p-3.5 bg-white border border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  <span className="font-semibold text-[var(--navy)] uppercase block mb-0.5">
-                    Early Care Timetable & Schedule:
-                  </span>
-                  {creche.curriculumStatus}
                 </div>
               </div>
 
@@ -130,7 +119,7 @@ export default function AcademicsPage() {
                     aspectRatio="hero"
                     theme="warm"
                     label="Creche Environment"
-                    sublabel="Hygienic & Peaceful Infant Discovery Space"
+                    sublabel="Hygienic & peaceful infant discovery space"
                     badge="STAGE 01 &bull; CRECHE"
                     captionLines={[
                       "CRECHE AT DRVA.",
@@ -154,7 +143,7 @@ export default function AcademicsPage() {
                     aspectRatio="hero"
                     theme="light"
                     label="Nursery Learning Lab"
-                    sublabel="Phonics Corners & Creative Expression Stations"
+                    sublabel="Phonics corners & creative expression stations"
                     badge="STAGE 02 &bull; NURSERY"
                     captionLines={[
                       "NURSERY AT DRVA.",
@@ -173,9 +162,6 @@ export default function AcademicsPage() {
                   <span className="text-xs font-mono tracking-widest uppercase text-[var(--navy)]">
                     EARLY YEARS FOUNDATIONS
                   </span>
-                  <span className="text-[11px] font-mono tracking-wider px-2 py-0.5 bg-white border border-[var(--line)] text-[var(--muted)]">
-                    {nursery.ageRange}
-                  </span>
                 </div>
 
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
@@ -191,7 +177,7 @@ export default function AcademicsPage() {
 
                 {/* Focus Matrix */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[var(--line)]">
-                  {nursery.provisionalFocus.map((focus, idx) => (
+                  {nursery.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
                       className="p-3 bg-[var(--paper)] border border-[var(--line)] text-xs sm:text-sm text-[var(--navy)] flex items-center gap-2.5"
@@ -200,14 +186,6 @@ export default function AcademicsPage() {
                       <span>{focus}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Reserved Notice */}
-                <div className="p-3.5 bg-white border border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  <span className="font-semibold text-[var(--navy)] uppercase block mb-0.5">
-                    Early Literacy Framework:
-                  </span>
-                  {nursery.curriculumStatus}
                 </div>
               </div>
             </div>
@@ -227,9 +205,6 @@ export default function AcademicsPage() {
                   <span className="text-xs font-mono tracking-widest uppercase text-[var(--navy)]">
                     PRIMARY ACADEMIC MASTERY
                   </span>
-                  <span className="text-[11px] font-mono tracking-wider px-2 py-0.5 bg-[var(--ivory)] border border-[var(--line)] text-[var(--muted)]">
-                    {primary.ageRange}
-                  </span>
                 </div>
 
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
@@ -245,7 +220,7 @@ export default function AcademicsPage() {
 
                 {/* Focus Matrix */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[var(--line)]">
-                  {primary.provisionalFocus.map((focus, idx) => (
+                  {primary.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
                       className="p-3 bg-[var(--ivory)] border border-[var(--line)] text-xs sm:text-sm text-[var(--navy)] flex items-center gap-2.5"
@@ -254,14 +229,6 @@ export default function AcademicsPage() {
                       <span>{focus}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Reserved Notice */}
-                <div className="p-3.5 bg-white border border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  <span className="font-semibold text-[var(--navy)] uppercase block mb-0.5">
-                    Primary Academic Scope:
-                  </span>
-                  {primary.curriculumStatus}
                 </div>
               </div>
 
@@ -272,7 +239,7 @@ export default function AcademicsPage() {
                     aspectRatio="hero"
                     theme="light"
                     label="Primary Classroom & Inquiry"
-                    sublabel="Mathematics, Science & Civic Discussions"
+                    sublabel="Mathematics, science & civic discussions"
                     badge="STAGE 03 &bull; PRIMARY"
                     captionLines={[
                       "PRIMARY AT DRVA.",
@@ -296,7 +263,7 @@ export default function AcademicsPage() {
                     aspectRatio="hero"
                     theme="warm"
                     label="Junior Secondary Environment"
-                    sublabel="Subject-Based Discovery, Labs & Character Mentorship"
+                    sublabel="Subject-based discovery, labs & character mentorship"
                     badge="STAGE 04 &bull; JUNIOR SECONDARY"
                     captionLines={[
                       "JUNIOR SECONDARY AT DRVA.",
@@ -313,10 +280,7 @@ export default function AcademicsPage() {
                     STAGE 04
                   </span>
                   <span className="text-xs font-mono tracking-widest uppercase text-[var(--navy)]">
-                    JUNIOR SECONDARY
-                  </span>
-                  <span className="text-[11px] font-mono tracking-wider px-2 py-0.5 bg-white border border-[var(--line)] text-[var(--muted)]">
-                    {juniorSecondary.ageRange}
+                    JUNIOR SECONDARY (JSS1&ndash;JSS3)
                   </span>
                 </div>
 
@@ -333,7 +297,7 @@ export default function AcademicsPage() {
 
                 {/* Focus Matrix */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[var(--line)]">
-                  {juniorSecondary.provisionalFocus.map((focus, idx) => (
+                  {juniorSecondary.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
                       className="p-3 bg-[var(--paper)] border border-[var(--line)] text-xs sm:text-sm text-[var(--navy)] flex items-center gap-2.5"
@@ -342,14 +306,6 @@ export default function AcademicsPage() {
                       <span>{focus}</span>
                     </div>
                   ))}
-                </div>
-
-                {/* Reserved Notice */}
-                <div className="p-3.5 bg-white border border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  <span className="font-semibold text-[var(--navy)] uppercase block mb-0.5">
-                    Junior Secondary Academic Scope:
-                  </span>
-                  {juniorSecondary.curriculumStatus}
                 </div>
               </div>
             </div>
@@ -426,7 +382,7 @@ export default function AcademicsPage() {
                 Curriculum structure.
               </h2>
               <p className="mt-3 text-sm font-mono tracking-wider uppercase text-slate-400">
-                Official Syllabus & Subject Breakdown Reserved Slots
+                Balanced educational scope across core academic disciplines
               </p>
             </div>
 
@@ -446,7 +402,7 @@ export default function AcademicsPage() {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
-                  [Detailed syllabus breakdown to be supplied before term start]
+                  Grammar, phonics, reading fluency &amp; civic education.
                 </div>
               </div>
 
@@ -465,7 +421,7 @@ export default function AcademicsPage() {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
-                  [Laboratory resources & curriculum map awaiting confirmation]
+                  Arithmetic, scientific inquiry &amp; problem-solving.
                 </div>
               </div>
 
@@ -484,7 +440,7 @@ export default function AcademicsPage() {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
-                  [Weekly enrichment timetable to be confirmed by school office]
+                  Hands-on expression, ICT literacy &amp; creative skills.
                 </div>
               </div>
             </div>

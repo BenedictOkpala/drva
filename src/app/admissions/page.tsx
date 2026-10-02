@@ -57,9 +57,6 @@ export default function AdmissionsPage() {
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                 Four simple, guided steps.
               </h2>
-              <div className="inline-block mt-3 px-3 py-1 bg-[var(--ivory)] border border-[var(--line)] text-[10px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                Provisional Workflow &mdash; Official Procedure To Be Confirmed
-              </div>
             </div>
 
             {/* 4 Connected Sequential Steps */}
@@ -112,7 +109,7 @@ export default function AdmissionsPage() {
               </div>
               <div className="lg:col-span-5 lg:pl-6">
                 <p className="text-xs sm:text-sm font-mono uppercase tracking-wider text-[var(--muted)]">
-                  Official criteria, fee schedules, and term dates will be published prior to session launch.
+                  Clear, transparent guidance for prospective parents and guardians.
                 </p>
               </div>
             </div>
@@ -127,9 +124,6 @@ export default function AdmissionsPage() {
                     <div className="flex items-center justify-between pb-3 mb-4 border-b border-[var(--line)]">
                       <span className="text-xs font-mono tracking-widest uppercase text-[var(--red)] font-semibold">
                         {"//"} {section.eyebrow}
-                      </span>
-                      <span className="text-[10px] font-mono uppercase px-2.5 py-0.5 bg-[var(--ivory)] text-[var(--navy)] border border-[var(--line)]">
-                        PENDING LAUNCH
                       </span>
                     </div>
 
@@ -171,11 +165,6 @@ export default function AdmissionsPage() {
                     <h3 className="font-serif text-xl sm:text-2xl text-[var(--navy)]">
                       {faq.question}
                     </h3>
-                    {faq.isProvisional && (
-                      <span className="shrink-0 text-[10px] font-mono uppercase px-2 py-0.5 bg-white text-[var(--muted)] border border-[var(--line)]">
-                        PROVISIONAL
-                      </span>
-                    )}
                   </div>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed font-normal">
                     {faq.answer}

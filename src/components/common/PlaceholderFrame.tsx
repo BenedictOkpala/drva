@@ -14,8 +14,8 @@ interface PlaceholderFrameProps {
 export function PlaceholderFrame({
   aspectRatio = "wide",
   theme = "light",
-  label = "School Scene",
-  sublabel = "DRVA Campus Life",
+  label = "Campus Life",
+  sublabel = "Deeper Real Vision Academy",
   badge,
   captionLines,
   className = "",
@@ -50,19 +50,19 @@ export function PlaceholderFrame({
       <div
         className={`absolute inset-0 ${
           isDark ? "pattern-fine-grid-dark" : "pattern-fine-grid"
-        } opacity-50`}
+        } opacity-40`}
       />
 
       {/* Subtle depth layered corner lines */}
       {showOverlayMotif && (
         <>
           <div
-            className={`absolute top-3 left-3 w-6 h-6 border-t border-l pointer-events-none transition-opacity duration-300 ${
+            className={`absolute top-3 left-3 w-5 h-5 border-t border-l pointer-events-none transition-opacity duration-300 ${
               isDark ? "border-slate-500/40" : "border-[var(--navy)]/20"
             }`}
           />
           <div
-            className={`absolute bottom-3 right-3 w-6 h-6 border-b border-r pointer-events-none transition-opacity duration-300 ${
+            className={`absolute bottom-3 right-3 w-5 h-5 border-b border-r pointer-events-none transition-opacity duration-300 ${
               isDark ? "border-slate-500/40" : "border-[var(--navy)]/20"
             }`}
           />
@@ -75,7 +75,7 @@ export function PlaceholderFrame({
         <div className="flex items-start justify-between gap-2">
           {badge ? (
             <span
-              className={`text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-semibold px-2.5 py-1 ${
+              className={`text-[9px] sm:text-[10px] tracking-[0.16em] uppercase font-semibold px-2.5 py-1 ${
                 isDark
                   ? "bg-slate-900/70 text-slate-300 border border-slate-700/50"
                   : "bg-white/90 text-[var(--navy)] border border-[var(--line)] shadow-xs"
@@ -85,25 +85,24 @@ export function PlaceholderFrame({
             </span>
           ) : (
             <span
-              className={`text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-mono ${
+              className={`text-[9px] sm:text-[10px] tracking-[0.16em] uppercase font-mono ${
                 isDark ? "text-slate-400/80" : "text-[var(--muted)]"
               }`}
             >
-              DRVA ARCHIVE
+              DRVA &bull; KABUSA, ABUJA
             </span>
           )}
 
           <div
-            className={`flex items-center gap-1.5 text-[10px] tracking-wider font-mono ${
+            className={`flex items-center gap-1.5 text-[9px] sm:text-[10px] tracking-wider font-mono ${
               isDark ? "text-slate-400/80" : "text-[var(--muted)]"
             }`}
           >
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[var(--blue)] opacity-70" />
-            <span className="uppercase text-[9px]">PHOTOGRAPHY</span>
+            <span>EST. 2016</span>
           </div>
         </div>
 
-        {/* Center editorial focal graphic */}
+        {/* Center institutional visual graphic */}
         <div className="my-auto text-center px-4">
           <div
             className={`inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 mb-2.5 rounded-none border ${
@@ -112,8 +111,9 @@ export function PlaceholderFrame({
                 : "border-[var(--line)] bg-white/75 text-[var(--navy)] shadow-xs"
             }`}
           >
+            {/* Clean book / learning emblem icon */}
             <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 opacity-70"
+              className="w-5 h-5 opacity-80"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -122,7 +122,7 @@ export function PlaceholderFrame({
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
               />
             </svg>
           </div>
@@ -164,7 +164,7 @@ export function PlaceholderFrame({
             }`}
           >
             <span>DEEPER REAL VISION ACADEMY</span>
-            <span>CAMPUS LIFE</span>
+            <span>IN GOD WE TRUST</span>
           </div>
         )}
       </div>

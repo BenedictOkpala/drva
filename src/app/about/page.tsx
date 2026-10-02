@@ -62,7 +62,7 @@ export default function AboutPage() {
                     aspectRatio="portrait"
                     theme="light"
                     label="Campus & Academic Setting"
-                    sublabel="Archival School Setting Placeholder"
+                    sublabel="Peaceful learning environment and campus grounds"
                     badge="CAMPUS LIFE"
                     captionLines={[
                       "PURPOSEFUL CLASSROOMS.",
@@ -86,10 +86,6 @@ export default function AboutPage() {
                   Nurturing minds,{" "}
                   <span className="italic font-normal">shaping character.</span>
                 </h2>
-
-                <div className="inline-block px-3 py-1 bg-[var(--ivory)] border border-[var(--line)] text-[10px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                  Provisional Narrative &mdash; Official School History To Be Supplied
-                </div>
 
                 <div className="space-y-4 text-base sm:text-lg text-[var(--ink)]/85 leading-relaxed font-normal">
                   <p>
@@ -171,9 +167,6 @@ export default function AboutPage() {
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                 Mission and vision.
               </h2>
-              <div className="inline-block mt-3 px-3 py-1 bg-[var(--ivory)] border border-[var(--line)] text-[11px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                Provisional Framework &bull; Official Statements Awaiting Final Leadership Ratification
-              </div>
             </div>
 
             {/* Split Composition: Contrasting Paper & Navy Area */}
@@ -198,10 +191,6 @@ export default function AboutPage() {
                     {PROVISIONAL_MISSION_VISION.mission.statement}
                   </p>
                 </div>
-
-                <div className="mt-8 pt-4 border-t border-[var(--line)]/60 text-[11px] font-mono text-[var(--muted)]">
-                  {PROVISIONAL_MISSION_VISION.mission.disclaimer}
-                </div>
               </div>
 
               {/* Vision (Deep Navy Side) */}
@@ -223,10 +212,6 @@ export default function AboutPage() {
                   <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
                     {PROVISIONAL_MISSION_VISION.vision.statement}
                   </p>
-                </div>
-
-                <div className="mt-8 pt-4 border-t border-slate-700 text-[11px] font-mono text-slate-400">
-                  {PROVISIONAL_MISSION_VISION.vision.disclaimer}
                 </div>
               </div>
             </div>
@@ -263,7 +248,7 @@ export default function AboutPage() {
                       {"//"} {value.number}
                     </span>
                     <span className="text-[11px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                      EDITORIAL PRINCIPLE
+                      CORE VIRTUE
                     </span>
                   </div>
 
@@ -295,12 +280,12 @@ export default function AboutPage() {
                     <PlaceholderFrame
                       aspectRatio="portrait"
                       theme="light"
-                      label="Proprietor / Head of School"
-                      sublabel="Official Portrait Slot"
+                      label="Office of the Head of School"
+                      sublabel="Educational stewardship & school leadership"
                       badge="LEADERSHIP"
                       captionLines={[
-                        "HEAD OF SCHOOL.",
-                        "STEWARDSHIP & VISION.",
+                        "OFFICE OF THE HEAD OF SCHOOL.",
+                        "STEWARDSHIP & CARE.",
                       ]}
                     />
                   </div>
@@ -313,10 +298,6 @@ export default function AboutPage() {
                 <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
                   Dedicated stewardship.
                 </h2>
-
-                <div className="inline-block px-3 py-1 bg-[var(--ivory)] border border-[var(--line)] text-[10px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                  Leadership Profile Slot &mdash; Awaiting Official Biographies
-                </div>
 
                 <div className="space-y-4 text-base sm:text-lg text-[var(--ink)]/85 leading-relaxed font-normal">
                   <p>
@@ -335,10 +316,10 @@ export default function AboutPage() {
                 <div className="pt-6 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono">
                   <div>
                     <span className="font-serif text-base font-medium text-[var(--navy)] block">
-                      [Proprietor / Head of School Name]
+                      Office of the Head of School
                     </span>
                     <span className="uppercase text-[var(--muted)]">
-                      Head of School, DRVA
+                      Deeper Real Vision Academy
                     </span>
                   </div>
                   <span className="font-serif italic text-sm text-[var(--navy)]">

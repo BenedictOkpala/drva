@@ -4,9 +4,10 @@ export interface ProgrammeItem {
   title: string;
   subtitle: string;
   description: string;
-  ageRange: string;
+  stageBadge: string;
   focusAreas: string[];
   anchor: string;
+  ageRange?: string; // alias for backward compatibility
 }
 
 export interface ValuePillar {
@@ -38,7 +39,7 @@ export const MILESTONE_DATA: MilestoneData = {
   tagline: "A decade of educational purpose.",
   eyebrow: "TEN-YEAR COMMEMORATION",
   description:
-    "Founded in October 2016 in Kabusa, Abuja, Deeper Real Vision Academy marks ten years of service to young minds and families. Rooted in our motto, 'In God We Trust', we continue our quiet commitment to character, curiosity, and disciplined learning.",
+    "Founded in October 2016 in Kabusa, Abuja, Deeper Real Vision Academy marks ten years of service to young minds and families. Rooted in our motto, 'In God We Trust', we continue our commitment to character, curiosity, and disciplined learning.",
   details: [
     { label: "FOUNDED", value: "October 2016" },
     { label: "LOCATION", value: "Kabusa, Abuja, Nigeria" },
@@ -54,8 +55,9 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Creche",
     subtitle: "A safe, peaceful and nurturing beginning.",
     description:
-      "An intimate, calm environment tailored to the earliest stages of infant growth. Dedicated caregivers prioritize emotional security, sensory discovery, and tender developmental milestones in a hygienic, homelike setting.",
-    ageRange: "3 Months – 18 Months",
+      "An intimate, calm environment tailored to early infant growth. Dedicated caregivers prioritize emotional security, sensory discovery, and gentle developmental care in a hygienic, supportive setting.",
+    stageBadge: "Stage 01",
+    ageRange: "Stage 01",
     focusAreas: ["Sensory Development", "Caregiver Bonding", "Early Motor Skills", "Calm Routine"],
     anchor: "/academics#creche",
   },
@@ -65,8 +67,9 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Nursery",
     subtitle: "Curiosity, play and strong foundational habits.",
     description:
-      "Joyful exploration designed to spark a natural love for learning. Children build early literacy, phonics, numbers, expressive arts, and collaborative social habits within attentive classrooms.",
-    ageRange: "18 Months – 5 Years",
+      "Joyful exploration designed to spark a natural love for learning. Children build early literacy, phonics, number awareness, expressive arts, and collaborative social habits within attentive classrooms.",
+    stageBadge: "Stage 02",
+    ageRange: "Stage 02",
     focusAreas: ["Phonics & Language", "Foundational Numeracy", "Creative Expression", "Social Habits"],
     anchor: "/academics#nursery",
   },
@@ -77,7 +80,8 @@ export const PROGRAMMES: ProgrammeItem[] = [
     subtitle: "Confidence, core knowledge and character.",
     description:
       "A structured curriculum that encourages young pupils to think thoughtfully, communicate clearly, and take pride in their academic growth, moral reflection, and personal diligence.",
-    ageRange: "5 Years – 11 Years",
+    stageBadge: "Stage 03",
+    ageRange: "Stage 03",
     focusAreas: ["Critical Inquiry", "Moral & Civic Values", "STEM & Humanities", "Attentive Mentorship"],
     anchor: "/academics#primary",
   },
@@ -88,6 +92,7 @@ export const PROGRAMMES: ProgrammeItem[] = [
     subtitle: "Subject mastery and purposeful readiness through JSS3.",
     description:
       "Bridging foundational primary learning with intermediate academic disciplines across JSS1 to JSS3. Students develop structured inquiry, disciplined study habits, and personal responsibility.",
+    stageBadge: "JSS1 – JSS3",
     ageRange: "JSS1 – JSS3",
     focusAreas: ["Intermediate Sciences & Math", "Language & Literature", "Social & Civic Studies", "Independent Study Habits"],
     anchor: "/academics#junior-secondary",
@@ -131,8 +136,8 @@ export const SCHOOL_MOMENTS: StoryPreview[] = [
     tag: "INTER-HOUSE ATHLETICS",
     title: "Annual Sports & Field Day Showcase",
     excerpt:
-      "Pupils across all houses participate in track events, relay games, and athletic teamwork celebrating sportsmanship and healthy movement.",
-    dateOrStatus: "Termly Showcase",
+      "Pupils across all houses participate in track disciplines, relay games, and athletic teamwork celebrating sportsmanship and healthy movement.",
+    dateOrStatus: "School Showcase",
     href: "/school-life",
   },
   {
@@ -147,10 +152,10 @@ export const SCHOOL_MOMENTS: StoryPreview[] = [
   {
     category: "Notice Board",
     tag: "ADMISSIONS DESK",
-    title: "Enquiry Open for Creche, Nursery, Primary & JSS Sessions",
+    title: "Admissions Information for Creche, Nursery, Primary & JSS",
     excerpt:
-      "Prospective families seeking enrollment guidelines, placement readiness benchmarks, and campus appointments can connect with our admissions office.",
-    dateOrStatus: "Official Notice",
+      "Prospective families seeking enrollment guidelines, placement details, and campus appointment schedules can connect with our admissions office.",
+    dateOrStatus: "Admissions Desk",
     href: "/admissions",
   },
 ];

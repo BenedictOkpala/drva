@@ -62,7 +62,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Office Contact Placeholders Card */}
+                {/* Office Contact Details Card */}
                 <div className="p-6 sm:p-8 bg-[var(--ivory)] border border-[var(--line)] space-y-6">
                   {/* Campus Address */}
                   <div>
@@ -77,37 +77,6 @@ export default function ContactPage() {
                     </span>
                   </div>
 
-                  {/* Phone Lines */}
-                  <div className="pt-4 border-t border-[var(--line)] space-y-3">
-                    <div>
-                      <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
-                        {SCHOOL_CONTACT.admissionsPhone.label}
-                      </span>
-                      <p className="font-mono text-sm text-[var(--navy)] font-medium">
-                        {SCHOOL_CONTACT.admissionsPhone.value}
-                      </p>
-                    </div>
-
-                    <div>
-                      <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
-                        {SCHOOL_CONTACT.generalPhone.label}
-                      </span>
-                      <p className="font-mono text-sm text-[var(--navy)] font-medium">
-                        {SCHOOL_CONTACT.generalPhone.value}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="pt-4 border-t border-[var(--line)]">
-                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
-                      {SCHOOL_CONTACT.email.label}
-                    </span>
-                    <p className="font-mono text-sm text-[var(--navy)] font-medium">
-                      {SCHOOL_CONTACT.email.value}
-                    </p>
-                  </div>
-
                   {/* Office Hours */}
                   <div className="pt-4 border-t border-[var(--line)]">
                     <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
@@ -116,15 +85,18 @@ export default function ContactPage() {
                     <p className="font-mono text-sm text-[var(--navy)] font-medium">
                       {SCHOOL_CONTACT.officeHours.value}
                     </p>
+                    <span className="text-xs text-[var(--muted)] mt-1 block">
+                      {SCHOOL_CONTACT.officeHours.note}
+                    </span>
                   </div>
 
-                  {/* Social Channels */}
+                  {/* Enquiries Note */}
                   <div className="pt-4 border-t border-[var(--line)]">
                     <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
-                      {SCHOOL_CONTACT.socials.label}
+                      Admissions &amp; General Enquiries
                     </span>
-                    <p className="font-mono text-sm text-[var(--navy)] font-medium">
-                      {SCHOOL_CONTACT.socials.value}
+                    <p className="text-xs text-[var(--ink)]/80 leading-relaxed font-normal">
+                      Please use the enquiry form to submit admission queries or request a scheduled campus visit.
                     </p>
                   </div>
                 </div>
@@ -133,16 +105,15 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs font-mono text-[var(--muted)]">
                     <span className="uppercase tracking-wider font-semibold text-[var(--navy)]">
-                      Campus Map & Transit
+                      Campus Map &amp; Transit
                     </span>
-                    <span>Coordinates Pending</span>
                   </div>
                   <div className="p-2 bg-white border border-[var(--line)] shadow-xs">
                     <PlaceholderFrame
                       aspectRatio="wide"
                       theme="light"
-                      label="Campus Map & Direction Slot"
-                      sublabel="Awaiting Verified Physical Address Coordinates"
+                      label="Campus Location"
+                      sublabel="Located in Kabusa, Abuja"
                       badge="CAMPUS ACCESS"
                       captionLines={[
                         "SECURE CAMPUS GROUNDS.",
