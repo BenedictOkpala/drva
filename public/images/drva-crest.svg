@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" width="100%" height="100%" aria-label="Deeper Real Vision Academy Official Crest">
+  <defs>
+    <!-- Circular text paths for upper and lower arcs -->
+    <path id="crest-text-upper" d="M 24,100 A 76,76 0 1,1 176,100" fill="none" />
+    <path id="crest-text-lower" d="M 172,108 A 73,73 0 0,1 28,108" fill="none" />
+    <path id="crest-ribbon-path" d="M 36,166 Q 100,182 164,166" fill="none" />
+    
+    <linearGradient id="crest-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2867B2" />
+      <stop offset="100%" stop-color="#102A43" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Ring Shield / Seal Outer Border -->
+  <circle cx="100" cy="100" r="95" stroke="#102A43" stroke-width="2.5" fill="#FCFBF8" />
+  <circle cx="100" cy="100" r="91" stroke="#2867B2" stroke-width="1" stroke-dasharray="2,2" fill="none" opacity="0.6" />
+  
+  <!-- Outer Ring Band Fill -->
+  <circle cx="100" cy="100" r="88" stroke="#102A43" stroke-width="1.5" fill="#F7F3EA" />
+  <circle cx="100" cy="100" r="62" stroke="#102A43" stroke-width="1.5" fill="#FCFBF8" />
+
+  <!-- Upper Text: DEEPER REAL VISION ACADEMY -->
+  <text font-family="'DM Serif Display', Georgia, serif" font-size="10.8" font-weight="600" fill="#102A43" letter-spacing="0.14em">
+    <textPath href="#crest-text-upper" startOffset="50%" text-anchor="middle">
+      DEEPER REAL VISION ACADEMY
+    </textPath>
+  </text>
+
+  <!-- Star Separators -->
+  <g fill="#2867B2">
+    <path d="M 28,103 L 30,105 L 29.2,107.5 L 31.2,106.2 L 33.2,107.5 L 32.4,105 L 34.4,103.5 L 31.9,103.5 L 31.2,101 L 30.5,103.5 Z" transform="scale(0.8) translate(8, 26)" />
+    <path d="M 28,103 L 30,105 L 29.2,107.5 L 31.2,106.2 L 33.2,107.5 L 32.4,105 L 34.4,103.5 L 31.9,103.5 L 31.2,101 L 30.5,103.5 Z" transform="scale(0.8) translate(206, 26)" />
+  </g>
+
+  <!-- Lower Text: KABUSA ABUJA -->
+  <text font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#2867B2" letter-spacing="0.22em">
+    <textPath href="#crest-text-lower" startOffset="50%" text-anchor="middle">
+      KABUSA &bull; ABUJA
+    </textPath>
+  </text>
+
+  <!-- Center Core Ring & Background -->
+  <circle cx="100" cy="94" r="50" fill="#F7F3EA" stroke="#2867B2" stroke-width="1" stroke-dasharray="3,2" />
+  <circle cx="100" cy="94" r="46" fill="#FFFFFF" stroke="#102A43" stroke-width="1.25" />
+
+  <!-- Center Motif: Radiant Sunbeams / Knowledge rays -->
+  <g stroke="#2867B2" stroke-width="0.75" opacity="0.35">
+    <line x1="100" y1="53" x2="100" y2="60" />
+    <line x1="84" y1="57" x2="88" y2="63" />
+    <line x1="116" y1="57" x2="112" y2="63" />
+    <line x1="72" y1="68" x2="78" y2="72" />
+    <line x1="128" y1="68" x2="122" y2="72" />
+  </g>
+
+  <!-- Diagonal Educational Pencil -->
+  <g transform="rotate(-32 100 92)">
+    <!-- Pencil Body -->
+    <rect x="97" y="60" width="6" height="52" fill="#2867B2" rx="0.5" />
+    <line x1="99" y1="60" x2="99" y2="112" stroke="#FFFFFF" stroke-width="0.75" opacity="0.7" />
+    <!-- Pencil Ferrule & Eraser -->
+    <rect x="97" y="56" width="6" height="4" fill="#66717D" />
+    <rect x="97" y="52" width="6" height="4" fill="#102A43" rx="1" />
+    <!-- Pencil Tip -->
+    <polygon points="97,112 103,112 100,122" fill="#DDD9D0" />
+    <polygon points="99,118 101,118 100,122" fill="#102A43" />
+  </g>
+
+  <!-- Center Motif: Open Book of Knowledge -->
+  <g transform="translate(0, 4)">
+    <!-- Left Page -->
+    <path d="M 100,98 C 92,93 76,91 66,93 C 64,93.4 63,95 63,97 L 63,117 C 73,115 90,117 100,123 Z" fill="#FCFBF8" stroke="#102A43" stroke-width="1.5" />
+    <!-- Left Page Ruling Lines -->
+    <line x1="70" y1="99" x2="94" y2="99" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="70" y1="104" x2="94" y2="104" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="70" y1="109" x2="94" y2="109" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="70" y1="114" x2="90" y2="114" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+
+    <!-- Right Page -->
+    <path d="M 100,98 C 108,93 124,91 134,93 C 136,93.4 137,95 137,97 L 137,117 C 127,115 110,117 100,123 Z" fill="#FCFBF8" stroke="#102A43" stroke-width="1.5" />
+    <!-- Right Page Ruling Lines -->
+    <line x1="106" y1="99" x2="130" y2="99" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="106" y1="104" x2="130" y2="104" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="106" y1="109" x2="130" y2="109" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+    <line x1="106" y1="114" x2="126" y2="114" stroke="#66717D" stroke-width="0.8" opacity="0.6" />
+
+    <!-- Spine / Center Binding Fold -->
+    <path d="M 100,97 L 100,123" stroke="#102A43" stroke-width="1.75" stroke-linecap="round" />
+    <polygon points="98,122 102,122 100,125" fill="#102A43" />
+  </g>
+
+  <!-- Flowing Bottom Ribbon Banner: IN GOD WE TRUST -->
+  <g>
+    <!-- Ribbon Left Fold / Tails -->
+    <path d="M 34,166 L 22,160 L 30,174 L 20,186 L 42,178 Z" fill="#102A43" stroke="#102A43" stroke-width="1" />
+    <!-- Ribbon Right Fold / Tails -->
+    <path d="M 166,166 L 178,160 L 170,174 L 180,186 L 158,178 Z" fill="#102A43" stroke="#102A43" stroke-width="1" />
+
+    <!-- Ribbon Under-shadow folds -->
+    <polygon points="40,166 48,166 46,174 38,172" fill="#0C2033" />
+    <polygon points="160,166 152,166 154,174 162,172" fill="#0C2033" />
+
+    <!-- Main Ribbon Front Banner -->
+    <path d="M 38,163 Q 100,177 162,163 L 160,179 Q 100,193 40,179 Z" fill="#102A43" stroke="#2867B2" stroke-width="1.25" />
+    
+    <!-- Ribbon Motto Text -->
+    <text font-family="'DM Serif Display', Georgia, serif" font-size="8.8" font-style="italic" font-weight="600" fill="#FFFFFF" letter-spacing="0.16em">
+      <textPath href="#crest-ribbon-path" startOffset="50%" text-anchor="middle">
+        IN GOD WE TRUST
+      </textPath>
+    </text>
+  </g>
+</svg>

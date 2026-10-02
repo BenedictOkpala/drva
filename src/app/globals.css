@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #102a43;
+  --color-navy-dark: #0b1d2f;
+  --color-navy-light: #1c3c5e;
+  --color-red: #b91c1c;
+  --color-red-dark: #991b1b;
+  --color-red-soft: #fdf2f2;
+  --color-blue: #2867b2;
+  --color-blue-dark: #1d508e;
+  --color-blue-soft: #eaf2fa;
+  --color-ivory: #f7f3ea;
+  --color-ivory-dark: #ece4d2;
+  --color-paper: #fcfbf8;
+  --color-ink: #17202a;
+  --color-muted: #66717d;
+  --color-line: #ddd9d0;
+  --color-line-dark: #24415f;
+
+  --font-serif: var(--font-serif), Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --navy: #102a43;
+  --navy-dark: #0b1d2f;
+  --navy-light: #1c3c5e;
+  --red: #b91c1c;
+  --red-dark: #991b1b;
+  --red-soft: #fdf2f2;
+  --blue: #2867b2;
+  --blue-dark: #1d508e;
+  --blue-soft: #eaf2fa;
+  --ivory: #f7f3ea;
+  --ivory-dark: #ece4d2;
+  --paper: #fcfbf8;
+  --ink: #17202a;
+  --muted: #66717d;
+  --line: #ddd9d0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color: var(--ink);
+  background-color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Subtle editorial grain / depth lines helper */
+.pattern-fine-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(23, 32, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(23, 32, 42, 0.03) 1px, transparent 1px);
+}
+
+.pattern-fine-grid-dark {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Editorial selection */
+::selection {
+  background-color: #2867b2;
+  color: #ffffff;
+}
+
