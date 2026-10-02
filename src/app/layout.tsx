@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Deeper Real Vision Academy (DRVA) | Creche, Nursery, Primary & Junior Secondary",
   description:
-    "A supportive, purposeful learning community where children are known and given room to grow. Providing education across Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3).",
+    "A supportive, purposeful learning community in Sheretti, Abuja where children are known and given room to grow. Providing education across Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3).",
   keywords: [
     "DRVA",
     "Deeper Real Vision Academy",
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "Primary School",
     "Junior Secondary School",
     "JSS1 JSS2 JSS3",
+    "Sheretti Abuja",
     "In God We Trust",
   ],
 };
@@ -51,4 +52,3 @@ export default function RootLayout({
     </html>
   );
 }
-

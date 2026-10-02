@@ -19,7 +19,7 @@ export function Hero() {
               <SchoolCrest size="xs" priority />
               <span className="w-4 h-px bg-[var(--red)]" />
               <span className="text-xs font-mono tracking-[0.2em] uppercase font-semibold text-[var(--navy)]">
-                KABUSA, ABUJA &bull; EST. 2016
+                SHERETTI, ABUJA &bull; EST. 2016
               </span>
             </div>
 
@@ -38,7 +38,7 @@ export function Hero() {
 
             {/* Restrained Supporting Copy */}
             <p className="text-base sm:text-lg text-[var(--ink)]/80 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
-              A purposeful learning community in Kabusa, Abuja, serving pupils
+              A purposeful learning community in Sheretti, Abuja, serving pupils
               across Creche, Nursery, Primary, and Junior Secondary (JSS1&ndash;JSS3).
               Where children are known, guided, and given room to flourish.
             </p>
@@ -121,7 +121,7 @@ export function Hero() {
                 theme="light"
                 label="DRVA Campus & Classrooms"
                 sublabel="Creche, Nursery, Primary & Junior Secondary Environments"
-                badge="KABUSA, ABUJA"
+                badge="SHERETTI, ABUJA"
                 captionLines={[
                   "DEEPER REAL VISION ACADEMY.",
                   "SERVING YOUNG MINDS IN ABUJA.",

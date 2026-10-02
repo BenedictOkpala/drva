@@ -4,33 +4,55 @@
  * 
  * Verified School Information:
  * - Name: Deeper Real Vision Academy (DRVA)
- * - Location: Kabusa, Abuja, Nigeria
+ * - Location: Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria
  * - Founded: October 2016
  * - Educational Stages: Creche, Nursery, Primary, Junior Secondary (JSS1–JSS3)
+ * - Future Expansion: Senior Secondary School (Future Plan)
  * - Motto: IN GOD WE TRUST
- * - Milestone: 2016 — 2026 (Ten years since founding)
+ * - Phone: 08036135006
+ * - Leadership: Mrs Okpala Priscilla (School Leadership)
+ * - Milestone: 2016 — 2026 (A decade of learning and growth)
  */
 
 export const SCHOOL_INFO = {
   brand: "DRVA",
   fullName: "Deeper Real Vision Academy",
+  shortName: "DRVA",
   motto: "IN GOD WE TRUST",
-  location: "Kabusa, Abuja, Nigeria",
-  cityState: "Kabusa, Abuja",
+  location: "Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria",
+  addressLine1: "Behind St. Anthony Catholic Church",
+  addressLine2: "Sheretti, Abuja, Nigeria",
+  cityState: "Sheretti, Abuja",
+  phone: "08036135006",
+  phoneTel: "tel:08036135006",
   founded: "October 2016",
   foundedYear: 2016,
   milestoneYears: "2016 — 2026",
-  milestoneTag: "A decade of DRVA",
+  milestoneTag: "A decade of learning and growth",
   levels: ["Creche", "Nursery", "Primary", "Junior Secondary"] as const,
   juniorSecondaryScope: "JSS1 – JSS3",
+  futureExpansion: "Looking ahead, DRVA plans to expand into Senior Secondary School, continuing the learning journey through an additional stage of education.",
+  futureStage: "Senior Secondary (Planned Future Expansion)",
   tagline: "Bright minds. Good people.",
+  leadership: {
+    name: "Mrs Okpala Priscilla",
+    role: "School Leadership",
+    message:
+      "At DRVA, we believe education should prepare a child not only for the classroom, but for life. Our responsibility is to help each learner grow in knowledge, character and confidence while providing the guidance and support they need at every stage of their development.",
+  },
 } as const;
 
 export const SCHOOL_CONTACT = {
   address: {
     label: "Campus Location",
-    value: "Kabusa, Abuja, Nigeria",
-    note: "Federal Capital Territory, Nigeria. Visiting by scheduled appointment.",
+    value: "Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria",
+    note: "Visiting by scheduled appointment.",
+  },
+  phone: {
+    label: "Phone Line",
+    value: "08036135006",
+    tel: "tel:08036135006",
+    note: "Direct telephone line for school and admissions enquiries.",
   },
   officeHours: {
     label: "School Office",
@@ -39,16 +61,26 @@ export const SCHOOL_CONTACT = {
   },
 };
 
+export const SCHOOL_STORY = {
+  title: "Our Story",
+  eyebrow: "THE DRVA STORY",
+  paragraphs: [
+    "Deeper Real Vision Academy has been part of the Abuja community since 2016. Established with a commitment to giving children a strong foundation for learning and life, DRVA has continued to grow with the families and community it serves.",
+    "Today, the Academy supports learners from Creche through Junior Secondary, with an environment that encourages curiosity, discipline, confidence and steady academic growth.",
+    "As DRVA marks a decade of learning and growth, the journey continues. With plans to expand into Senior Secondary School, the Academy looks ahead to serving its learners through even more stages of their education.",
+  ],
+};
+
 export const SCHOOL_MISSION_VISION = {
   mission: {
-    heading: "Our Purpose & Commitment",
+    heading: "Our Mission",
     statement:
-      "To provide an uplifting, disciplined, and nurturing environment where every child is known, guided with care, and anchored in enduring moral character.",
+      "To provide a supportive learning environment where every child can build strong academic foundations, develop good character, grow in confidence and discover a lasting desire to learn.",
   },
   vision: {
-    heading: "Our Educational Aspiration",
+    heading: "Our Vision",
     statement:
-      "To be an exemplary learning community recognized for nurturing confident, principled, and curious young minds prepared for lifelong achievement.",
+      "To raise knowledgeable, responsible and confident young people who are prepared for the next stage of their education and equipped to make meaningful contributions to their communities.",
   },
 };
 
@@ -219,7 +251,7 @@ export const ACADEMIC_STAGES: AcademicStageDetail[] = [
   },
 ];
 
-export interface SchoolLifeFacet {
+export interface SchoolActivityArea {
   id: string;
   title: string;
   category: string;
@@ -227,96 +259,86 @@ export interface SchoolLifeFacet {
   description: string;
   aspectRatio?: "wide" | "portrait" | "video" | "square";
   label: string;
-  placeholderLabel?: string; // alias
   badge: string;
 }
 
-export const SCHOOL_LIFE_FACETS: SchoolLifeFacet[] = [
+export const BEYOND_CLASSROOM_INTRO =
+  "Learning at DRVA extends beyond everyday classroom lessons. Pupils are encouraged to communicate confidently, think creatively, work with others and discover their individual strengths through activities that complement their academic development.";
+
+export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
   {
-    id: "classroom-life",
-    title: "Classroom Life",
-    category: "ACADEMIC ATMOSPHERE",
-    tagline: "Purposeful inquiry, focused attention, and supportive guidance.",
+    id: "debate-public-speaking",
+    title: "Debate & Public Speaking",
+    category: "ORAL EXPRESSION",
+    tagline: "Fostering articulate thought and reasoned presentation.",
     description:
-      "Inside DRVA classrooms, learning is structured and collaborative. Teachers observe pupils closely, tailoring guidance to support comprehension and active participation across all levels.",
+      "Pupils learn to construct clear arguments, listen respectfully to opposing views, and present their ideas before peers with clarity and confidence.",
     aspectRatio: "wide",
-    label: "Classroom Learning & Instruction",
-    placeholderLabel: "Classroom Learning & Instruction",
-    badge: "DAILY LEARNING",
+    label: "Debate & Public Speaking",
+    badge: "EXPRESSION",
   },
   {
-    id: "creativity-arts",
-    title: "Creativity & The Arts",
-    category: "EXPRESSIVE ARTS",
-    tagline: "Giving voice to imagination, melody, and visual expression.",
+    id: "reading-literacy",
+    title: "Reading & Literacy",
+    category: "LITERARY DISCOVERY",
+    tagline: "Cultivating a lifelong appreciation for books and language.",
     description:
-      "Through music, visual arts, drama, and craft activities, pupils are encouraged to explore their creative sensibilities and express themselves with confidence.",
+      "Guided reading sessions and storytelling encourage learners to explore diverse literature, develop vocabulary, and deepen comprehension habits.",
     aspectRatio: "portrait",
-    label: "Creative Arts & Music",
-    placeholderLabel: "Creative Arts & Music",
-    badge: "CREATIVE VOICE",
+    label: "Reading & Literacy",
+    badge: "LITERACY",
   },
   {
-    id: "sports-movement",
-    title: "Sports & Movement",
-    category: "PHYSICAL WELLNESS",
-    tagline: "Building stamina, teamwork, and healthy sportsmanship.",
+    id: "quiz-academic-activities",
+    title: "Quiz & Academic Activities",
+    category: "INTELLECTUAL INQUIRY",
+    tagline: "Encouraging curiosity and knowledge recall across subjects.",
     description:
-      "Structured outdoor activities, athletics, inter-house sports, and movement drills teach pupils the value of physical fitness, resilience, and gracious teamwork.",
-    aspectRatio: "wide",
-    label: "Athletics & Physical Training",
-    placeholderLabel: "Athletics & Physical Training",
-    badge: "PHYSICAL HEALTH",
-  },
-  {
-    id: "clubs-activities",
-    title: "Clubs & Activities",
-    category: "CO-CURRICULAR CLUBS",
-    tagline: "Discovering new interests beyond the regular timetable.",
-    description:
-      "Afternoon clubs give pupils avenues to explore specialized interests, chess, young science discovery, debate, recitation, and cultural appreciation.",
+      "Team quizzes, mental arithmetic challenges, and knowledge competitions make learning collaborative, stimulating, and fun for all learners.",
     aspectRatio: "square",
-    label: "Student Clubs & Workshops",
-    placeholderLabel: "Student Clubs & Workshops",
-    badge: "EXPANDED HORIZONS",
+    label: "Quiz & Academic Activities",
+    badge: "INQUIRY",
   },
   {
-    id: "celebrations-events",
-    title: "Celebrations & Events",
-    category: "SCHOOL TRADITIONS",
-    tagline: "Gathering as a community to honor effort and milestones.",
+    id: "creative-arts",
+    title: "Creative Arts",
+    category: "CREATIVE PRACTICE",
+    tagline: "Giving visual form and musical melody to imagination.",
     description:
-      "Our school calendar features meaningful traditions including annual speech days, cultural days, term showcases, and inter-house events.",
-    aspectRatio: "wide",
-    label: "Assemblies & School Traditions",
-    placeholderLabel: "Assemblies & School Traditions",
-    badge: "SHARED TRADITIONS",
-  },
-  {
-    id: "trips-excursions",
-    title: "Trips & Excursions",
-    category: "LEARNING BEYOND CAMPUS",
-    tagline: "Connecting classroom lessons with the wider world.",
-    description:
-      "Supervised educational visits to cultural landmarks, botanical sites, and community centers broaden pupils' horizons and encourage practical curiosity.",
+      "Drawing, painting, hands-on craft projects, and musical participation allow pupils to express their creativity and appreciate aesthetic detail.",
     aspectRatio: "portrait",
-    label: "Field Visits & Excursions",
-    placeholderLabel: "Field Visits & Excursions",
-    badge: "FIELD DISCOVERY",
+    label: "Creative Arts & Expression",
+    badge: "ARTS",
   },
   {
-    id: "community-fellowship",
-    title: "Community & Fellowship",
-    category: "FAMILY & VALUES",
-    tagline: "Cultivating lasting bonds between pupils, educators, and families.",
+    id: "sports-physical-activity",
+    title: "Sports & Physical Activity",
+    category: "PHYSICAL WELLBEING",
+    tagline: "Building coordination, stamina, and healthy sportsmanship.",
     description:
-      "Family open mornings, community gatherings, and parent-teacher consultations ensure that school life remains a collaborative, welcoming experience.",
+      "Structured games, movement exercises, and outdoor recreation help pupils stay active, learn teamwork, and build physical resilience.",
     aspectRatio: "wide",
-    label: "School Community & Fellowship",
-    placeholderLabel: "School Community & Fellowship",
-    badge: "COMMUNITY SPIRIT",
+    label: "Sports & Physical Activity",
+    badge: "MOVEMENT",
+  },
+  {
+    id: "school-events-celebrations",
+    title: "School Events & Celebrations",
+    category: "COMMUNITY TRADITIONS",
+    tagline: "Bringing pupils, educators, and families together.",
+    description:
+      "Milestones, cultural presentations, and term assemblies celebrate pupil effort and reinforce our shared school community values.",
+    aspectRatio: "wide",
+    label: "School Events & Assemblies",
+    badge: "CELEBRATIONS",
   },
 ];
+
+// Aliased for backward compatibility with SchoolLifeFacet
+export const SCHOOL_LIFE_FACETS = SCHOOL_LIFE_ACTIVITIES.map((a) => ({
+  ...a,
+  placeholderLabel: a.label,
+}));
 
 export interface AdmissionsStep {
   step: string;
@@ -332,8 +354,8 @@ export const ADMISSIONS_JOURNEY: AdmissionsStep[] = [
     title: "Enquire",
     subtitle: "Begin the conversation",
     description:
-      "Submit an initial enquiry online or contact our admissions office to share details about your child and request general school information across Creche, Nursery, Primary, or Junior Secondary.",
-    actionNote: "Enquiry form available on our Contact page.",
+      "Contact our admissions desk on 08036135006 or visit our campus in Sheretti, Abuja to discuss enrollment across Creche, Nursery, Primary, or Junior Secondary.",
+    actionNote: "Phone enquiry line: 08036135006",
   },
   {
     step: "02",
@@ -409,12 +431,12 @@ export const ADMISSIONS_FAQS = [
   {
     question: "What educational levels does DRVA currently serve?",
     answer:
-      "DRVA serves children across four stages: Creche, Nursery, Primary, and Junior Secondary School through JSS3 (JSS1 – JSS3).",
+      "DRVA currently serves children across four stages: Creche, Nursery, Primary, and Junior Secondary School through JSS3 (JSS1 – JSS3). Looking ahead, DRVA plans to expand into Senior Secondary School.",
   },
   {
     question: "How can parents arrange a campus visit?",
     answer:
-      "Campus visits are scheduled by appointment through the school office to ensure dedicated time for visiting families.",
+      "Campus visits are scheduled by appointment. Please call the school on 08036135006 to arrange a convenient time with our administrative team.",
   },
   {
     question: "What is the admissions process for Junior Secondary (JSS1 – JSS3)?",
@@ -424,6 +446,6 @@ export const ADMISSIONS_FAQS = [
   {
     question: "Where is Deeper Real Vision Academy located?",
     answer:
-      "DRVA is located in Kabusa, Abuja, Nigeria. Full directions and appointment details are provided by the school office.",
+      "DRVA is located Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria. Full directions and appointment details can be confirmed by calling 08036135006.",
   },
 ];

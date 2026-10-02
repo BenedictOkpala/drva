@@ -25,7 +25,7 @@ export function Introduction() {
                 <span className="px-2.5 py-1 bg-white border border-[var(--line)] font-semibold uppercase">
                   EST. OCTOBER 2016
                 </span>
-                <span className="text-[var(--muted)] uppercase">KABUSA, ABUJA</span>
+                <span className="text-[var(--muted)] uppercase">SHERETTI, ABUJA</span>
               </div>
               <p className="font-serif italic text-base text-[var(--muted)] leading-relaxed">
                 &ldquo;Where academic curiosity is nurtured alongside moral conviction and enduring diligence.&rdquo;
@@ -37,7 +37,7 @@ export function Introduction() {
           <div className="lg:col-span-7 space-y-6 lg:pl-4 text-[var(--ink)]/85">
             <p className="text-xl sm:text-2xl font-serif text-[var(--navy)] leading-relaxed font-normal">
               Deeper Real Vision Academy provides a supportive, purposeful
-              environment in Kabusa, Abuja, where children learn with confidence,
+              environment in Sheretti, Abuja, where children learn with confidence,
               develop unshakeable character, and experience the joy of genuine
               understanding.
             </p>

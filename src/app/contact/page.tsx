@@ -5,12 +5,12 @@ import { PageHero } from "@/components/common/PageHero";
 import { SectionEyebrow } from "@/components/common/SectionEyebrow";
 import { PlaceholderFrame } from "@/components/common/PlaceholderFrame";
 import { ContactForm } from "@/components/contact/ContactForm";
-import { SCHOOL_CONTACT } from "@/data/schoolData";
+import { SCHOOL_CONTACT, SCHOOL_INFO } from "@/data/schoolData";
 
 export const metadata: Metadata = {
   title: "Contact DRVA",
   description:
-    "Get in touch with Deeper Real Vision Academy (DRVA). Reach our admissions desk, general school office, or send an enquiry.",
+    "Get in touch with Deeper Real Vision Academy (DRVA) in Sheretti, Abuja. Reach our admissions desk on 08036135006 or visit our campus Behind St. Anthony Catholic Church.",
 };
 
 export default function ContactPage() {
@@ -29,13 +29,16 @@ export default function ContactPage() {
           badge="OFFICE & ADMISSIONS DESK"
           variant="functional"
           rightSlot={
-            <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] text-xs font-mono space-y-1 w-full lg:max-w-xs">
+            <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] text-xs font-mono space-y-2 w-full lg:max-w-xs">
               <span className="text-[10px] uppercase tracking-widest text-[var(--muted)] block">
-                Office Hours
+                Direct Phone Line
               </span>
-              <p className="text-[var(--navy)] font-medium">
-                Monday &ndash; Friday, Term Time
-              </p>
+              <a
+                href={SCHOOL_INFO.phoneTel}
+                className="text-base font-semibold text-[var(--navy)] hover:text-[var(--red)] block transition-colors"
+              >
+                {SCHOOL_INFO.phone}
+              </a>
               <p className="text-[11px] text-[var(--muted)]">
                 Visiting by scheduled appointment
               </p>
@@ -64,8 +67,24 @@ export default function ContactPage() {
 
                 {/* Office Contact Details Card */}
                 <div className="p-6 sm:p-8 bg-[var(--ivory)] border border-[var(--line)] space-y-6">
-                  {/* Campus Address */}
+                  {/* Phone Number */}
                   <div>
+                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
+                      {SCHOOL_CONTACT.phone.label}
+                    </span>
+                    <a
+                      href={SCHOOL_CONTACT.phone.tel}
+                      className="font-mono text-lg text-[var(--navy)] font-semibold hover:text-[var(--red)] transition-colors inline-block"
+                    >
+                      {SCHOOL_CONTACT.phone.value}
+                    </a>
+                    <span className="text-xs text-[var(--muted)] mt-1 block">
+                      {SCHOOL_CONTACT.phone.note}
+                    </span>
+                  </div>
+
+                  {/* Campus Address */}
+                  <div className="pt-4 border-t border-[var(--line)]">
                     <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
                       {SCHOOL_CONTACT.address.label}
                     </span>
@@ -77,26 +96,20 @@ export default function ContactPage() {
                     </span>
                   </div>
 
-                  {/* Office Hours */}
-                  <div className="pt-4 border-t border-[var(--line)]">
-                    <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
-                      {SCHOOL_CONTACT.officeHours.label}
-                    </span>
-                    <p className="font-mono text-sm text-[var(--navy)] font-medium">
-                      {SCHOOL_CONTACT.officeHours.value}
-                    </p>
-                    <span className="text-xs text-[var(--muted)] mt-1 block">
-                      {SCHOOL_CONTACT.officeHours.note}
-                    </span>
-                  </div>
-
                   {/* Enquiries Note */}
                   <div className="pt-4 border-t border-[var(--line)]">
                     <span className="font-mono text-xs uppercase tracking-wider text-[var(--red)] font-semibold block mb-1">
                       Admissions &amp; General Enquiries
                     </span>
                     <p className="text-xs text-[var(--ink)]/80 leading-relaxed font-normal">
-                      Please use the enquiry form to submit admission queries or request a scheduled campus visit.
+                      For admissions enquiries and tour appointments, please call{" "}
+                      <a
+                        href={SCHOOL_INFO.phoneTel}
+                        className="font-semibold text-[var(--navy)] underline hover:text-[var(--red)]"
+                      >
+                        {SCHOOL_INFO.phone}
+                      </a>
+                      .
                     </p>
                   </div>
                 </div>
@@ -105,7 +118,7 @@ export default function ContactPage() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs font-mono text-[var(--muted)]">
                     <span className="uppercase tracking-wider font-semibold text-[var(--navy)]">
-                      Campus Map &amp; Transit
+                      Campus Location &amp; Access
                     </span>
                   </div>
                   <div className="p-2 bg-white border border-[var(--line)] shadow-xs">
@@ -113,7 +126,7 @@ export default function ContactPage() {
                       aspectRatio="wide"
                       theme="light"
                       label="Campus Location"
-                      sublabel="Located in Kabusa, Abuja"
+                      sublabel="Behind St. Anthony Catholic Church, Sheretti, Abuja"
                       badge="CAMPUS ACCESS"
                       captionLines={[
                         "SECURE CAMPUS GROUNDS.",

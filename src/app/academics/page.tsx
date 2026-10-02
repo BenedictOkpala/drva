@@ -10,7 +10,7 @@ import { ACADEMIC_STAGES } from "@/data/schoolData";
 export const metadata: Metadata = {
   title: "Academics | DRVA",
   description:
-    "Explore the academic stages at DRVA — Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3). A structured, supportive learning continuum nurturing confidence, knowledge, and character.",
+    "Explore the academic stages at DRVA in Sheretti, Abuja — Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3). A structured, supportive learning continuum nurturing confidence, knowledge, and character.",
 };
 
 export default function AcademicsPage() {
@@ -30,7 +30,7 @@ export default function AcademicsPage() {
           eyebrow="ACADEMICS"
           title="Growing at every stage."
           subtitle="A disciplined and nurturing educational continuum."
-          description="From early steps in our Creche through to Junior Secondary (JSS1–JSS3), DRVA provides a continuous, supportive learning journey that fosters deep inquiry, confidence, and enduring moral habits."
+          description="From early steps in our Creche through to Junior Secondary (JSS1–JSS3), DRVA provides a continuous, supportive learning journey in Sheretti, Abuja that fosters deep inquiry, confidence, and enduring moral habits."
           badge="CURRICULUM & STAGES"
           variant="progressive"
           rightSlot={
@@ -452,7 +452,7 @@ export default function AcademicsPage() {
           eyebrow="ACADEMIC ENROLLMENT"
           heading="Begin your child's academic journey."
           italicHeading="Creche, Nursery, Primary & Junior Secondary admissions open."
-          description="Speak with our admissions team to discuss placement assessments, age readiness benchmarks, and tour schedules."
+          description="Speak with our admissions team on 08036135006 to discuss placement assessments and tour schedules."
           primaryCtaText="Begin an enquiry"
           primaryCtaHref="/contact"
           secondaryCtaText="Review admissions process"

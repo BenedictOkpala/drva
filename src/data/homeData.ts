@@ -39,12 +39,12 @@ export const MILESTONE_DATA: MilestoneData = {
   tagline: "A decade of educational purpose.",
   eyebrow: "TEN-YEAR COMMEMORATION",
   description:
-    "Founded in October 2016 in Kabusa, Abuja, Deeper Real Vision Academy marks ten years of service to young minds and families. Rooted in our motto, 'In God We Trust', we continue our commitment to character, curiosity, and disciplined learning.",
+    "Established in October 2016 in Sheretti, Abuja, Deeper Real Vision Academy marks a decade of learning and growth. As DRVA commemorates this milestone, the journey continues with plans to expand into Senior Secondary School, serving learners through even more stages of their education.",
   details: [
     { label: "FOUNDED", value: "October 2016" },
-    { label: "LOCATION", value: "Kabusa, Abuja, Nigeria" },
+    { label: "LOCATION", value: "Sheretti, Abuja, Nigeria" },
     { label: "EDUCATIONAL SCOPE", value: "Creche through JSS3" },
-    { label: "HISTORICAL MOTTO", value: "IN GOD WE TRUST" },
+    { label: "FUTURE EXPANSION", value: "Senior Secondary (Planned)" },
   ],
 };
 
@@ -133,20 +133,20 @@ export const PILLARS: ValuePillar[] = [
 export const SCHOOL_MOMENTS: StoryPreview[] = [
   {
     category: "Athletics & Sports",
-    tag: "INTER-HOUSE ATHLETICS",
-    title: "Annual Sports & Field Day Showcase",
+    tag: "PHYSICAL ACTIVITY",
+    title: "Sports & Movement Showcases",
     excerpt:
-      "Pupils across all houses participate in track disciplines, relay games, and athletic teamwork celebrating sportsmanship and healthy movement.",
-    dateOrStatus: "School Showcase",
+      "Pupils participate in games, movement exercises, and athletic teamwork celebrating sportsmanship, physical coordination, and healthy activity.",
+    dateOrStatus: "School Life",
     href: "/school-life",
   },
   {
     category: "Academic Discovery",
-    tag: "INQUIRY & STEM",
-    title: "Practical Science & Classroom Project Exhibitions",
+    tag: "INQUIRY & DEBATE",
+    title: "Quiz, Academic Activities & Public Speaking",
     excerpt:
-      "Hands-on scientific inquiry, experimental demonstrations, and creative project presentations developed during term studies.",
-    dateOrStatus: "Academic Spotlight",
+      "Pupils build confidence through debate, collaborative team quizzes, and reading activities that complement their academic development.",
+    dateOrStatus: "School Life",
     href: "/school-life",
   },
   {
@@ -154,7 +154,7 @@ export const SCHOOL_MOMENTS: StoryPreview[] = [
     tag: "ADMISSIONS DESK",
     title: "Admissions Information for Creche, Nursery, Primary & JSS",
     excerpt:
-      "Prospective families seeking enrollment guidelines, placement details, and campus appointment schedules can connect with our admissions office.",
+      "Prospective families seeking enrollment guidelines, placement details, and campus appointment schedules can connect directly with our school desk on 08036135006.",
     dateOrStatus: "Admissions Desk",
     href: "/admissions",
   },

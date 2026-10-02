@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { SchoolCrest } from "../brand/SchoolCrest";
+import { SCHOOL_INFO } from "@/data/schoolData";
 
 export function VisitAdmissions() {
   return (
@@ -16,7 +17,7 @@ export function VisitAdmissions() {
               <SchoolCrest variant="dark" size="sm" />
               <span className="w-4 h-px bg-[var(--red)]" />
               <span className="text-xs font-mono tracking-[0.2em] uppercase font-semibold text-slate-200">
-                VISIT & ENROL &bull; KABUSA, ABUJA
+                VISIT & ENROL &bull; SHERETTI, ABUJA
               </span>
             </div>
 
@@ -28,7 +29,7 @@ export function VisitAdmissions() {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl">
-              We welcome prospective families to discover our school in Kabusa,
+              We welcome prospective families to discover our school in Sheretti,
               Abuja. Whether you are enrolling for Creche, Nursery, Primary, or
               Junior Secondary (JSS1&ndash;JSS3), our office is ready to assist you.
             </p>
@@ -37,7 +38,7 @@ export function VisitAdmissions() {
             <div className="pt-4 border-t border-slate-700/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-300">
               <div className="p-3 bg-[var(--navy-dark)] border border-slate-700">
                 <span className="text-[10px] uppercase text-slate-400 block mb-1">LOCATION</span>
-                <span className="text-white font-medium">Kabusa, Abuja</span>
+                <span className="text-white font-medium">Sheretti, Abuja</span>
               </div>
               <div className="p-3 bg-[var(--navy-dark)] border border-slate-700">
                 <span className="text-[10px] uppercase text-slate-400 block mb-1">PROGRAMMES</span>
@@ -81,15 +82,15 @@ export function VisitAdmissions() {
 
               <div>
                 <span className="text-xs font-mono uppercase tracking-[0.2em] text-[var(--blue-soft)] block mb-1">
-                  DEEPER REAL VISION ACADEMY
+                  {SCHOOL_INFO.fullName}
                 </span>
                 <span className="font-serif italic text-xl text-white block">
-                  &ldquo;In God We Trust&rdquo;
+                  &ldquo;{SCHOOL_INFO.motto}&rdquo;
                 </span>
               </div>
 
               <div className="pt-4 border-t border-slate-800 text-[11px] font-mono text-slate-400">
-                <span>Kabusa &bull; Abuja &bull; Founded October 2016</span>
+                <span>Sheretti &bull; Abuja &bull; Founded October 2016</span>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function HomePage() {
         {/* 2. Photographic Authority Hero */}
         <Hero />
 
-        {/* 3. Editorial Introduction (Est. October 2016, Kabusa, Abuja) */}
+        {/* 3. Editorial Introduction (Est. October 2016, Sheretti, Abuja) */}
         <Introduction />
 
         {/* 4. Connected Learning Journey (Stages 01–04) */}

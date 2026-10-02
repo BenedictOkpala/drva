@@ -32,7 +32,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              A purposeful learning community dedicated to sound values,
+              A purposeful learning community in Sheretti, Abuja dedicated to sound values,
               attentive care, and steady academic growth across Creche,
               Nursery, Primary, and Junior Secondary stages.
             </p>
@@ -120,11 +120,23 @@ export function Footer() {
           {/* School Office & Location */}
           <div className="lg:col-span-4 space-y-4">
             <h3 className="text-xs font-mono uppercase tracking-[0.2em] font-semibold text-white">
-              School Location
+              School Contact
             </h3>
 
             <div className="p-5 bg-[var(--navy-dark)] border border-slate-700/80 space-y-4 text-xs">
               <div>
+                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
+                  {SCHOOL_CONTACT.phone.label}
+                </span>
+                <a
+                  href={SCHOOL_CONTACT.phone.tel}
+                  className="text-white hover:text-[var(--blue-soft)] font-mono font-semibold text-base transition-colors inline-block"
+                >
+                  {SCHOOL_CONTACT.phone.value}
+                </a>
+              </div>
+
+              <div className="pt-3 border-t border-slate-800">
                 <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
                   {SCHOOL_CONTACT.address.label}
                 </span>
@@ -132,19 +144,16 @@ export function Footer() {
                   {SCHOOL_CONTACT.address.value}
                 </p>
                 <p className="text-slate-400 text-xs mt-1">
-                  Federal Capital Territory, Nigeria. Campus visits by scheduled appointment.
+                  Federal Capital Territory, Nigeria. Visits by appointment.
                 </p>
               </div>
 
               <div className="pt-3 border-t border-slate-800">
-                <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 block mb-1">
-                  Admissions Enquiries
-                </span>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-1.5 text-white hover:text-[var(--blue-soft)] font-medium transition-colors"
                 >
-                  <span>Submit an online enquiry</span>
+                  <span>Admissions &amp; Visiting Details</span>
                   <span>&rarr;</span>
                 </Link>
               </div>
@@ -160,7 +169,7 @@ export function Footer() {
           <div className="flex items-center gap-4 sm:gap-6 text-[11px]">
             <span>Motto: {SCHOOL_INFO.motto}</span>
             <span className="text-slate-600">|</span>
-            <span className="text-slate-400">Kabusa, Abuja</span>
+            <span className="text-slate-400">Sheretti, Abuja</span>
           </div>
         </div>
       </div>

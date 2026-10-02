@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { SCHOOL_INFO } from "@/data/schoolData";
 
 interface FormData {
   parentName: string;
@@ -21,18 +22,11 @@ export function ContactForm() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [contactPromptActive, setContactPromptActive] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    // Provide immediate acknowledgment feedback
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-    }, 400);
+    setContactPromptActive(true);
   };
 
   const handleChange = (
@@ -52,22 +46,22 @@ export function ContactForm() {
 
       <div className="mb-8">
         <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] tracking-tight">
-          Admissions Enquiry Form
+          Admissions Enquiry
         </h3>
-        <p className="text-sm text-[var(--muted)] mt-1">
-          Complete the details below to register your interest for Creche, Nursery, Primary, or Junior Secondary (JSS1&ndash;JSS3) enrollment.
+        <p className="text-sm text-[var(--muted)] mt-1 leading-relaxed">
+          For all enrollment questions across Creche, Nursery, Primary, or Junior Secondary (JSS1&ndash;JSS3), please connect directly with our school office.
         </p>
       </div>
 
-      {submitted ? (
+      {contactPromptActive ? (
         <div
           role="status"
           aria-live="polite"
-          className="p-8 bg-[var(--ivory)] border border-[var(--line)] text-[var(--ink)] space-y-4"
+          className="p-8 bg-[var(--ivory)] border border-[var(--line)] text-[var(--ink)] space-y-5"
         >
           <div className="flex items-center gap-2.5 text-[var(--navy)] font-serif text-xl font-medium">
             <svg
-              className="w-6 h-6 text-[var(--navy)] shrink-0"
+              className="w-6 h-6 text-[var(--red)] shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -76,39 +70,59 @@ export function ContactForm() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
               />
             </svg>
-            <span>Enquiry Received</span>
+            <span>Direct Admissions Contact</span>
           </div>
 
-          <p className="text-sm sm:text-base leading-relaxed text-[var(--ink)]/85">
-            Thank you, <strong>{formData.parentName || "Parent/Guardian"}</strong>.
-            We appreciate your interest in Deeper Real Vision Academy. The admissions office in Kabusa, Abuja will review your enquiry.
+          <p className="text-base leading-relaxed text-[var(--ink)]/85">
+            For admissions enquiries, please contact DRVA on{" "}
+            <a
+              href={`tel:${SCHOOL_INFO.phone}`}
+              className="font-semibold text-[var(--navy)] underline hover:text-[var(--red)] transition-colors"
+            >
+              {SCHOOL_INFO.phone}
+            </a>
+            .
           </p>
 
-          <div className="pt-2">
+          <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed">
+            Our school desk in Sheretti, Abuja is available to provide guidance on
+            stage placement, documentation, and campus walk appointments.
+          </p>
+
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              href={`tel:${SCHOOL_INFO.phone}`}
+              className="inline-flex items-center justify-center px-6 py-3 text-xs font-mono uppercase tracking-wider font-semibold text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all shadow-xs"
+            >
+              Call {SCHOOL_INFO.phone}
+            </a>
             <button
               type="button"
-              onClick={() => {
-                setFormData({
-                  parentName: "",
-                  email: "",
-                  phone: "",
-                  childStage: "",
-                  interestedLevel: "Primary",
-                  message: "",
-                });
-                setSubmitted(false);
-              }}
-              className="inline-flex items-center justify-center px-5 py-2.5 text-xs font-mono uppercase tracking-wider text-[var(--navy)] bg-white border border-[var(--line)] hover:bg-[var(--paper)] transition-colors shadow-2xs"
+              onClick={() => setContactPromptActive(false)}
+              className="inline-flex items-center justify-center px-5 py-3 text-xs font-mono uppercase tracking-wider text-[var(--navy)] bg-white border border-[var(--line)] hover:bg-[var(--paper)] transition-colors"
             >
-              Submit Another Enquiry
+              Back to Form
             </button>
           </div>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Quick Telephone Advisory Strip */}
+          <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] flex items-center justify-between gap-3 text-xs">
+            <span className="text-[var(--ink)]/80 font-normal">
+              Direct telephone line:
+            </span>
+            <a
+              href={`tel:${SCHOOL_INFO.phone}`}
+              className="font-mono font-semibold text-[var(--navy)] hover:text-[var(--red)] transition-colors"
+            >
+              {SCHOOL_INFO.phone}
+            </a>
+          </div>
+
           {/* Parent/Guardian Name */}
           <div>
             <label
@@ -164,7 +178,7 @@ export function ContactForm() {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="+234..."
+                placeholder="080..."
                 className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
               />
             </div>
@@ -235,10 +249,9 @@ export function ContactForm() {
           <div>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] disabled:opacity-50 transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2 shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2 shadow-xs"
             >
-              {isSubmitting ? "Processing..." : "Submit enquiry"}
+              Submit enquiry
             </button>
           </div>
         </form>

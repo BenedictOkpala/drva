@@ -5,15 +5,16 @@ import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionEyebrow } from "@/components/common/SectionEyebrow";
 import {
-  PROVISIONAL_ADMISSIONS_JOURNEY,
-  ADMISSIONS_PENDING_SECTIONS,
+  ADMISSIONS_JOURNEY,
+  ADMISSIONS_SECTIONS,
   ADMISSIONS_FAQS,
+  SCHOOL_INFO,
 } from "@/data/schoolData";
 
 export const metadata: Metadata = {
   title: "Admissions | DRVA",
   description:
-    "Admissions information for Deeper Real Vision Academy (DRVA). Explore our provisional admissions journey, enrollment guidelines, and enquiry steps.",
+    "Admissions information for Deeper Real Vision Academy (DRVA) in Sheretti, Abuja. Explore our admissions journey, enrollment guidelines, and enquiry steps.",
 };
 
 export default function AdmissionsPage() {
@@ -28,7 +29,7 @@ export default function AdmissionsPage() {
           eyebrow="ADMISSIONS"
           title="Your journey to DRVA starts here."
           subtitle="A clear, supportive pathway for prospective families."
-          description="We understand that selecting a school is an important decision. Our admissions team is dedicated to making the enrollment journey welcoming, transparent, and straightforward for your family."
+          description="We understand that selecting a school is an important decision. Our admissions team is dedicated to making the enrollment journey welcoming, transparent, and straightforward for your family in Sheretti, Abuja."
           badge="ENROLLMENT & GUIDELINES"
           variant="action"
           rightSlot={
@@ -37,14 +38,14 @@ export default function AdmissionsPage() {
                 Quick Action
               </span>
               <p className="text-xs text-[var(--ink)]/80 leading-relaxed">
-                Have immediate questions about enrolling your child for Creche, Nursery, Primary, or Junior Secondary (JSS1–JSS3)?
+                Have questions about enrolling your child for Creche, Nursery, Primary, or Junior Secondary (JSS1–JSS3)?
               </p>
-              <Link
-                href="/contact"
+              <a
+                href={SCHOOL_INFO.phoneTel}
                 className="w-full inline-flex items-center justify-center py-2.5 text-xs font-mono uppercase tracking-wider font-semibold text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] transition-colors"
               >
-                Send Direct Enquiry &rarr;
-              </Link>
+                Call {SCHOOL_INFO.phone} &rarr;
+              </a>
             </div>
           }
         />
@@ -61,7 +62,7 @@ export default function AdmissionsPage() {
 
             {/* 4 Connected Sequential Steps */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-              {PROVISIONAL_ADMISSIONS_JOURNEY.map((step) => (
+              {ADMISSIONS_JOURNEY.map((step) => (
                 <div
                   key={step.step}
                   className="p-8 bg-[var(--ivory)] border border-[var(--line)] flex flex-col justify-between relative group hover:border-[var(--navy)] transition-colors"
@@ -115,7 +116,7 @@ export default function AdmissionsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {ADMISSIONS_PENDING_SECTIONS.map((section, idx) => (
+              {ADMISSIONS_SECTIONS.map((section, idx) => (
                 <div
                   key={idx}
                   className="p-8 bg-[var(--paper)] border border-[var(--line)] flex flex-col justify-between"
@@ -183,22 +184,21 @@ export default function AdmissionsPage() {
               Ready to take the next step?
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto mb-10">
-              Submit your enquiry online or connect directly with our admissions
-              office for personalized guidance.
+              Connect directly with our admissions desk on {SCHOOL_INFO.phone} or send an enquiry.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
+              <a
+                href={SCHOOL_INFO.phoneTel}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide text-[var(--navy)] bg-[var(--ivory)] hover:bg-white active:scale-[0.99] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-xs"
               >
-                Begin an enquiry
-              </Link>
+                Call {SCHOOL_INFO.phone}
+              </a>
               <Link
-                href="/contact#office-details"
+                href="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 text-sm font-medium tracking-wide text-white hover:text-slate-200 bg-[var(--navy-dark)] border border-slate-700 hover:border-slate-500 transition-all"
               >
-                Contact the school &rarr;
+                Enquiry form &amp; location &rarr;
               </Link>
             </div>
           </div>
