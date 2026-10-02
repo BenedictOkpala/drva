@@ -89,7 +89,7 @@ export function PlaceholderFrame({
                 isDark ? "text-slate-400/80" : "text-[var(--muted)]"
               }`}
             >
-              DRVA &bull; KABUSA, ABUJA
+              DRVA &bull; SHERETTI, ABUJA
             </span>
           )}
 

@@ -42,6 +42,7 @@ export function Header() {
     { label: "About", href: "/about" },
     { label: "Academics", href: "/academics" },
     { label: "School Life", href: "/school-life" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Admissions", href: "/admissions" },
     { label: "Contact", href: "/contact" },
   ];
@@ -203,7 +204,7 @@ export function Header() {
             <div className="pt-2 flex flex-col gap-3">
               <div className="flex items-center justify-center gap-2.5 pb-1">
                 <SchoolCrest size="xs" />
-                <span className="font-serif text-xs text-[var(--navy)]">DRVA &bull; Kabusa, Abuja</span>
+                <span className="font-serif text-xs text-[var(--navy)]">DRVA &bull; Sheretti, Abuja</span>
               </div>
               <Link
                 href="/contact"

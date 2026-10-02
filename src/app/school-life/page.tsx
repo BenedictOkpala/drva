@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
@@ -261,8 +262,15 @@ export default function SchoolLifePage() {
                     {eventsFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  Shared School Traditions
+                <div className="mt-6 pt-4 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono">
+                  <span className="text-[var(--muted)]">Shared School Traditions</span>
+                  <Link
+                    href="/gallery"
+                    className="text-[var(--navy)] hover:text-[var(--red)] font-semibold transition-colors flex items-center gap-1"
+                  >
+                    <span>View Gallery</span>
+                    <span>&rarr;</span>
+                  </Link>
                 </div>
               </div>
             </div>

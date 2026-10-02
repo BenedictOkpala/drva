@@ -71,6 +71,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/gallery" className="hover:text-white transition-colors">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link href="/admissions" className="hover:text-white transition-colors">
                   Admissions
                 </Link>
