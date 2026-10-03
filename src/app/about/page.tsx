@@ -68,7 +68,7 @@ export default function AboutPage() {
                 {/* Subtitle Under Image */}
                 <div className="mt-4 pt-3 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
                   <span>DRVA Foundation</span>
-                  <span>Established October 2016</span>
+                  <span>Established 2015</span>
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     Official Seal &amp; Crest
                   </span>
                   <span className="text-xs text-[var(--navy)] font-heading font-bold mt-1">
-                    Sheretti, Abuja &bull; Est. October 2016
+                    Sheretti, Abuja &bull; Est. 2015
                   </span>
                 </div>
 

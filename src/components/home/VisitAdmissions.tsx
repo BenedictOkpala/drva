@@ -81,7 +81,7 @@ export function VisitAdmissions() {
               </div>
 
               <div className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-                <span>Sheretti &bull; Abuja &bull; Founded October 2016</span>
+                <span>Sheretti &bull; Abuja &bull; Founded 2015</span>
               </div>
             </div>
           </div>

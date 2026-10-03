@@ -188,6 +188,17 @@ export function LifeAtDRVA() {
                   Meireer Education Foundation&apos;s 2026 International Day of
                   Education Essay Competition.
                 </p>
+                <div className="pt-1">
+                  <a
+                    href="https://themeireerfoundation.org/blog/press-release/mef-international-day-for-education-essay-competition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs uppercase tracking-wider font-bold text-[var(--navy)] hover:text-[var(--red)] transition-colors"
+                  >
+                    <span>Read the story</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

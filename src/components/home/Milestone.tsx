@@ -17,10 +17,10 @@ export function Milestone() {
               <SchoolCrest variant="dark" size="lg" priority />
               <div className="mt-5 pt-4 border-t border-slate-800 w-full">
                 <span className="font-heading font-bold text-3xl text-white tracking-tight block">
-                  2016 &mdash; 2026
+                  Since 2015
                 </span>
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold mt-1 block">
-                  A DECADE OF DRVA
+                  DEEPER REAL VISION ACADEMY
                 </span>
               </div>
             </div>
@@ -35,7 +35,7 @@ export function Milestone() {
               </div>
 
               <h3 className="font-heading font-bold text-3xl sm:text-4xl text-white tracking-tight leading-[1.15]">
-                Ten years of learning, character and community.
+                {MILESTONE_DATA.tagline}
               </h3>
 
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">

@@ -5,13 +5,13 @@
  * Verified School Information:
  * - Name: Deeper Real Vision Academy (DRVA)
  * - Location: Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria
- * - Founded: October 2016
+ * - Founded: 2015
  * - Educational Stages: Creche, Nursery, Primary, Junior Secondary (JSS1–JSS3)
  * - Future Expansion: Senior Secondary School (Future Plan)
  * - Motto: IN GOD WE TRUST
  * - Phone: 08036135006
  * - Leadership: Mrs Okpala Priscilla (School Leadership)
- * - Milestone: 2016 — 2026 (A decade of learning and growth)
+ * - Milestone: Since 2015 (Growing with every generation)
  */
 
 export const SCHOOL_INFO = {
@@ -25,10 +25,10 @@ export const SCHOOL_INFO = {
   cityState: "Sheretti, Abuja",
   phone: "08036135006",
   phoneTel: "tel:08036135006",
-  founded: "October 2016",
-  foundedYear: 2016,
-  milestoneYears: "2016 — 2026",
-  milestoneTag: "A decade of learning and growth",
+  founded: "2015",
+  foundedYear: 2015,
+  milestoneYears: "Since 2015",
+  milestoneTag: "Growing with every generation",
   levels: ["Creche", "Nursery", "Primary", "Junior Secondary"] as const,
   juniorSecondaryScope: "JSS1 – JSS3",
   futureExpansion: "Looking ahead, DRVA plans to expand into Senior Secondary School, continuing the learning journey through an additional stage of education.",
@@ -46,7 +46,7 @@ export const SCHOOL_CONTACT = {
   address: {
     label: "Campus Location",
     value: "Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria",
-    note: "Visiting by scheduled appointment.",
+    note: "Official school premises in Sheretti, Abuja.",
   },
   phone: {
     label: "Phone Line",
@@ -57,7 +57,7 @@ export const SCHOOL_CONTACT = {
   officeHours: {
     label: "School Office",
     value: "Monday – Friday, Term Time",
-    note: "Visiting by scheduled appointment.",
+    note: "General and admissions enquiries.",
   },
 };
 
@@ -65,9 +65,9 @@ export const SCHOOL_STORY = {
   title: "Our Story",
   eyebrow: "THE DRVA STORY",
   paragraphs: [
-    "Deeper Real Vision Academy has been part of the Abuja community since 2016. Established with a commitment to giving children a strong foundation for learning and life, DRVA has continued to grow with the families and community it serves.",
+    "Deeper Real Vision Academy has been part of the Abuja community since 2015. Established with a commitment to giving children a strong foundation for learning and life, DRVA has continued to grow with the families and community it serves.",
     "Today, the Academy supports learners from Creche through Junior Secondary, with an environment that encourages curiosity, discipline, confidence and steady academic growth.",
-    "As DRVA marks a decade of learning and growth, the journey continues. With plans to expand into Senior Secondary School, the Academy looks ahead to serving its learners through even more stages of their education.",
+    "With plans to expand into Senior Secondary School, the Academy looks ahead to serving its learners through even more stages of their education, growing with every generation.",
   ],
 };
 

@@ -19,7 +19,7 @@ export function Hero() {
               <SchoolCrest size="xs" priority />
               <span className="w-4 h-0.5 bg-[var(--red)]" />
               <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
-                SHERETTI, ABUJA &bull; EST. OCTOBER 2016
+                SHERETTI, ABUJA &bull; EST. 2015
               </span>
             </div>
 

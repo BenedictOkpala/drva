@@ -30,7 +30,7 @@ export default function HomePage() {
         {/* 6. White Life at DRVA (4 Independent Real Photographs Showcase) */}
         <LifeAtDRVA />
 
-        {/* 7. Deep Navy 10-Year Milestone: 2016 — 2026 (#0B1D2F) */}
+        {/* 7. Deep Navy Milestone: Since 2015 (#0B1D2F) */}
         <Milestone />
 
         {/* 8. Visit DRVA & Admissions Closing Pathway */}

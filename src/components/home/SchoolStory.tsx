@@ -18,7 +18,7 @@ export function SchoolStory() {
                 <SchoolCrest variant="dark" size="md" priority />
                 <div>
                   <span className="text-xs uppercase tracking-wider font-semibold text-[var(--blue-soft)] block">
-                    FOUNDED OCTOBER 2016
+                    FOUNDED 2015
                   </span>
                   <span className="font-heading text-base font-bold text-white">
                     Sheretti, Abuja
@@ -60,7 +60,7 @@ export function SchoolStory() {
             </h2>
 
             <p className="font-heading font-medium text-lg sm:text-xl text-slate-200 leading-relaxed">
-              Founded in October 2016 in Sheretti, Abuja, Deeper Real Vision Academy
+              Founded in 2015 in Sheretti, Abuja, Deeper Real Vision Academy
               was established to provide children with a disciplined, uplifting,
               and values-driven education.
             </p>

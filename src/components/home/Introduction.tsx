@@ -22,7 +22,7 @@ export function Introduction() {
             <div className="mt-8 pt-8 border-t border-[#E4E7EB] hidden lg:block space-y-4">
               <div className="flex items-center gap-4 text-xs text-[var(--navy)]">
                 <span className="px-2.5 py-1 bg-white border border-[#E4E7EB] font-semibold uppercase">
-                  EST. OCTOBER 2016
+                  EST. 2015
                 </span>
                 <span className="text-[var(--muted)] font-medium uppercase">SHERETTI, ABUJA</span>
               </div>

@@ -35,13 +35,13 @@ export interface MilestoneData {
 }
 
 export const MILESTONE_DATA: MilestoneData = {
-  years: "2016 — 2026",
-  tagline: "A decade of educational purpose.",
-  eyebrow: "TEN-YEAR COMMEMORATION",
+  years: "Since 2015",
+  tagline: "Growing with every generation.",
+  eyebrow: "SINCE 2015",
   description:
-    "Established in October 2016 in Sheretti, Abuja, Deeper Real Vision Academy marks a decade of learning and growth. As DRVA commemorates this milestone, the journey continues with plans to expand into Senior Secondary School, serving learners through even more stages of their education.",
+    "Established in 2015 in Sheretti, Abuja, Deeper Real Vision Academy is committed to learning and character development. As DRVA continues its journey, plans are underway to expand into Senior Secondary School, serving learners through even more stages of their education.",
   details: [
-    { label: "FOUNDED", value: "October 2016" },
+    { label: "FOUNDED", value: "2015" },
     { label: "LOCATION", value: "Sheretti, Abuja, Nigeria" },
     { label: "EDUCATIONAL SCOPE", value: "Creche through JSS3" },
     { label: "FUTURE EXPANSION", value: "Senior Secondary (Planned)" },

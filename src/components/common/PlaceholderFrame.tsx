@@ -77,7 +77,7 @@ export function PlaceholderFrame({
               isDark ? "text-slate-400" : "text-[var(--muted)]"
             }`}
           >
-            Est. 2016
+            Est. 2015
           </span>
         </div>
 
