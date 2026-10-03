@@ -92,7 +92,7 @@ export function SchoolLife() {
               {!photoError ? (
                 <div className="relative w-full aspect-[16/10] bg-[#E4E7EB] overflow-hidden">
                   <Image
-                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg"
+                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.png"
                     alt="DRVA pupil dressed in blue traditional attire holding ceremonial whisk during Cultural Day celebration"
                     fill
                     sizes="(max-width: 1024px) 100vw, 600px"

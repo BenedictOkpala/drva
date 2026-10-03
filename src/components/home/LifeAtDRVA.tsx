@@ -55,7 +55,7 @@ export function LifeAtDRVA() {
               <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                 {!photoErrors["photo-1"] ? (
                   <Image
-                    src="/images/drva/cultural-day/pupil-traditional-beadwork.jpg"
+                    src="/images/drva/cultural-day/pupil-traditional-beadwork.png"
                     alt="Young DRVA pupil wearing traditional attire with beadwork celebrating Cultural Day"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -89,7 +89,7 @@ export function LifeAtDRVA() {
               <div className="relative w-full aspect-[16/10] bg-[#E4E7EB] overflow-hidden">
                 {!photoErrors["photo-3"] ? (
                   <Image
-                    src="/images/drva/learning/pupils-learning-computing.jpg"
+                    src="/images/drva/learning/pupils-learning-computing.png"
                     alt="DRVA pupils gathered around a computer during classroom learning"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 66vw"
@@ -123,7 +123,7 @@ export function LifeAtDRVA() {
               <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                 {!photoErrors["photo-2"] ? (
                   <Image
-                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg"
+                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.png"
                     alt="DRVA pupil in blue traditional attire holding ceremonial whisk at Cultural Day"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
@@ -157,7 +157,7 @@ export function LifeAtDRVA() {
               <div className="relative w-full aspect-[16/10] bg-[#E4E7EB] overflow-hidden">
                 {!photoErrors["photo-4"] ? (
                   <Image
-                    src="/images/drva/achievements/favour-chima-essay-award.jpg"
+                    src="/images/drva/achievements/favour-chima-essay-award.png"
                     alt="DRVA pupil Favour Chima receiving her first place certificate for the 2026 International Day of Education Essay Competition"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 60vw"

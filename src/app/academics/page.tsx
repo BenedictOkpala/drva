@@ -221,7 +221,7 @@ export default function AcademicsPage() {
                 <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                   <div className="relative w-full aspect-[4/3] bg-[#E4E7EB] overflow-hidden">
                     <Image
-                      src="/images/drva/academics/pupils-learning-computing.jpg"
+                      src="/images/drva/learning/pupils-learning-computing.png"
                       alt="DRVA pupils engaged in classroom learning in Sheretti, Abuja"
                       fill
                       sizes="(max-width: 1024px) 100vw, 500px"

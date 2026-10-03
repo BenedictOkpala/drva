@@ -34,7 +34,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspectRatio: "portrait",
     dateOrTerm: "Cultural Day",
     badge: "HERITAGE",
-    src: "/images/drva/cultural-day/pupil-traditional-beadwork.jpg",
+    src: "/images/drva/cultural-day/pupil-traditional-beadwork.png",
   },
   {
     id: "cultural-day-ceremonial-whisk",
@@ -46,7 +46,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspectRatio: "portrait",
     dateOrTerm: "Cultural Day",
     badge: "CELEBRATION",
-    src: "/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg",
+    src: "/images/drva/cultural-day/pupil-blue-traditional-whisk.png",
   },
   {
     id: "pupils-learning-practice",
@@ -58,7 +58,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspectRatio: "landscape",
     dateOrTerm: "Classroom Practice",
     badge: "PRACTICE",
-    src: "/images/drva/learning/pupils-learning-computing.jpg",
+    src: "/images/drva/learning/pupils-learning-computing.png",
   },
   {
     id: "favour-chima-essay-award",
@@ -70,6 +70,6 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     aspectRatio: "landscape",
     dateOrTerm: "2026 Competition",
     badge: "ACHIEVEMENT",
-    src: "/images/drva/achievements/favour-chima-essay-award.jpg",
+    src: "/images/drva/achievements/favour-chima-essay-award.png",
   },
 ];

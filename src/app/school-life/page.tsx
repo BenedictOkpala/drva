@@ -83,7 +83,7 @@ export default function SchoolLifePage() {
               <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
                 <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                   <Image
-                    src="/images/drva/cultural-day/pupil-traditional-beadwork.jpg"
+                    src="/images/drva/cultural-day/pupil-traditional-beadwork.png"
                     alt="Young DRVA pupil dressed in traditional attire with ceremonial beadwork"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -104,7 +104,7 @@ export default function SchoolLifePage() {
               <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
                 <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                   <Image
-                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg"
+                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.png"
                     alt="DRVA pupil dressed in blue traditional attire holding ceremonial whisk"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
