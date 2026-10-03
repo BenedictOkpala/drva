@@ -51,10 +51,10 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[var(--paper)]">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Understated Category Filter Bar */}
-        <div className="mb-12 border-b border-[var(--line)] pb-4">
+        {/* Category Filter Bar */}
+        <div className="mb-12 border-b border-[#E4E7EB] pb-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center flex-wrap gap-2 sm:gap-3" role="tablist" aria-label="Gallery category filters">
               {GALLERY_CATEGORIES.map((category) => {
@@ -67,18 +67,18 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
                     role="tab"
                     aria-selected={isActive}
                     onClick={() => setActiveCategory(category)}
-                    className={`relative px-4 py-2.5 text-xs sm:text-sm font-medium tracking-wide transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] ${
+                    className={`relative px-4 py-2.5 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] ${
                       isActive
-                        ? "text-[var(--navy)] font-semibold bg-white border border-[var(--line)] shadow-xs"
-                        : "text-[var(--muted)] hover:text-[var(--navy)] hover:bg-white/60"
+                        ? "text-[var(--navy)] bg-white border border-[#E4E7EB] shadow-xs"
+                        : "text-[var(--muted)] hover:text-[var(--navy)] hover:bg-[#F7F8FA]"
                     }`}
                   >
                     <span>{category}</span>
                     <span
-                      className={`ml-2 text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
+                      className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
                         isActive
                           ? "bg-[var(--navy)] text-white"
-                          : "bg-[var(--ivory)] text-[var(--muted)]"
+                          : "bg-[#F7F8FA] text-[var(--muted)]"
                       }`}
                     >
                       {count}
@@ -94,13 +94,13 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
             </div>
 
             {/* Displaying count info */}
-            <div className="text-xs font-mono text-[var(--muted)] hidden md:block">
+            <div className="text-xs text-[var(--muted)] font-medium hidden md:block">
               Showing {filteredItems.length} {filteredItems.length === 1 ? "moment" : "moments"}
             </div>
           </div>
         </div>
 
-        {/* Gallery Grid: Editorial mixed-size responsive layout */}
+        {/* Gallery Grid */}
         {filteredItems.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredItems.map((item, index) => (
@@ -113,8 +113,8 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
             ))}
           </div>
         ) : (
-          <div className="py-20 text-center bg-[var(--ivory)] border border-[var(--line)] p-8">
-            <p className="font-serif text-xl text-[var(--navy)] mb-2">
+          <div className="py-20 text-center bg-[#F7F8FA] border border-[#E4E7EB] p-8">
+            <p className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
               No photographs available in this category yet.
             </p>
             <p className="text-sm text-[var(--muted)] max-w-md mx-auto">

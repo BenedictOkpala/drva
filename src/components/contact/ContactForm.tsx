@@ -39,13 +39,9 @@ export function ContactForm() {
   };
 
   return (
-    <div className="bg-[var(--paper)] border border-[var(--line)] p-6 sm:p-10 relative shadow-xs">
-      {/* Corner depth lines */}
-      <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-[var(--navy)]/30 pointer-events-none" />
-      <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-[var(--navy)]/30 pointer-events-none" />
-
+    <div className="bg-white border border-[#E4E7EB] p-6 sm:p-10 relative shadow-sm">
       <div className="mb-8">
-        <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] tracking-tight">
+        <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] tracking-tight">
           Admissions Enquiry
         </h3>
         <p className="text-sm text-[var(--muted)] mt-1 leading-relaxed">
@@ -57,9 +53,9 @@ export function ContactForm() {
         <div
           role="status"
           aria-live="polite"
-          className="p-8 bg-[var(--ivory)] border border-[var(--line)] text-[var(--ink)] space-y-5"
+          className="p-8 bg-[#F7F8FA] border border-[#E4E7EB] text-[var(--ink)] space-y-5"
         >
-          <div className="flex items-center gap-2.5 text-[var(--navy)] font-serif text-xl font-medium">
+          <div className="flex items-center gap-2.5 text-[var(--navy)] font-heading text-xl font-bold">
             <svg
               className="w-6 h-6 text-[var(--red)] shrink-0"
               fill="none"
@@ -80,7 +76,7 @@ export function ContactForm() {
             For admissions enquiries, please contact DRVA on{" "}
             <a
               href={`tel:${SCHOOL_INFO.phone}`}
-              className="font-semibold text-[var(--navy)] underline hover:text-[var(--red)] transition-colors"
+              className="font-bold text-[var(--navy)] underline hover:text-[var(--red)] transition-colors"
             >
               {SCHOOL_INFO.phone}
             </a>
@@ -95,14 +91,14 @@ export function ContactForm() {
           <div className="pt-2 flex flex-wrap items-center gap-3">
             <a
               href={`tel:${SCHOOL_INFO.phone}`}
-              className="inline-flex items-center justify-center px-6 py-3 text-xs font-mono uppercase tracking-wider font-semibold text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all shadow-xs"
+              className="inline-flex items-center justify-center px-6 py-3 text-xs uppercase tracking-wider font-bold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all shadow-xs"
             >
               Call {SCHOOL_INFO.phone}
             </a>
             <button
               type="button"
               onClick={() => setContactPromptActive(false)}
-              className="inline-flex items-center justify-center px-5 py-3 text-xs font-mono uppercase tracking-wider text-[var(--navy)] bg-white border border-[var(--line)] hover:bg-[var(--paper)] transition-colors"
+              className="inline-flex items-center justify-center px-5 py-3 text-xs uppercase tracking-wider font-bold text-[var(--navy)] bg-white border border-[#E4E7EB] hover:bg-[#F7F8FA] transition-colors"
             >
               Back to Form
             </button>
@@ -110,14 +106,14 @@ export function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Quick Telephone Advisory Strip */}
-          <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] flex items-center justify-between gap-3 text-xs">
+          {/* Telephone Advisory */}
+          <div className="p-4 bg-[#F7F8FA] border border-[#E4E7EB] flex items-center justify-between gap-3 text-xs">
             <span className="text-[var(--ink)]/80 font-normal">
               Direct telephone line:
             </span>
             <a
               href={`tel:${SCHOOL_INFO.phone}`}
-              className="font-mono font-semibold text-[var(--navy)] hover:text-[var(--red)] transition-colors"
+              className="font-bold text-[var(--navy)] hover:text-[var(--red)] transition-colors"
             >
               {SCHOOL_INFO.phone}
             </a>
@@ -127,7 +123,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="parentName"
-              className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+              className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
             >
               Parent / Guardian Name <span className="text-[var(--red)]">*</span>
             </label>
@@ -139,7 +135,7 @@ export function ContactForm() {
               value={formData.parentName}
               onChange={handleChange}
               placeholder="e.g. Mrs. Adebayo"
-              className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
+              className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
             />
           </div>
 
@@ -148,7 +144,7 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+                className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
               >
                 Email Address <span className="text-[var(--red)]">*</span>
               </label>
@@ -160,14 +156,14 @@ export function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="name@example.com"
-                className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
               />
             </div>
 
             <div>
               <label
                 htmlFor="phone"
-                className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+                className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
               >
                 Phone Number <span className="text-[var(--red)]">*</span>
               </label>
@@ -179,7 +175,7 @@ export function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="080..."
-                className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
               />
             </div>
           </div>
@@ -189,7 +185,7 @@ export function ContactForm() {
             <div>
               <label
                 htmlFor="childStage"
-                className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+                className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
               >
                 Child&apos;s Current Class / Stage (Optional)
               </label>
@@ -200,14 +196,14 @@ export function ContactForm() {
                 value={formData.childStage}
                 onChange={handleChange}
                 placeholder="e.g. Entering Primary 1"
-                className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
               />
             </div>
 
             <div>
               <label
                 htmlFor="interestedLevel"
-                className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+                className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
               >
                 Interested Educational Stage <span className="text-[var(--red)]">*</span>
               </label>
@@ -216,7 +212,7 @@ export function ContactForm() {
                 name="interestedLevel"
                 value={formData.interestedLevel}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all"
               >
                 <option value="Creche">Creche</option>
                 <option value="Nursery">Nursery</option>
@@ -230,7 +226,7 @@ export function ContactForm() {
           <div>
             <label
               htmlFor="message"
-              className="block text-xs font-mono uppercase tracking-wider text-[var(--navy)] font-medium mb-2"
+              className="block text-xs uppercase tracking-wider text-[var(--navy)] font-bold mb-2"
             >
               Enquiry / Questions (Optional)
             </label>
@@ -241,7 +237,7 @@ export function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               placeholder="Please share any questions regarding admission details, tour appointments, or specific needs."
-              className="w-full px-4 py-3 bg-[var(--ivory)] border border-[var(--line)] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all resize-y"
+              className="w-full px-4 py-3 bg-[#F7F8FA] border border-[#E4E7EB] text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--navy)] focus:border-transparent transition-all resize-y"
             />
           </div>
 
@@ -249,7 +245,7 @@ export function ContactForm() {
           <div>
             <button
               type="submit"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-medium tracking-wide text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2 shadow-xs"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] shadow-xs"
             >
               Submit enquiry
             </button>

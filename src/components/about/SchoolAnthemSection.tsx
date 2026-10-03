@@ -60,7 +60,7 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <section className="py-20 sm:py-28 bg-[var(--ivory)] border-b border-[var(--line)] relative overflow-hidden">
+    <section className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB] relative overflow-hidden">
       {/* Background Watermark Crest Motif */}
       <div className="absolute -right-16 -bottom-16 w-80 h-80 opacity-[0.03] pointer-events-none select-none">
         <SchoolCrest size="xl" />
@@ -72,7 +72,7 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
           <div className="lg:col-span-6 space-y-6">
             <SectionEyebrow text="OUR ANTHEM" />
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
               The sound of DRVA.
             </h2>
 
@@ -82,14 +82,14 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
               discipline, and foundational trust in God.
             </p>
 
-            <div className="p-6 bg-[var(--paper)] border border-[var(--line)] space-y-3">
+            <div className="p-6 bg-white border border-[#E4E7EB] space-y-3 shadow-xs">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-[var(--red)] shrink-0" />
-                <span className="font-mono text-xs uppercase tracking-widest text-[var(--navy)] font-semibold">
+                <span className="w-2 h-2 rounded-full bg-[var(--red)] shrink-0" />
+                <span className="text-xs uppercase tracking-wider text-[var(--navy)] font-bold">
                   FOUNDATIONAL MOTTO
                 </span>
               </div>
-              <p className="font-serif italic text-xl sm:text-2xl text-[var(--navy)]">
+              <p className="font-heading font-bold text-xl sm:text-2xl text-[var(--navy)]">
                 &ldquo;{SCHOOL_INFO.motto}&rdquo;
               </p>
               <p className="text-xs sm:text-sm text-[var(--muted)] leading-relaxed font-normal">
@@ -99,34 +99,28 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
             </div>
           </div>
 
-          {/* Right Column: Elegant Audio Player Architecture */}
+          {/* Right Column: Audio Player */}
           <div className="lg:col-span-6">
-            <div className="p-8 sm:p-10 bg-[var(--paper)] border border-[var(--line)] shadow-xs relative">
-              {/* Corner Framing Elements */}
-              <div className="absolute top-2.5 left-2.5 w-3 h-3 border-t border-l border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute top-2.5 right-2.5 w-3 h-3 border-t border-r border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute bottom-2.5 left-2.5 w-3 h-3 border-b border-l border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute bottom-2.5 right-2.5 w-3 h-3 border-b border-r border-[var(--navy)]/30 pointer-events-none" />
-
+            <div className="p-8 sm:p-10 bg-white border border-[#E4E7EB] shadow-xs relative">
               {/* Player Header */}
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-[var(--line)]">
+              <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#E4E7EB]">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-none border border-[var(--navy)] bg-[var(--ivory)] flex items-center justify-center">
-                    <span className="font-serif text-xs font-semibold text-[var(--navy)]">
+                  <div className="w-9 h-9 rounded-md border border-[#E4E7EB] bg-[#F7F8FA] flex items-center justify-center">
+                    <span className="font-heading text-sm font-bold text-[var(--navy)]">
                       D
                     </span>
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[var(--navy)] font-semibold block">
+                    <span className="text-xs uppercase tracking-wider text-[var(--navy)] font-bold block">
                       DRVA School Anthem
                     </span>
-                    <span className="text-[10px] font-mono uppercase text-[var(--muted)] block">
+                    <span className="text-xs text-[var(--muted)] font-medium block">
                       Deeper Real Vision Academy
                     </span>
                   </div>
                 </div>
 
-                <span className="text-[10px] font-mono tracking-wider uppercase px-2 py-0.5 bg-[var(--ivory)] border border-[var(--line)] text-[var(--navy)]">
+                <span className="text-xs tracking-wider uppercase px-2.5 py-0.5 bg-[#F7F8FA] border border-[#E4E7EB] text-[var(--navy)] font-semibold">
                   HERITAGE
                 </span>
               </div>
@@ -134,9 +128,9 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
               {/* Player Body / Track Representation */}
               <div className="space-y-6">
                 {/* Audio Status Strip */}
-                <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] flex items-center justify-between gap-4">
+                <div className="p-4 bg-[#F7F8FA] border border-[#E4E7EB] flex items-center justify-between gap-4">
                   <div className="space-y-1">
-                    <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--navy)] font-medium block">
+                    <span className="text-xs uppercase tracking-wider text-[var(--navy)] font-bold block">
                       Recording Status
                     </span>
                     <p className="text-xs text-[var(--muted)] leading-relaxed">
@@ -151,7 +145,7 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
                     <button
                       type="button"
                       onClick={togglePlay}
-                      className="w-12 h-12 bg-[var(--navy)] text-white hover:bg-[var(--navy-light)] active:scale-95 transition-all flex items-center justify-center shrink-0 shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
+                      className="w-12 h-12 bg-[var(--navy)] text-white hover:bg-[#1C3C5E] active:scale-95 transition-all flex items-center justify-center shrink-0 shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
                       aria-label={isPlaying ? "Pause anthem" : "Play anthem"}
                     >
                       {isPlaying ? (
@@ -175,7 +169,7 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
                     </button>
                   ) : (
                     <div
-                      className="w-12 h-12 bg-[var(--paper)] border border-[var(--line)] text-[var(--muted)] flex items-center justify-center shrink-0 cursor-not-allowed opacity-80"
+                      className="w-12 h-12 bg-white border border-[#E4E7EB] text-[var(--muted)] flex items-center justify-center shrink-0 cursor-not-allowed opacity-80"
                       title="Pupil recording is currently in production"
                     >
                       <svg
@@ -191,20 +185,20 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
 
                 {/* Progress Bar & Timing Track */}
                 <div className="space-y-2">
-                  <div className="h-1.5 w-full bg-[var(--line)]/60 relative overflow-hidden">
+                  <div className="h-1.5 w-full bg-[#E4E7EB] relative overflow-hidden rounded-full">
                     <div
                       className="h-full bg-[var(--navy)] transition-all duration-200"
                       style={{ width: `${progressPercent}%` }}
                     />
                   </div>
-                  <div className="flex items-center justify-between text-[11px] font-mono text-[var(--muted)]">
+                  <div className="flex items-center justify-between text-xs text-[var(--muted)] font-medium">
                     <span>{formatTime(currentTime)}</span>
                     <span>{formatTime(duration)}</span>
                   </div>
                 </div>
 
-                {/* Editorial Audio Note */}
-                <div className="pt-4 border-t border-[var(--line)] text-xs text-[var(--ink)]/75 font-normal leading-relaxed">
+                {/* Audio Note */}
+                <div className="pt-4 border-t border-[#E4E7EB] text-xs text-[var(--ink)]/75 font-normal leading-relaxed">
                   <p>
                     The official DRVA anthem recording by the school choir is
                     scheduled for release. When published, playback will be enabled
@@ -213,7 +207,7 @@ export function SchoolAnthemSection({ audioSrc }: SchoolAnthemSectionProps) {
                 </div>
               </div>
 
-              {/* Hidden HTML5 Audio Element for Future Audio Integration (preload="none", never autoplays) */}
+              {/* Hidden HTML5 Audio Element */}
               {audioSrc && (
                 <audio
                   ref={audioRef}

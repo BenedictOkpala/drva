@@ -22,12 +22,10 @@ export function SectionEyebrow({
       } ${className}`}
     >
       <span
-        className={`w-5 h-px ${
-          isDark ? "bg-[var(--red)]" : "bg-[var(--red)]"
-        }`}
+        className="w-4 h-0.5 bg-[var(--red)]"
       />
       <span
-        className={`text-xs font-mono tracking-[0.2em] uppercase font-semibold ${
+        className={`text-xs font-bold tracking-wider uppercase ${
           isDark ? "text-slate-200" : "text-[var(--navy)]"
         }`}
       >
@@ -35,12 +33,9 @@ export function SectionEyebrow({
       </span>
       {centered && (
         <span
-          className={`w-5 h-px ${
-            isDark ? "bg-[var(--red)]" : "bg-[var(--red)]"
-          }`}
+          className="w-4 h-0.5 bg-[var(--red)]"
         />
       )}
     </div>
   );
 }
-

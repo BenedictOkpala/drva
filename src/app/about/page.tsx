@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--paper)]">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
       <main className="flex-grow">
-        {/* 1. Quiet, Institutional Page Hero */}
+        {/* 1. Page Hero */}
         <PageHero
           breadcrumbLabel="About"
           eyebrow="ABOUT DRVA"
@@ -36,47 +36,40 @@ export default function AboutPage() {
           badge="INSTITUTIONAL IDENTITY"
           variant="story"
           rightSlot={
-            <div className="p-4 bg-[var(--ivory)] border border-[var(--line)] max-w-xs text-xs font-mono">
-              <span className="text-[10px] uppercase tracking-widest text-[var(--muted)] block mb-1">
+            <div className="p-4 bg-[#F7F8FA] border border-[#E4E7EB] max-w-xs text-xs">
+              <span className="text-xs uppercase tracking-wider text-[var(--muted)] font-semibold block mb-1">
                 Educational Continuum
               </span>
-              <span className="font-serif text-sm sm:text-base text-[var(--navy)] block mb-2 font-medium">
+              <span className="font-heading text-sm sm:text-base text-[var(--navy)] block mb-2 font-bold">
                 Creche &bull; Nursery &bull; Primary &bull; Junior Secondary
               </span>
-              <span className="text-[11px] text-[var(--ink)]/75 leading-relaxed block">
+              <span className="text-xs text-[var(--ink)]/75 leading-relaxed block font-normal">
                 Serving pupils from infant care through JSS3 in Sheretti, Abuja.
               </span>
             </div>
           }
         />
 
-        {/* 2. Large Asymmetric School-Story Composition (Our Story) */}
-        <section className="py-20 sm:py-28 bg-[var(--paper)] border-b border-[var(--line)]">
+        {/* 2. Our Story Composition */}
+        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              {/* Left Column: Large Photography Area */}
+              {/* Left Column: Photography Area */}
               <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="relative p-2 sm:p-3 bg-white border border-[var(--line)] shadow-sm">
-                  {/* Subtle architectural offset frame */}
-                  <div className="absolute -inset-2 border border-[var(--line)]/60 pointer-events-none hidden sm:block" />
-
+                <div className="relative p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                   <PlaceholderFrame
                     aspectRatio="portrait"
                     theme="light"
                     label="Campus & Academic Setting"
                     sublabel="Peaceful learning environment and campus grounds"
                     badge="CAMPUS LIFE"
-                    captionLines={[
-                      "PURPOSEFUL CLASSROOMS.",
-                      "A CALM ENVIRONMENT FOR LEARNING.",
-                    ]}
                   />
                 </div>
 
                 {/* Subtitle Under Image */}
-                <div className="mt-4 pt-3 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono text-[var(--muted)]">
-                  <span>DRVA FOUNDATION</span>
-                  <span>ESTABLISHED OCTOBER 2016</span>
+                <div className="mt-4 pt-3 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
+                  <span>DRVA Foundation</span>
+                  <span>Established October 2016</span>
                 </div>
               </div>
 
@@ -84,7 +77,7 @@ export default function AboutPage() {
               <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
                 <SectionEyebrow text={SCHOOL_STORY.eyebrow} />
 
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
                   {SCHOOL_STORY.title}
                 </h2>
 
@@ -99,35 +92,29 @@ export default function AboutPage() {
         </section>
 
         {/* 3. Heritage & Motto Plaque (IN GOD WE TRUST + Official Crest) */}
-        <section className="py-16 sm:py-20 bg-[var(--ivory)] border-b border-[var(--line)]">
+        <section className="py-16 sm:py-20 bg-[#F7F8FA] border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="p-8 sm:p-12 lg:p-16 bg-[var(--paper)] border border-[var(--line)] relative">
-              {/* Corner Framing Lines */}
-              <div className="absolute top-3 left-3 w-4 h-4 border-t border-l border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute top-3 right-3 w-4 h-4 border-t border-r border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute bottom-3 left-3 w-4 h-4 border-b border-l border-[var(--navy)]/30 pointer-events-none" />
-              <div className="absolute bottom-3 right-3 w-4 h-4 border-b border-r border-[var(--navy)]/30 pointer-events-none" />
-
+            <div className="p-8 sm:p-12 lg:p-16 bg-white border border-[#E4E7EB] relative shadow-xs">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                 {/* Left: Official Crest & Seal */}
-                <div className="md:col-span-4 flex flex-col items-center justify-center p-6 border border-[var(--line)] bg-[var(--ivory)] text-center shadow-xs">
+                <div className="md:col-span-4 flex flex-col items-center justify-center p-6 border border-[#E4E7EB] bg-[#F7F8FA] text-center shadow-xs">
                   <div className="mb-3">
                     <SchoolCrest size="lg" priority />
                   </div>
-                  <span className="font-mono text-[10px] tracking-widest uppercase text-[var(--muted)] block">
-                    Official Seal & Crest
+                  <span className="text-xs uppercase tracking-wider text-[var(--muted)] font-semibold block">
+                    Official Seal &amp; Crest
                   </span>
-                  <span className="text-xs text-[var(--navy)] font-serif mt-1 font-medium">
+                  <span className="text-xs text-[var(--navy)] font-heading font-bold mt-1">
                     Sheretti, Abuja &bull; Est. October 2016
                   </span>
                 </div>
 
-                {/* Right: Historical Motto Presentation */}
+                {/* Right: Motto Presentation */}
                 <div className="md:col-span-8 space-y-3">
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block">
                     FOUNDATIONAL ANCHOR
                   </span>
-                  <h3 className="font-serif italic text-2xl sm:text-3xl text-[var(--navy)]">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)]">
                     &ldquo;{SCHOOL_INFO.motto}&rdquo;
                   </h3>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed">
@@ -144,31 +131,31 @@ export default function AboutPage() {
         {/* 4. Dedicated School Anthem Section */}
         <SchoolAnthemSection />
 
-        {/* 5. Mission & Vision — Split Editorial Composition */}
-        <section className="py-20 sm:py-28 bg-[var(--paper)] border-b border-[var(--line)]">
+        {/* 5. Mission & Vision — Split Composition */}
+        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-14">
               <SectionEyebrow text="INSTITUTIONAL DIRECTION" />
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                 Mission and vision.
               </h2>
             </div>
 
-            {/* Split Composition: Contrasting Paper & Navy Area */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 border border-[var(--line)]">
-              {/* Mission (Warm Paper Side) */}
-              <div className="p-8 sm:p-12 bg-[var(--paper)] flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[var(--line)]">
+            {/* Split Composition */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 border border-[#E4E7EB]">
+              {/* Mission */}
+              <div className="p-8 sm:p-12 bg-[#F7F8FA] flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-[#E4E7EB]">
                 <div>
-                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-[var(--line)]">
-                    <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold">
-                      {"//"} 01 OUR MISSION
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      01 OUR MISSION
                     </span>
-                    <span className="text-[10px] font-mono uppercase text-[var(--muted)]">
-                      PURPOSE & COMMITMENT
+                    <span className="text-xs uppercase tracking-wider text-[var(--muted)] font-semibold">
+                      PURPOSE &amp; COMMITMENT
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] mb-4 leading-snug">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] mb-4 leading-snug">
                     {SCHOOL_MISSION_VISION.mission.heading}
                   </h3>
 
@@ -179,18 +166,18 @@ export default function AboutPage() {
               </div>
 
               {/* Vision (Deep Navy Side) */}
-              <div className="p-8 sm:p-12 bg-[var(--navy)] text-white flex flex-col justify-between">
+              <div className="p-8 sm:p-12 bg-[#0B1D2F] text-white flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-700">
-                    <span className="text-xs font-mono uppercase tracking-widest text-slate-300 font-semibold">
-                      {"//"} 02 OUR VISION
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#24415F]">
+                    <span className="text-xs uppercase tracking-wider text-slate-300 font-bold">
+                      02 OUR VISION
                     </span>
-                    <span className="text-[10px] font-mono uppercase text-slate-400">
+                    <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
                       LONG-TERM ASPIRATION
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl sm:text-3xl text-slate-100 mb-4 leading-snug">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4 leading-snug">
                     {SCHOOL_MISSION_VISION.vision.heading}
                   </h3>
 
@@ -204,12 +191,12 @@ export default function AboutPage() {
         </section>
 
         {/* 6. Values as Editorial Principles */}
-        <section className="py-20 sm:py-28 bg-[var(--ivory)] border-b border-[var(--line)]">
+        <section className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[var(--line)] items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[#E4E7EB] items-end">
               <div className="lg:col-span-7">
                 <SectionEyebrow text="CORE PRINCIPLES" />
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                   Four enduring virtues.
                 </h2>
               </div>
@@ -221,27 +208,27 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* 4 Large Numbered Statements */}
+            {/* 4 Statements */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
               {SCHOOL_VALUES.map((value) => (
                 <div
                   key={value.number}
-                  className="flex flex-col pt-6 border-t border-[var(--line)]"
+                  className="flex flex-col pt-6 border-t border-[#E4E7EB]"
                 >
                   <div className="flex items-baseline justify-between mb-3">
-                    <span className="font-mono text-sm font-semibold tracking-widest text-[var(--red)]">
-                      {"//"} {value.number}
+                    <span className="text-xs font-bold tracking-wider text-[var(--red)] uppercase">
+                      Value {value.number}
                     </span>
-                    <span className="text-[11px] font-mono tracking-wider uppercase text-[var(--muted)]">
-                      CORE VIRTUE
+                    <span className="text-xs tracking-wider uppercase text-[var(--muted)] font-semibold">
+                      Core Virtue
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] tracking-tight mb-1">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] tracking-tight mb-1">
                     {value.title}
                   </h3>
 
-                  <p className="font-serif italic text-sm text-[var(--muted)] mb-3">
+                  <p className="font-heading font-medium text-sm text-[var(--muted)] mb-3">
                     {value.subtitle}
                   </p>
 
@@ -254,52 +241,48 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 7. Leadership Visual Composition (Mrs Okpala Priscilla) */}
-        <section className="py-20 sm:py-28 bg-[var(--paper)] border-b border-[var(--line)]">
+        {/* 7. Leadership Composition (Mrs Okpala Priscilla) */}
+        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
               {/* Portrait Frame */}
               <div className="lg:col-span-5">
                 <div className="relative max-w-sm mx-auto lg:max-w-none">
-                  <div className="p-2 sm:p-3 bg-white border border-[var(--line)] shadow-sm">
+                  <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                     <PlaceholderFrame
                       aspectRatio="portrait"
                       theme="light"
                       label={SCHOOL_INFO.leadership.name}
                       sublabel={`${SCHOOL_INFO.leadership.role} • DRVA`}
                       badge="LEADERSHIP"
-                      captionLines={[
-                        "MRS OKPALA PRISCILLA.",
-                        "SCHOOL LEADERSHIP.",
-                      ]}
                     />
                   </div>
                 </div>
               </div>
 
-              {/* Message & Title Slot */}
+              {/* Message */}
               <div className="lg:col-span-7 space-y-6">
                 <SectionEyebrow text="SCHOOL LEADERSHIP" />
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
                   Dedicated stewardship.
                 </h2>
 
                 <div className="space-y-4 text-base sm:text-lg text-[var(--ink)]/85 leading-relaxed font-normal">
-                  <p className="font-serif italic text-lg sm:text-xl text-[var(--navy)] leading-relaxed">
+                  <p className="font-heading font-medium text-lg sm:text-xl text-[var(--navy)] leading-relaxed">
                     &ldquo;{SCHOOL_INFO.leadership.message}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono">
+                <div className="pt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs">
                   <div>
-                    <span className="font-serif text-base font-medium text-[var(--navy)] block">
+                    <span className="font-heading text-base font-bold text-[var(--navy)] block">
                       {SCHOOL_INFO.leadership.name}
                     </span>
-                    <span className="uppercase text-[var(--muted)]">
+                    <span className="uppercase tracking-wider text-[var(--muted)] font-semibold">
                       {SCHOOL_INFO.leadership.role}
                     </span>
                   </div>
-                  <span className="font-serif italic text-sm text-[var(--navy)]">
+                  <span className="font-heading font-bold text-sm text-[var(--navy)]">
                     In God We Trust
                   </span>
                 </div>

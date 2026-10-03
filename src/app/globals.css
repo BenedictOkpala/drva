@@ -10,16 +10,18 @@
   --color-blue: #2867b2;
   --color-blue-dark: #1d508e;
   --color-blue-soft: #eaf2fa;
-  --color-ivory: #f7f3ea;
-  --color-ivory-dark: #ece4d2;
-  --color-paper: #fcfbf8;
+  --color-surface-subtle: #f7f8fa;
+  --color-surface-light: #fafafa;
+  --color-paper: #ffffff;
+  --color-ivory: #f7f8fa;
   --color-ink: #17202a;
   --color-muted: #66717d;
-  --color-line: #ddd9d0;
+  --color-line: #e4e7eb;
   --color-line-dark: #24415f;
 
-  --font-serif: var(--font-serif), Georgia, Cambria, "Times New Roman", serif;
+  --font-heading: var(--font-heading), var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-heading), var(--font-sans), sans-serif;
 }
 
 :root {
@@ -32,18 +34,20 @@
   --blue: #2867b2;
   --blue-dark: #1d508e;
   --blue-soft: #eaf2fa;
-  --ivory: #f7f3ea;
-  --ivory-dark: #ece4d2;
-  --paper: #fcfbf8;
+  --surface-subtle: #f7f8fa;
+  --surface-light: #fafafa;
+  --paper: #ffffff;
+  --ivory: #f7f8fa;
   --ink: #17202a;
   --muted: #66717d;
-  --line: #ddd9d0;
+  --line: #e4e7eb;
+  --color-line-dark: #24415f;
 }
 
 html {
   scroll-behavior: smooth;
   color: var(--ink);
-  background-color: var(--paper);
+  background-color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -63,31 +67,34 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--paper);
+  background-color: #ffffff;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
-/* Subtle editorial grain / depth lines helper */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Subtle architectural grid lines */
 .pattern-fine-grid {
-  background-size: 24px 24px;
+  background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(23, 32, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(23, 32, 42, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(16, 42, 67, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 42, 67, 0.03) 1px, transparent 1px);
 }
 
 .pattern-fine-grid-dark {
-  background-size: 24px 24px;
+  background-size: 32px 32px;
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
-/* Editorial selection */
+/* Clean institutional selection */
 ::selection {
-  background-color: #2867b2;
+  background-color: #102a43;
   color: #ffffff;
 }
-

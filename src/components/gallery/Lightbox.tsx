@@ -67,29 +67,29 @@ export function Lightbox({
       role="dialog"
       aria-modal="true"
       aria-label={`Photo viewer: ${currentItem.title}`}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--navy-dark)]/95 backdrop-blur-md p-4 sm:p-6 md:p-8 animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0B1D2F]/95 backdrop-blur-md p-4 sm:p-6 md:p-8 animate-fade-in"
       onClick={onClose}
     >
       {/* Container to prevent backdrop click close when clicking content */}
       <div
-        className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-[var(--navy)] border border-slate-700 shadow-2xl overflow-hidden"
+        className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-[#0B1D2F] border border-slate-700 shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top bar header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/80 bg-[var(--navy-dark)]/80 text-white">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/80 bg-slate-900/80 text-white">
           <div className="flex items-center gap-3">
-            <span className="text-[10px] sm:text-xs font-mono tracking-widest uppercase px-2.5 py-1 bg-slate-800 text-[var(--blue-soft)] border border-slate-700">
+            <span className="text-xs uppercase tracking-wider px-2.5 py-1 bg-slate-800 text-[var(--blue-soft)] border border-slate-700 font-bold">
               {currentItem.category}
             </span>
             {currentItem.dateOrTerm && (
-              <span className="text-xs font-mono text-slate-400 hidden sm:inline">
+              <span className="text-xs text-slate-400 hidden sm:inline font-medium">
                 {currentItem.dateOrTerm}
               </span>
             )}
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="text-xs font-mono text-slate-400">
+            <span className="text-xs text-slate-400 font-semibold">
               {currentIndex + 1} / {items.length}
             </span>
 
@@ -117,7 +117,7 @@ export function Lightbox({
         </div>
 
         {/* Center media viewer area */}
-        <div className="relative flex-1 min-h-[300px] sm:min-h-[420px] max-h-[60vh] flex items-center justify-center p-4 sm:p-6 bg-[var(--navy-dark)]/50 overflow-hidden">
+        <div className="relative flex-1 min-h-[300px] sm:min-h-[420px] max-h-[60vh] flex items-center justify-center p-4 sm:p-6 bg-slate-950/60 overflow-hidden">
           {/* Navigation Prev Button */}
           <button
             type="button"
@@ -169,21 +169,21 @@ export function Lightbox({
         </div>
 
         {/* Bottom details / caption bar */}
-        <div className="px-5 py-4 sm:px-6 sm:py-5 border-t border-slate-700/80 bg-[var(--navy)] text-white space-y-1.5">
+        <div className="px-5 py-4 sm:px-6 sm:py-5 border-t border-slate-700/80 bg-[#0B1D2F] text-white space-y-1.5">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 className="font-serif text-lg sm:text-xl text-white">
+            <h3 className="font-heading font-bold text-lg sm:text-xl text-white">
               {currentItem.title}
             </h3>
             {currentItem.badge && (
-              <span className="text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 border border-slate-600 text-slate-300">
+              <span className="text-xs uppercase tracking-wider px-2 py-0.5 border border-slate-600 text-slate-300 font-semibold">
                 {currentItem.badge}
               </span>
             )}
           </div>
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl">
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl font-normal">
             {currentItem.caption}
           </p>
-          <div className="pt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+          <div className="pt-2 flex items-center justify-between text-xs text-slate-400">
             <span>Deeper Real Vision Academy &bull; Sheretti, Abuja</span>
             <span className="hidden sm:inline">Press Esc to close</span>
           </div>
@@ -196,7 +196,6 @@ export function Lightbox({
 function LightboxMedia({ item }: { item: GalleryItem }) {
   const [imgError, setImgError] = React.useState(false);
 
-  // If item has a src and no error yet, try rendering Image
   if (item.src && !imgError) {
     return (
       <div className="relative w-full h-full max-h-[55vh] flex items-center justify-center">
@@ -213,7 +212,6 @@ function LightboxMedia({ item }: { item: GalleryItem }) {
     );
   }
 
-  // Graceful editorial placeholder frame
   return (
     <div className="w-full max-w-2xl">
       <PlaceholderFrame
@@ -222,10 +220,6 @@ function LightboxMedia({ item }: { item: GalleryItem }) {
         label={item.title}
         sublabel={item.caption}
         badge={item.badge || item.category.toUpperCase()}
-        captionLines={[
-          `DRVA GALLERY • ${item.category.toUpperCase()}`,
-          item.dateOrTerm ? item.dateOrTerm.toUpperCase() : "SHERETTI, ABUJA",
-        ]}
       />
     </div>
   );

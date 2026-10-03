@@ -5,38 +5,38 @@ import { SchoolCrest } from "../brand/SchoolCrest";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--paper)] border-b border-[var(--line)]">
+    <section className="relative overflow-hidden bg-white border-b border-[#E4E7EB]">
       {/* Background Architectural Grid Lines */}
-      <div className="absolute top-0 right-0 w-1/3 h-full border-l border-[var(--line)]/50 hidden lg:block pointer-events-none" />
-      <div className="absolute top-0 left-0 w-full h-full pattern-fine-grid opacity-40 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-full border-l border-[#E4E7EB]/50 hidden lg:block pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full pattern-fine-grid opacity-30 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-22 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* LEFT: Editorial Authority Column */}
+          {/* LEFT: Authority Column */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Eyebrow with Crest and Location Indicator */}
             <div className="flex items-center gap-3 mb-5 sm:mb-6">
               <SchoolCrest size="xs" priority />
-              <span className="w-4 h-px bg-[var(--red)]" />
-              <span className="text-xs font-mono tracking-[0.2em] uppercase font-semibold text-[var(--navy)]">
+              <span className="w-4 h-0.5 bg-[var(--red)]" />
+              <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
                 SHERETTI, ABUJA &bull; EST. 2016
               </span>
             </div>
 
             {/* School Identity & Display Typography */}
-            <div className="mb-2">
-              <span className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--muted)] block mb-1">
+            <div className="mb-3">
+              <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] block mb-2">
                 Deeper Real Vision Academy
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--navy)] tracking-tight leading-[1.10] mb-5">
-                <span className="block font-normal">Bright minds.</span>
-                <span className="block italic font-normal text-[var(--navy)]/90">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--navy)] tracking-tight leading-[1.08] mb-5">
+                Bright minds.
+                <span className="block text-[var(--navy)]/85 mt-1 font-bold">
                   Good people.
                 </span>
               </h1>
             </div>
 
-            {/* Restrained Supporting Copy */}
+            {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-[var(--ink)]/80 leading-relaxed max-w-xl mb-8 sm:mb-10 font-normal">
               A purposeful learning community in Sheretti, Abuja, serving pupils
               across Creche, Nursery, Primary, and Junior Secondary (JSS1&ndash;JSS3).
@@ -47,13 +47,13 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
               <Link
                 href="/admissions"
-                className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-medium tracking-wide text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2 shadow-xs"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold tracking-wide text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] shadow-xs"
               >
                 Admissions
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium tracking-wide text-[var(--navy)] hover:text-[var(--blue)] bg-[var(--ivory)] hover:bg-[var(--ivory-dark)] border border-[var(--line)] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold tracking-wide text-[var(--navy)] hover:bg-[#F7F8FA] bg-white border border-[#E4E7EB] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
               >
                 <span>Explore DRVA</span>
                 <svg
@@ -61,7 +61,7 @@ export function Hero() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="2"
                 >
                   <path
                     strokeLinecap="round"
@@ -73,37 +73,37 @@ export function Hero() {
             </div>
 
             {/* Educational Stages Progression Strip */}
-            <div className="mt-10 pt-8 border-t border-[var(--line)] grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
+            <div className="mt-10 pt-8 border-t border-[#E4E7EB] grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
               <Link href="/academics#creche" className="group">
-                <span className="text-[10px] font-mono tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--blue)] transition-colors block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
                   Stage 01
                 </span>
-                <span className="font-serif text-sm font-medium text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
+                <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Creche
                 </span>
               </Link>
               <Link href="/academics#nursery" className="group">
-                <span className="text-[10px] font-mono tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--blue)] transition-colors block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
                   Stage 02
                 </span>
-                <span className="font-serif text-sm font-medium text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
+                <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Nursery
                 </span>
               </Link>
               <Link href="/academics#primary" className="group">
-                <span className="text-[10px] font-mono tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--blue)] transition-colors block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
                   Stage 03
                 </span>
-                <span className="font-serif text-sm font-medium text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
+                <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Primary
                 </span>
               </Link>
               <Link href="/academics#junior-secondary" className="group">
-                <span className="text-[10px] font-mono tracking-wider uppercase text-[var(--muted)] group-hover:text-[var(--blue)] transition-colors block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
                   Stage 04
                 </span>
-                <span className="font-serif text-sm font-medium text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
-                  Junior Sec. <span className="text-[10px] font-mono text-[var(--muted)] font-normal block">JSS1&ndash;JSS3</span>
+                <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
+                  Junior Sec. <span className="text-xs text-[var(--muted)] font-normal block">JSS1&ndash;JSS3</span>
                 </span>
               </Link>
             </div>
@@ -111,22 +111,13 @@ export function Hero() {
 
           {/* RIGHT: Photography Hero Composition */}
           <div className="lg:col-span-6 relative">
-            {/* Double layered architectural frame lines */}
-            <div className="absolute -inset-2.5 border border-[var(--line)] pointer-events-none hidden sm:block" />
-            <div className="absolute -inset-5 border border-[var(--line)]/40 pointer-events-none hidden lg:block" />
-
-            <div className="relative bg-white p-2.5 sm:p-3.5 border border-[var(--line)] shadow-sm">
+            <div className="relative bg-white p-2 sm:p-3 border border-[#E4E7EB] shadow-sm">
               <PlaceholderFrame
                 aspectRatio="hero"
                 theme="light"
                 label="DRVA Campus & Classrooms"
                 sublabel="Creche, Nursery, Primary & Junior Secondary Environments"
                 badge="SHERETTI, ABUJA"
-                captionLines={[
-                  "DEEPER REAL VISION ACADEMY.",
-                  "SERVING YOUNG MINDS IN ABUJA.",
-                  "FOUNDED OCTOBER 2016.",
-                ]}
               />
             </div>
           </div>

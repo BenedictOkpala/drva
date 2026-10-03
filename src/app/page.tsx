@@ -12,15 +12,15 @@ import { VisitAdmissions } from "@/components/home/VisitAdmissions";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--paper)]">
+    <div className="flex min-h-screen flex-col bg-white">
       {/* 1. Header with Official Crest */}
       <Header />
 
       <main className="flex-grow">
-        {/* 2. Photographic Authority Hero */}
+        {/* 2. Hero */}
         <Hero />
 
-        {/* 3. Editorial Introduction (Est. October 2016, Sheretti, Abuja) */}
+        {/* 3. Introduction (Est. October 2016, Sheretti, Abuja) */}
         <Introduction />
 
         {/* 4. Connected Learning Journey (Stages 01–04) */}
@@ -29,7 +29,7 @@ export default function HomePage() {
         {/* 5. Ten-Year Milestone Commemoration (2016 — 2026) */}
         <Milestone />
 
-        {/* 6. Photographic School Life */}
+        {/* 6. School Life */}
         <SchoolLife />
 
         {/* 7. Why DRVA — Four Foundational Pillars */}
@@ -38,7 +38,7 @@ export default function HomePage() {
         {/* 8. Message from the School Leadership */}
         <SchoolMessage />
 
-        {/* 9. News & Stories Editorial Preview */}
+        {/* 9. News & Stories Preview */}
         <NewsPreview />
 
         {/* 10. Visit DRVA & Admissions Ending Composition */}

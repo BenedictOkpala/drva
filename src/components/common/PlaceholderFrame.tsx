@@ -17,9 +17,7 @@ export function PlaceholderFrame({
   label = "Campus Life",
   sublabel = "Deeper Real Vision Academy",
   badge,
-  captionLines,
   className = "",
-  showOverlayMotif = true,
 }: PlaceholderFrameProps) {
   const aspectClasses = {
     video: "aspect-[16/9]",
@@ -32,92 +30,72 @@ export function PlaceholderFrame({
   };
 
   const isDark = theme === "dark";
-  const isWarm = theme === "warm";
 
   const bgStyle = isDark
-    ? "bg-[var(--navy-dark)] text-slate-200 border border-[var(--color-line-dark)]"
-    : isWarm
-    ? "bg-[#F3ECE0] text-[var(--ink)] border border-[var(--line)]"
-    : "bg-[var(--ivory)] text-[var(--ink)] border border-[var(--line)]";
+    ? "bg-[#0B1D2F] text-slate-200 border border-[#24415F]"
+    : "bg-[#F7F8FA] text-[var(--ink)] border border-[#E4E7EB]";
 
   return (
     <div
-      className={`relative w-full overflow-hidden transition-all duration-300 group ${aspectClasses[aspectRatio]} ${bgStyle} ${className}`}
+      className={`relative w-full overflow-hidden transition-all duration-300 ${aspectClasses[aspectRatio]} ${bgStyle} ${className}`}
       role="img"
       aria-label={`${label} - ${sublabel}`}
     >
-      {/* Editorial grid texture */}
+      {/* Clean subtle pattern */}
       <div
         className={`absolute inset-0 ${
           isDark ? "pattern-fine-grid-dark" : "pattern-fine-grid"
-        } opacity-40`}
+        } opacity-30`}
       />
 
-      {/* Subtle depth layered corner lines */}
-      {showOverlayMotif && (
-        <>
-          <div
-            className={`absolute top-3 left-3 w-5 h-5 border-t border-l pointer-events-none transition-opacity duration-300 ${
-              isDark ? "border-slate-500/40" : "border-[var(--navy)]/20"
-            }`}
-          />
-          <div
-            className={`absolute bottom-3 right-3 w-5 h-5 border-b border-r pointer-events-none transition-opacity duration-300 ${
-              isDark ? "border-slate-500/40" : "border-[var(--navy)]/20"
-            }`}
-          />
-        </>
-      )}
-
-      {/* Inner editorial composition */}
+      {/* Clean modern interior container */}
       <div className="absolute inset-4 sm:inset-6 flex flex-col justify-between pointer-events-none select-none">
         {/* Top bar / badge */}
-        <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center justify-between gap-2">
           {badge ? (
             <span
-              className={`text-[9px] sm:text-[10px] tracking-[0.16em] uppercase font-semibold px-2.5 py-1 ${
+              className={`text-xs font-semibold px-2.5 py-1 ${
                 isDark
-                  ? "bg-slate-900/70 text-slate-300 border border-slate-700/50"
-                  : "bg-white/90 text-[var(--navy)] border border-[var(--line)] shadow-xs"
+                  ? "bg-slate-900/80 text-slate-300 border border-slate-700/60"
+                  : "bg-white text-[var(--navy)] border border-[#E4E7EB] shadow-xs"
               }`}
             >
               {badge}
             </span>
           ) : (
             <span
-              className={`text-[9px] sm:text-[10px] tracking-[0.16em] uppercase font-mono ${
-                isDark ? "text-slate-400/80" : "text-[var(--muted)]"
+              className={`text-xs font-medium ${
+                isDark ? "text-slate-400" : "text-[var(--muted)]"
               }`}
             >
-              DRVA &bull; SHERETTI, ABUJA
+              DRVA &bull; Sheretti, Abuja
             </span>
           )}
 
-          <div
-            className={`flex items-center gap-1.5 text-[9px] sm:text-[10px] tracking-wider font-mono ${
-              isDark ? "text-slate-400/80" : "text-[var(--muted)]"
+          <span
+            className={`text-xs ${
+              isDark ? "text-slate-400" : "text-[var(--muted)]"
             }`}
           >
-            <span>EST. 2016</span>
-          </div>
+            Est. 2016
+          </span>
         </div>
 
-        {/* Center institutional visual graphic */}
+        {/* Center clean visual icon and text */}
         <div className="my-auto text-center px-4">
           <div
-            className={`inline-flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 mb-2.5 rounded-none border ${
+            className={`inline-flex items-center justify-center w-11 h-11 mb-3 rounded-md border ${
               isDark
                 ? "border-slate-700/60 bg-slate-900/40 text-slate-300"
-                : "border-[var(--line)] bg-white/75 text-[var(--navy)] shadow-xs"
+                : "border-[#E4E7EB] bg-white text-[var(--navy)] shadow-xs"
             }`}
           >
-            {/* Clean book / learning emblem icon */}
             <svg
               className="w-5 h-5 opacity-80"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth="1.25"
+              strokeWidth="1.5"
             >
               <path
                 strokeLinecap="round"
@@ -127,14 +105,14 @@ export function PlaceholderFrame({
             </svg>
           </div>
           <p
-            className={`font-serif text-base sm:text-lg tracking-wide ${
-              isDark ? "text-slate-200" : "text-[var(--navy)]"
+            className={`font-heading font-semibold text-base sm:text-lg tracking-tight ${
+              isDark ? "text-white" : "text-[var(--navy)]"
             }`}
           >
             {label}
           </p>
           <p
-            className={`text-xs tracking-normal mt-1 max-w-xs mx-auto ${
+            className={`text-xs mt-1 max-w-xs mx-auto ${
               isDark ? "text-slate-400" : "text-[var(--muted)]"
             }`}
           >
@@ -142,31 +120,15 @@ export function PlaceholderFrame({
           </p>
         </div>
 
-        {/* Bottom caption lines if provided */}
-        {captionLines && captionLines.length > 0 ? (
-          <div
-            className={`pt-2 border-t text-[10px] sm:text-[11px] font-mono tracking-[0.14em] uppercase ${
-              isDark
-                ? "border-slate-800 text-slate-300"
-                : "border-[var(--line)] text-[var(--navy)]"
-            }`}
-          >
-            {captionLines.map((line, idx) => (
-              <div key={idx} className="leading-tight">
-                {line}
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div
-            className={`flex justify-between items-center text-[9px] sm:text-[10px] font-mono tracking-widest uppercase ${
-              isDark ? "text-slate-500" : "text-[var(--muted)]/80"
-            }`}
-          >
-            <span>DEEPER REAL VISION ACADEMY</span>
-            <span>IN GOD WE TRUST</span>
-          </div>
-        )}
+        {/* Bottom clean status */}
+        <div
+          className={`flex justify-between items-center text-xs ${
+            isDark ? "text-slate-400" : "text-[var(--muted)]"
+          }`}
+        >
+          <span>Deeper Real Vision Academy</span>
+          <span>In God We Trust</span>
+        </div>
       </div>
     </div>
   );

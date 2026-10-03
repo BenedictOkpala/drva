@@ -26,11 +26,11 @@ export default function SchoolLifePage() {
   const eventsFacet = SCHOOL_LIFE_ACTIVITIES.find((f) => f.id === "school-events-celebrations")!;
 
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--paper)]">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
       <main className="flex-grow">
-        {/* 1. Visual, Energetic Page Hero */}
+        {/* 1. Page Hero */}
         <PageHero
           breadcrumbLabel="School Life"
           eyebrow="SCHOOL LIFE"
@@ -40,8 +40,8 @@ export default function SchoolLifePage() {
           badge="BEYOND THE CLASSROOM"
           variant="visual"
           rightSlot={
-            <div className="p-4 bg-[var(--navy)] text-white border border-[var(--color-line-dark)] max-w-xs text-xs font-mono">
-              <span className="text-[10px] uppercase tracking-widest text-[var(--blue-soft)] block mb-1">
+            <div className="p-4 bg-[#0B1D2F] text-white border border-[#24415F] max-w-xs text-xs">
+              <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-1">
                 COMPLEMENTARY ACTIVITIES
               </span>
               <p className="text-slate-300 leading-relaxed text-xs">
@@ -52,15 +52,15 @@ export default function SchoolLifePage() {
         />
 
         {/* 2. Feature Moment 01: Debate & Public Speaking */}
-        <section className="py-20 sm:py-28 bg-[var(--paper)] border-b border-[var(--line)]">
+        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               <div className="lg:col-span-5 space-y-4">
                 <SectionEyebrow text={debateFacet.category} />
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
                   {debateFacet.title}.
                 </h2>
-                <p className="font-serif italic text-lg text-[var(--muted)]">
+                <p className="font-heading font-medium text-lg text-[var(--muted)]">
                   {debateFacet.tagline}
                 </p>
                 <p className="text-base sm:text-lg text-[var(--ink)]/80 leading-relaxed font-normal">
@@ -69,17 +69,13 @@ export default function SchoolLifePage() {
               </div>
 
               <div className="lg:col-span-7">
-                <div className="p-2 sm:p-3 bg-white border border-[var(--line)] shadow-sm">
+                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                   <PlaceholderFrame
                     aspectRatio="wide"
                     theme="light"
                     label={debateFacet.label}
                     sublabel="Articulate presentation & peer discussion"
                     badge={debateFacet.badge}
-                    captionLines={[
-                      "DEBATE & EXPRESSION.",
-                      "CONFIDENT COMMUNICATION & INQUIRY.",
-                    ]}
                   />
                 </div>
               </div>
@@ -88,39 +84,35 @@ export default function SchoolLifePage() {
         </section>
 
         {/* 3. Paired Composition: Creative Arts & Sports/Movement */}
-        <section className="py-20 sm:py-28 bg-[var(--ivory)] border-b border-[var(--line)]">
+        <section className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
               <SectionEyebrow text="EXPRESSION & PHYSICAL RESILIENCE" />
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                 Creativity and movement.
               </h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              {/* Creative Arts Side (Tall Portrait Frame) */}
+              {/* Creative Arts Side */}
               <div className="lg:col-span-6 space-y-6">
-                <div className="p-2 sm:p-3 bg-white border border-[var(--line)] shadow-sm">
+                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                   <PlaceholderFrame
                     aspectRatio="portrait"
-                    theme="warm"
+                    theme="light"
                     label={artsFacet.label}
                     sublabel="Visual art, melody, and craft activities"
                     badge={artsFacet.badge}
-                    captionLines={[
-                      "CREATIVE PRACTICE.",
-                      "DRAWING, CRAFT & MUSIC.",
-                    ]}
                   />
                 </div>
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
                     {artsFacet.category}
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] mb-2">
                     {artsFacet.title}
                   </h3>
-                  <p className="font-serif italic text-base text-[var(--muted)] mb-3">
+                  <p className="font-heading font-medium text-base text-[var(--muted)] mb-3">
                     {artsFacet.tagline}
                   </p>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed font-normal">
@@ -129,16 +121,16 @@ export default function SchoolLifePage() {
                 </div>
               </div>
 
-              {/* Sports Side (Wide Athletic Frame) */}
+              {/* Sports Side */}
               <div className="lg:col-span-6 space-y-6 lg:pt-10">
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
                     {sportsFacet.category}
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] mb-2">
                     {sportsFacet.title}
                   </h3>
-                  <p className="font-serif italic text-base text-[var(--muted)] mb-3">
+                  <p className="font-heading font-medium text-base text-[var(--muted)] mb-3">
                     {sportsFacet.tagline}
                   </p>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed font-normal">
@@ -146,17 +138,13 @@ export default function SchoolLifePage() {
                   </p>
                 </div>
 
-                <div className="p-2 sm:p-3 bg-white border border-[var(--line)] shadow-sm">
+                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
                   <PlaceholderFrame
                     aspectRatio="wide"
                     theme="light"
                     label={sportsFacet.label}
                     sublabel="Movement games and outdoor physical activity"
                     badge={sportsFacet.badge}
-                    captionLines={[
-                      "SPORTSMANSHIP & HEALTH.",
-                      "ACTIVE PHYSICAL EXERCISE.",
-                    ]}
                   />
                 </div>
               </div>
@@ -164,13 +152,13 @@ export default function SchoolLifePage() {
           </div>
         </section>
 
-        {/* 4. Editorial Photo-Grid: Reading, Quiz & Celebrations */}
-        <section className="py-20 sm:py-28 bg-[var(--paper)] border-b border-[var(--line)]">
+        {/* 4. Photo-Grid: Reading, Quiz & Celebrations */}
+        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[var(--line)] items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[#E4E7EB] items-end">
               <div className="lg:col-span-7">
                 <SectionEyebrow text="ENRICHED EXPERIENCES" />
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                   Literacy, quizzes and celebrations.
                 </h2>
               </div>
@@ -184,89 +172,86 @@ export default function SchoolLifePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1: Reading & Literacy */}
-              <div className="p-6 bg-[var(--ivory)] border border-[var(--line)] flex flex-col justify-between">
+              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[var(--line)]">
+                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
                     <PlaceholderFrame
                       aspectRatio="square"
                       theme="light"
                       label={readingFacet.label}
                       sublabel="Guided reading and literature"
                       badge={readingFacet.badge}
-                      showOverlayMotif={false}
                     />
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
                     {readingFacet.category}
                   </span>
-                  <h3 className="font-serif text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
                     {readingFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {readingFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[var(--line)] text-xs font-mono text-[var(--muted)]">
-                  Language & Comprehension
+                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
+                  Language &amp; Comprehension
                 </div>
               </div>
 
               {/* Card 2: Quiz & Academic Activities */}
-              <div className="p-6 bg-[var(--ivory)] border border-[var(--line)] flex flex-col justify-between">
+              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[var(--line)]">
+                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
                     <PlaceholderFrame
                       aspectRatio="square"
                       theme="light"
                       label={quizFacet.label}
                       sublabel="Collaborative team quizzes and puzzles"
                       badge={quizFacet.badge}
-                      showOverlayMotif={false}
                     />
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
                     {quizFacet.category}
                   </span>
-                  <h3 className="font-serif text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
                     {quizFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {quizFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[var(--line)] text-xs font-mono text-[var(--muted)]">
+                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
                   Collaborative Inquiry
                 </div>
               </div>
 
               {/* Card 3: School Events & Celebrations */}
-              <div className="p-6 bg-[var(--ivory)] border border-[var(--line)] flex flex-col justify-between">
+              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[var(--line)]">
+                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
                     <PlaceholderFrame
                       aspectRatio="square"
                       theme="light"
                       label={eventsFacet.label}
                       sublabel="Term assemblies and milestones"
                       badge={eventsFacet.badge}
-                      showOverlayMotif={false}
                     />
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[var(--red)] font-semibold block mb-1">
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
                     {eventsFacet.category}
                   </span>
-                  <h3 className="font-serif text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
                     {eventsFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {eventsFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[var(--line)] flex items-center justify-between text-xs font-mono">
-                  <span className="text-[var(--muted)]">Shared School Traditions</span>
+                <div className="mt-6 pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs">
+                  <span className="text-[var(--muted)] font-semibold">Shared School Traditions</span>
                   <Link
                     href="/gallery"
-                    className="text-[var(--navy)] hover:text-[var(--red)] font-semibold transition-colors flex items-center gap-1"
+                    className="text-[var(--navy)] hover:text-[var(--red)] font-bold transition-colors flex items-center gap-1"
                   >
                     <span>View Gallery</span>
                     <span>&rarr;</span>
@@ -277,16 +262,16 @@ export default function SchoolLifePage() {
           </div>
         </section>
 
-        {/* 5. Full-Width Navy Feature: Community & Fellowship */}
-        <section className="py-20 sm:py-28 bg-[var(--navy)] text-white border-b border-[var(--color-line-dark)]">
+        {/* 5. Community & Fellowship */}
+        <section className="py-20 sm:py-28 bg-[#0B1D2F] text-white border-b border-[#24415F]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 space-y-6">
-                <SectionEyebrow text="COMMUNITY & FELLOWSHIP" theme="dark" />
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
+                <SectionEyebrow text="COMMUNITY &amp; FELLOWSHIP" theme="dark" />
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
                   A supportive school family.
                 </h2>
-                <p className="font-serif italic text-lg text-slate-300">
+                <p className="font-heading font-medium text-lg text-slate-300">
                   Cultivating lasting bonds between pupils, educators, and families.
                 </p>
                 <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
@@ -294,7 +279,7 @@ export default function SchoolLifePage() {
                   is recognized and encouraged. Together with parents, our educators guide
                   learners with patience, high expectations, and moral clarity.
                 </p>
-                <div className="pt-4 border-t border-slate-700 flex flex-wrap items-center gap-6 text-xs font-mono text-slate-400">
+                <div className="pt-4 border-t border-slate-700 flex flex-wrap items-center gap-6 text-xs text-slate-400">
                   <span>Motto: In God We Trust</span>
                   <span>&bull;</span>
                   <span>Parent-Teacher Partnership</span>
@@ -304,17 +289,13 @@ export default function SchoolLifePage() {
               </div>
 
               <div className="lg:col-span-6">
-                <div className="p-2 sm:p-3 bg-[var(--navy-dark)] border border-slate-700 shadow-2xl">
+                <div className="p-2 sm:p-3 bg-slate-900/80 border border-slate-700 shadow-xl">
                   <PlaceholderFrame
                     aspectRatio="wide"
                     theme="dark"
-                    label="School Community & Fellowship"
+                    label="School Community &amp; Fellowship"
                     sublabel="Pupil growth and community gatherings"
                     badge="FELLOWSHIP"
-                    captionLines={[
-                      "COMMUNITY & BELONGING.",
-                      "PARTNERSHIP IN EDUCATION.",
-                    ]}
                   />
                 </div>
               </div>

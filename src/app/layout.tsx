@@ -1,19 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 
-const dmSerif = DM_Serif_Display({
-  weight: "400",
-  style: ["normal", "italic"],
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-heading",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -45,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSerif.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col font-sans bg-[var(--paper)] text-[var(--ink)] antialiased selection:bg-[var(--blue)] selection:text-white">
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
+      <body className="min-h-screen flex flex-col font-sans bg-white text-[var(--ink)] antialiased selection:bg-[var(--navy)] selection:text-white">
         {children}
       </body>
     </html>

@@ -5,18 +5,18 @@ import { PlaceholderFrame } from "../common/PlaceholderFrame";
 
 export function NewsPreview() {
   return (
-    <section className="py-20 sm:py-26 lg:py-32 bg-[var(--paper)] border-b border-[var(--line)]">
+    <section className="py-20 sm:py-26 lg:py-30 bg-white border-b border-[#E4E7EB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-18 pb-8 border-b border-[var(--line)] gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-18 pb-8 border-b border-[#E4E7EB] gap-6">
           <div>
             <div className="inline-flex items-center gap-2.5 mb-4">
-              <span className="w-5 h-px bg-[var(--red)]" />
-              <span className="text-xs font-mono tracking-[0.2em] uppercase font-semibold text-[var(--navy)]">
-                NEWS & STORIES
+              <span className="w-4 h-0.5 bg-[var(--red)]" />
+              <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
+                NEWS &amp; STORIES
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.14]">
               Dispatches from DRVA.
             </h2>
           </div>
@@ -34,31 +34,30 @@ export function NewsPreview() {
           {SCHOOL_MOMENTS.map((story, index) => (
             <article
               key={index}
-              className="flex flex-col justify-between group border-b md:border-b-0 pb-8 md:pb-0 border-[var(--line)]"
+              className="flex flex-col justify-between group border-b md:border-b-0 pb-8 md:pb-0 border-[#E4E7EB]"
             >
               <div>
                 {/* Visual Thumbnail Frame */}
-                <div className="relative mb-6 overflow-hidden border border-[var(--line)] bg-white p-1.5 transition-transform duration-200 group-hover:-translate-y-0.5 shadow-2xs">
+                <div className="relative mb-6 overflow-hidden border border-[#E4E7EB] bg-white p-1.5 transition-transform duration-200 group-hover:-translate-y-0.5 shadow-2xs">
                   <PlaceholderFrame
                     aspectRatio="video"
                     theme="light"
                     label={story.category}
                     sublabel="Deeper Real Vision Academy"
                     badge={story.tag}
-                    showOverlayMotif={false}
                   />
                 </div>
 
                 {/* Category & Status */}
-                <div className="flex items-center justify-between mb-3 text-xs font-mono">
-                  <span className="uppercase tracking-widest text-[var(--navy)] font-semibold">
+                <div className="flex items-center justify-between mb-3 text-xs">
+                  <span className="uppercase tracking-wider text-[var(--navy)] font-bold">
                     {story.category}
                   </span>
-                  <span className="text-[var(--muted)]">{story.dateOrStatus}</span>
+                  <span className="text-[var(--muted)] font-medium">{story.dateOrStatus}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-xl sm:text-2xl text-[var(--navy)] group-hover:text-[var(--red)] transition-colors tracking-tight leading-snug mb-3">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[var(--navy)] group-hover:text-[var(--red)] transition-colors tracking-tight leading-snug mb-3">
                   {story.title}
                 </h3>
 
@@ -69,13 +68,13 @@ export function NewsPreview() {
               </div>
 
               {/* Story Read Link */}
-              <div className="mt-6 pt-4 border-t border-[var(--line)]/60 flex items-center justify-between">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-[var(--muted)]">
-                  DRVA DISPATCH
+              <div className="mt-6 pt-4 border-t border-[#E4E7EB] flex items-center justify-between">
+                <span className="text-xs uppercase tracking-wider text-[var(--muted)] font-medium">
+                  DRVA Dispatch
                 </span>
                 <Link
                   href={story.href || "/school-life"}
-                  className="text-xs font-mono tracking-wide font-semibold text-[var(--navy)] group-hover:text-[var(--red)] group-hover:translate-x-1 transition-all flex items-center gap-1"
+                  className="text-xs uppercase tracking-wider font-bold text-[var(--navy)] group-hover:text-[var(--red)] group-hover:translate-x-1 transition-all flex items-center gap-1"
                 >
                   <span>Learn more</span>
                   <span>&rarr;</span>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-[var(--paper)]">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
 
       <main className="flex-grow">
@@ -27,8 +27,8 @@ export default function GalleryPage() {
           badge="CAMPUS MOMENTS"
           variant="visual"
           rightSlot={
-            <div className="p-4 bg-[var(--navy)] text-white border border-[var(--color-line-dark)] max-w-xs text-xs font-mono">
-              <span className="text-[10px] uppercase tracking-widest text-[var(--blue-soft)] block mb-1">
+            <div className="p-4 bg-[#0B1D2F] text-white border border-[#24415F] max-w-xs text-xs">
+              <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-1">
                 PHOTO ARCHIVES
               </span>
               <p className="text-slate-300 leading-relaxed text-xs">

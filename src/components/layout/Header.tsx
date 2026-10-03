@@ -18,7 +18,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   // Close mobile menu on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -57,25 +56,25 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-[#FCFBF8]/95 backdrop-blur-md border-b border-[var(--line)] shadow-[0_2px_12px_rgba(16,42,67,0.04)]"
-          : "bg-[var(--paper)] border-b border-[var(--line)]/70"
+          ? "bg-white/95 backdrop-blur-md border-b border-[#E4E7EB] shadow-[0_1px_4px_rgba(16,42,67,0.06)]"
+          : "bg-white border-b border-[#E4E7EB]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-22">
+        <div className="flex items-center justify-between h-20">
           {/* Brand & Real Official School Crest */}
           <Link
             href="/"
-            className="group flex items-center gap-3 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue)] focus-visible:ring-offset-2 rounded-sm"
+            className="group flex items-center gap-3 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] rounded-sm"
             aria-label="DRVA — Deeper Real Vision Academy Homepage"
           >
             <SchoolCrest size="sm" priority />
 
             <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl font-medium tracking-tight text-[var(--navy)] leading-none group-hover:text-[var(--blue)] transition-colors">
+              <span className="font-heading text-lg sm:text-xl font-bold tracking-tight text-[var(--navy)] leading-none group-hover:text-[var(--blue)] transition-colors">
                 DRVA
               </span>
-              <span className="text-[10px] sm:text-[11px] tracking-[0.14em] uppercase text-[var(--muted)] mt-1 font-medium">
+              <span className="text-[11px] tracking-wide text-[var(--muted)] mt-1 font-medium">
                 Deeper Real Vision Academy
               </span>
             </div>
@@ -84,7 +83,7 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav
             aria-label="Main Navigation"
-            className="hidden md:flex items-center gap-7 lg:gap-9"
+            className="hidden md:flex items-center gap-7 lg:gap-8"
           >
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -92,7 +91,7 @@ export function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-sm tracking-wide transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] ${
+                  className={`text-sm tracking-normal transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] ${
                     active
                       ? "text-[var(--navy)] font-semibold"
                       : "text-[var(--ink)]/80 hover:text-[var(--navy)] font-medium"
@@ -113,7 +112,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium tracking-wide text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] shadow-xs"
             >
               Enquire
             </Link>
@@ -123,14 +122,14 @@ export function Header() {
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/contact"
-              className="px-3.5 py-1.5 text-xs font-medium text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] transition-colors"
+              className="px-3.5 py-1.5 text-xs font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] transition-colors"
             >
               Enquire
             </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[var(--navy)] hover:text-[var(--red)] hover:bg-[var(--ivory)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
+              className="p-2 text-[var(--navy)] hover:text-[var(--red)] hover:bg-[#F7F8FA] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -140,7 +139,7 @@ export function Header() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth="1.75"
+                  strokeWidth="2"
                 >
                   <path
                     strokeLinecap="round"
@@ -154,7 +153,7 @@ export function Header() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth="1.75"
+                  strokeWidth="2"
                 >
                   <path
                     strokeLinecap="round"
@@ -171,14 +170,14 @@ export function Header() {
       {/* Mobile Navigation Drawer Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 top-20 sm:top-22 bg-[var(--navy)]/40 backdrop-blur-sm z-40 md:hidden animate-fade-in"
+          className="fixed inset-0 top-20 bg-[var(--navy)]/50 backdrop-blur-sm z-40 md:hidden animate-fade-in"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="bg-[var(--paper)] border-b border-[var(--line)] shadow-xl px-6 py-8 flex flex-col gap-6"
+            className="bg-white border-b border-[#E4E7EB] shadow-xl px-6 py-6 flex flex-col gap-5"
             onClick={(e) => e.stopPropagation()}
           >
-            <nav className="flex flex-col space-y-3" aria-label="Mobile Navigation">
+            <nav className="flex flex-col space-y-1" aria-label="Mobile Navigation">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
                 return (
@@ -186,9 +185,9 @@ export function Header() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-lg font-serif py-2 border-b border-[var(--line)]/50 transition-colors flex items-center justify-between ${
+                    className={`text-base font-semibold py-2.5 border-b border-[#E4E7EB] transition-colors flex items-center justify-between ${
                       active
-                        ? "text-[var(--navy)] font-semibold"
+                        ? "text-[var(--navy)] font-bold"
                         : "text-[var(--ink)] hover:text-[var(--navy)]"
                     }`}
                   >
@@ -202,18 +201,18 @@ export function Header() {
             </nav>
 
             <div className="pt-2 flex flex-col gap-3">
-              <div className="flex items-center justify-center gap-2.5 pb-1">
+              <div className="flex items-center justify-center gap-2 pb-1">
                 <SchoolCrest size="xs" />
-                <span className="font-serif text-xs text-[var(--navy)]">DRVA &bull; Sheretti, Abuja</span>
+                <span className="text-xs font-medium text-[var(--navy)]">DRVA &bull; Sheretti, Abuja</span>
               </div>
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-3 text-sm font-medium text-white bg-[var(--navy)] hover:bg-[var(--navy-light)] transition-colors"
+                className="w-full text-center py-3 text-sm font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] transition-colors"
               >
                 Enquire for Admissions
               </Link>
-              <p className="text-center text-xs tracking-widest uppercase text-[var(--muted)] font-mono mt-1">
+              <p className="text-center text-xs tracking-wider uppercase text-[var(--muted)] font-medium mt-1">
                 IN GOD WE TRUST
               </p>
             </div>
