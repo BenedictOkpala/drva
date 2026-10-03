@@ -32,7 +32,7 @@ export default function GalleryPage() {
                 PHOTO ARCHIVES
               </span>
               <p className="text-slate-300 leading-relaxed text-xs">
-                Cultural Day &bull; Graduations &bull; School Life &bull; Assemblies &bull; Athletics
+                Cultural Day &bull; Learning &bull; Student Achievements
               </p>
             </div>
           }

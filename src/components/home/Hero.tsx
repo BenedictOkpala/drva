@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute top-0 right-0 w-1/3 h-full border-l border-[#E4E7EB]/50 hidden lg:block pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-full pattern-fine-grid opacity-30 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-22 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* LEFT: Authority Column */}
           <div className="lg:col-span-6 flex flex-col justify-center">
@@ -19,7 +19,7 @@ export function Hero() {
               <SchoolCrest size="xs" priority />
               <span className="w-4 h-0.5 bg-[var(--red)]" />
               <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
-                SHERETTI, ABUJA &bull; EST. 2016
+                SHERETTI, ABUJA &bull; EST. OCTOBER 2016
               </span>
             </div>
 
@@ -75,32 +75,32 @@ export function Hero() {
             {/* Educational Stages Progression Strip */}
             <div className="mt-10 pt-8 border-t border-[#E4E7EB] grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl">
               <Link href="/academics#creche" className="group">
-                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
-                  Stage 01
+                <span className="text-xs uppercase tracking-wider font-bold text-[var(--red)] group-hover:text-[var(--navy)] transition-colors block">
+                  01
                 </span>
                 <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Creche
                 </span>
               </Link>
               <Link href="/academics#nursery" className="group">
-                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
-                  Stage 02
+                <span className="text-xs uppercase tracking-wider font-bold text-[var(--red)] group-hover:text-[var(--navy)] transition-colors block">
+                  02
                 </span>
                 <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Nursery
                 </span>
               </Link>
               <Link href="/academics#primary" className="group">
-                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
-                  Stage 03
+                <span className="text-xs uppercase tracking-wider font-bold text-[var(--red)] group-hover:text-[var(--navy)] transition-colors block">
+                  03
                 </span>
                 <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Primary
                 </span>
               </Link>
               <Link href="/academics#junior-secondary" className="group">
-                <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] group-hover:text-[var(--navy)] transition-colors block">
-                  Stage 04
+                <span className="text-xs uppercase tracking-wider font-bold text-[var(--red)] group-hover:text-[var(--navy)] transition-colors block">
+                  04
                 </span>
                 <span className="font-heading text-sm font-bold text-[var(--navy)] group-hover:text-[var(--blue)] transition-colors mt-0.5 block">
                   Junior Sec. <span className="text-xs text-[var(--muted)] font-normal block">JSS1&ndash;JSS3</span>
@@ -109,14 +109,14 @@ export function Hero() {
             </div>
           </div>
 
-          {/* RIGHT: Photography Hero Composition */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative bg-white p-2 sm:p-3 border border-[#E4E7EB] shadow-sm">
+          {/* RIGHT: ONE Clean, Substantial Visual Area Ready for Future School Photography */}
+          <div className="lg:col-span-6">
+            <div className="relative bg-white p-3 sm:p-4 border border-[#E4E7EB] shadow-sm">
               <PlaceholderFrame
                 aspectRatio="hero"
                 theme="light"
-                label="DRVA Campus & Classrooms"
-                sublabel="Creche, Nursery, Primary & Junior Secondary Environments"
+                label="Deeper Real Vision Academy"
+                sublabel="Creche, Nursery, Primary &amp; Junior Secondary Campus"
                 badge="SHERETTI, ABUJA"
               />
             </div>

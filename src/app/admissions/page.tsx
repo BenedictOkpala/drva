@@ -68,13 +68,13 @@ export default function AdmissionsPage() {
                   className="p-8 bg-white border border-[#E4E7EB] flex flex-col justify-between relative group hover:border-[var(--navy)] transition-colors shadow-xs"
                 >
                   <div>
-                    {/* Step Number & Badge */}
+                    {/* Step Number & Category Indicator */}
                     <div className="flex items-center justify-between pb-4 mb-5 border-b border-[#E4E7EB]">
                       <span className="font-heading font-extrabold text-3xl text-[var(--navy)]">
                         {step.step}
                       </span>
-                      <span className="text-xs font-bold uppercase px-2 py-0.5 bg-[#F7F8FA] text-[var(--navy)] border border-[#E4E7EB]">
-                        STEP {step.step}
+                      <span className="text-xs font-semibold uppercase text-[var(--muted)]">
+                        Admissions
                       </span>
                     </div>
 

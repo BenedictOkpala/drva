@@ -1,9 +1,8 @@
 export type GalleryCategory =
   | "All"
   | "Cultural Day"
-  | "Graduation"
-  | "School Life"
-  | "Events";
+  | "Learning"
+  | "Achievements";
 
 export interface GalleryItem {
   id: string;
@@ -20,190 +19,57 @@ export interface GalleryItem {
 export const GALLERY_CATEGORIES: GalleryCategory[] = [
   "All",
   "Cultural Day",
-  "Graduation",
-  "School Life",
-  "Events",
+  "Learning",
+  "Achievements",
 ];
 
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: "cultural-day-attire",
-    title: "Heritage & Cultural Attire Presentation",
+    id: "cultural-day-traditional-beadwork",
+    title: "Cultural Day",
     category: "Cultural Day",
     caption:
-      "Pupils proudly showcasing traditional attire representing Nigeria's diverse cultural heritages during the annual DRVA Cultural Day celebration.",
-    alt: "DRVA pupils celebrating Cultural Day in traditional Nigerian attire in Sheretti, Abuja",
-    aspectRatio: "feature",
-    dateOrTerm: "Annual Cultural Day",
+      "A young DRVA pupil in traditional cultural attire with ceremonial beadwork celebrating Nigerian heritage during Cultural Day.",
+    alt: "Young DRVA pupil wearing traditional attire with ornate beadwork at Cultural Day in Abuja",
+    aspectRatio: "portrait",
+    dateOrTerm: "Cultural Day",
     badge: "HERITAGE",
-    src: "/images/gallery/cultural-day-attire.jpg",
+    src: "/images/drva/cultural-day/pupil-traditional-beadwork.jpg",
   },
   {
-    id: "cultural-day-music-dance",
-    title: "Traditional Music & Dance Showcase",
+    id: "cultural-day-ceremonial-whisk",
+    title: "Cultural Day",
     category: "Cultural Day",
     caption:
-      "Energetic cultural choreography and rhythmic performances led by pupils across primary and secondary stages.",
-    alt: "Students performing traditional cultural dance during school celebration",
-    aspectRatio: "landscape",
-    dateOrTerm: "Cultural Celebration",
-    badge: "PERFORMANCE",
-    src: "/images/gallery/cultural-day-dance.jpg",
-  },
-  {
-    id: "cultural-day-exhibition",
-    title: "Regional Heritage & Craft Exhibition",
-    category: "Cultural Day",
-    caption:
-      "Interactive displays of regional artifacts, cuisine, and handcrafted projects assembled by our classes.",
-    alt: "Cultural artifacts and regional craft exhibition curated by DRVA pupils",
+      "DRVA pupil dressed in blue traditional attire holding a ceremonial whisk during school cultural festivities.",
+    alt: "DRVA pupil in blue traditional attire holding ceremonial whisk at Cultural Day",
     aspectRatio: "portrait",
-    dateOrTerm: "Cultural Exhibition",
-    badge: "COMMUNITY",
-    src: "/images/gallery/cultural-day-exhibition.jpg",
+    dateOrTerm: "Cultural Day",
+    badge: "CELEBRATION",
+    src: "/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg",
   },
   {
-    id: "graduation-prize-giving",
-    title: "Annual Prize Giving & Speech Ceremony",
-    category: "Graduation",
+    id: "pupils-learning-practice",
+    title: "Learning in practice",
+    category: "Learning",
     caption:
-      "Recognizing outstanding academic diligence, moral exemplary character, and consistent effort at the close of the academic year.",
-    alt: "DRVA Prize Giving and Speech Day ceremony in Sheretti, Abuja",
+      "DRVA pupils gathered around a computer in practical classroom learning.",
+    alt: "DRVA pupils working attentively with a computer during classroom learning in Sheretti, Abuja",
     aspectRatio: "landscape",
-    dateOrTerm: "End of Session",
-    badge: "EXCELLENCE",
-    src: "/images/gallery/graduation-prize-giving.jpg",
-  },
-  {
-    id: "graduation-nursery-transition",
-    title: "Early Years Graduation & Milestone",
-    category: "Graduation",
-    caption:
-      "Celebrating our young nursery learners as they complete their foundational stages and advance into Primary 1.",
-    alt: "Nursery pupils in graduation caps celebrating advancement to primary school",
-    aspectRatio: "portrait",
-    dateOrTerm: "Graduation Milestone",
-    badge: "EARLY YEARS",
-    src: "/images/gallery/graduation-nursery.jpg",
-  },
-  {
-    id: "graduation-valedictory-procession",
-    title: "Graduation Procession & Ceremony",
-    category: "Graduation",
-    caption:
-      "Graduating pupils, educators, and parents gathered in celebration of shared accomplishments and purposeful learning.",
-    alt: "Graduation ceremony procession with educators and students",
-    aspectRatio: "feature",
-    dateOrTerm: "Valedictory Service",
-    badge: "MILESTONE",
-    src: "/images/gallery/graduation-procession.jpg",
-  },
-  {
-    id: "school-life-morning-assembly",
-    title: "Morning Assembly & Devotion",
-    category: "School Life",
-    caption:
-      "The DRVA community gathering each morning for prayer, national and school anthems, and moral guidance under our motto 'In God We Trust'.",
-    alt: "Pupils and teachers at DRVA morning assembly in Sheretti, Abuja",
-    aspectRatio: "landscape",
-    dateOrTerm: "Daily Routine",
-    badge: "ASSEMBLY",
-    src: "/images/gallery/school-life-assembly.jpg",
-  },
-  {
-    id: "school-life-reading-circle",
-    title: "Primary Reading Circle & Literacy Hour",
-    category: "School Life",
-    caption:
-      "Guided reading sessions where young pupils develop phonics fluency, comprehension confidence, and a lifelong appreciation for books.",
-    alt: "Primary pupils engaged in interactive guided reading session",
-    aspectRatio: "portrait",
     dateOrTerm: "Classroom Practice",
-    badge: "LITERACY",
-    src: "/images/gallery/school-life-reading.jpg",
+    badge: "PRACTICE",
+    src: "/images/drva/learning/pupils-learning-computing.jpg",
   },
   {
-    id: "school-life-maths-inquiry",
-    title: "Collaborative Mathematics & Problem Solving",
-    category: "School Life",
+    id: "favour-chima-essay-award",
+    title: "Student Achievement",
+    category: "Achievements",
     caption:
-      "Learners working together with hands-on learning aids and structured numeracy exercises to build problem-solving fluency.",
-    alt: "Students collaborating on numeracy and problem-solving exercises in classroom",
-    aspectRatio: "square",
-    dateOrTerm: "Classroom Learning",
-    badge: "NUMERACY",
-    src: "/images/gallery/school-life-maths.jpg",
-  },
-  {
-    id: "school-life-creative-crafts",
-    title: "Hands-on Creative Arts & Craft",
-    category: "School Life",
-    caption:
-      "Practical exploration through drawing, painting, modeling, and tactile projects encouraging creative expression.",
-    alt: "Children creating artwork and colorful crafts in classroom workshop",
-    aspectRatio: "portrait",
-    dateOrTerm: "Creative Arts",
-    badge: "CREATIVITY",
-    src: "/images/gallery/school-life-crafts.jpg",
-  },
-  {
-    id: "school-life-outdoor-play",
-    title: "Outdoor Recreation & Peer Games",
-    category: "School Life",
-    caption:
-      "Supervised playtime encouraging active movement, camaraderie, fair play, and healthy social development.",
-    alt: "Pupils enjoying recreation and outdoor games during break time",
+      "Favour Chima placed first in the Junior Secondary category of the Meireer Education Foundation's 2026 International Day of Education Essay Competition.",
+    alt: "DRVA pupil Favour Chima receiving her award certificate for first place in the 2026 International Day of Education Essay Competition",
     aspectRatio: "landscape",
-    dateOrTerm: "Campus Life",
-    badge: "RECREATION",
-    src: "/images/gallery/school-life-play.jpg",
-  },
-  {
-    id: "events-inter-house-sports",
-    title: "Inter-House Sports & Athletic Competition",
-    category: "Events",
-    caption:
-      "A spirited day of track events, relay races, and team sports fostering athletic resilience, teamwork, and school spirit.",
-    alt: "Students competing in track races during DRVA Inter-House Sports competition",
-    aspectRatio: "feature",
-    dateOrTerm: "Sports Season",
-    badge: "ATHLETICS",
-    src: "/images/gallery/events-sports.jpg",
-  },
-  {
-    id: "events-literacy-spelling-bee",
-    title: "Literacy Week & Spelling Bee Challenge",
-    category: "Events",
-    caption:
-      "Pupils challenging themselves in vocabulary, speech articulation, and spelling competitions before their peers and teachers.",
-    alt: "Pupils participating in school spelling bee and literacy contest",
-    aspectRatio: "landscape",
-    dateOrTerm: "Literacy Week",
-    badge: "ACADEMICS",
-    src: "/images/gallery/events-spelling-bee.jpg",
-  },
-  {
-    id: "events-independence-day",
-    title: "National Independence Day Assembly",
-    category: "Events",
-    caption:
-      "Commemorating Nigerian National Day through historical recitations, national pride, and civic awareness.",
-    alt: "DRVA students holding flags during National Independence Day assembly",
-    aspectRatio: "portrait",
-    dateOrTerm: "Civic Milestone",
-    badge: "CIVIC DAY",
-    src: "/images/gallery/events-independence.jpg",
-  },
-  {
-    id: "events-end-of-year-carols",
-    title: "End-of-Year Thanksgiving & Carol Presentation",
-    category: "Events",
-    caption:
-      "Musical presentations, scripture recitations, and joyous thanksgiving fellowship welcoming families to conclude the term.",
-    alt: "Pupils choir performing during end of year thanksgiving and carols",
-    aspectRatio: "landscape",
-    dateOrTerm: "First Term Close",
-    badge: "FELLOWSHIP",
-    src: "/images/gallery/events-carols.jpg",
+    dateOrTerm: "2026 Competition",
+    badge: "ACHIEVEMENT",
+    src: "/images/drva/achievements/favour-chima-essay-award.jpg",
   },
 ];

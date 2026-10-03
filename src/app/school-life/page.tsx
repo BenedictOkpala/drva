@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
@@ -23,7 +24,6 @@ export default function SchoolLifePage() {
   const quizFacet = SCHOOL_LIFE_ACTIVITIES.find((f) => f.id === "quiz-academic-activities")!;
   const artsFacet = SCHOOL_LIFE_ACTIVITIES.find((f) => f.id === "creative-arts")!;
   const sportsFacet = SCHOOL_LIFE_ACTIVITIES.find((f) => f.id === "sports-physical-activity")!;
-  const eventsFacet = SCHOOL_LIFE_ACTIVITIES.find((f) => f.id === "school-events-celebrations")!;
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -51,32 +51,73 @@ export default function SchoolLifePage() {
           }
         />
 
-        {/* 2. Feature Moment 01: Debate & Public Speaking */}
+        {/* 2. Feature Moment: Cultural Day at DRVA (Real DRVA Photography) */}
         <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-              <div className="lg:col-span-5 space-y-4">
-                <SectionEyebrow text={debateFacet.category} />
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
-                  {debateFacet.title}.
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 pb-8 border-b border-[#E4E7EB] items-end">
+              <div className="lg:col-span-7">
+                <SectionEyebrow text="HERITAGE &amp; COMMUNITY" />
+                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
+                  Cultural Day at DRVA.
                 </h2>
-                <p className="font-heading font-medium text-lg text-[var(--muted)]">
-                  {debateFacet.tagline}
+              </div>
+              <div className="lg:col-span-5 lg:pl-6 space-y-3">
+                <p className="text-sm text-[var(--muted)] leading-relaxed font-normal">
+                  Cultural Day brings our school family together to celebrate
+                  diversity, articulate cultural heritage through song and traditional attire,
+                  and foster deep appreciation for our shared community.
                 </p>
-                <p className="text-base sm:text-lg text-[var(--ink)]/80 leading-relaxed font-normal">
-                  {debateFacet.description}
-                </p>
+                <Link
+                  href="/gallery"
+                  className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-bold text-[var(--navy)] hover:text-[var(--red)] transition-colors"
+                >
+                  <span>View gallery photographs</span>
+                  <span>&rarr;</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* 2 Independent Cultural Day Photographs */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Photo 1 */}
+              <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
+                <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
+                  <Image
+                    src="/images/drva/cultural-day/pupil-traditional-beadwork.jpg"
+                    alt="Young DRVA pupil dressed in traditional attire with ceremonial beadwork"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4 bg-white border-t border-[#E4E7EB] flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                    Cultural Day
+                  </span>
+                  <span className="text-xs text-[var(--muted)] font-medium">
+                    Traditional Beadwork Attire
+                  </span>
+                </div>
               </div>
 
-              <div className="lg:col-span-7">
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="wide"
-                    theme="light"
-                    label={debateFacet.label}
-                    sublabel="Articulate presentation & peer discussion"
-                    badge={debateFacet.badge}
+              {/* Photo 2 */}
+              <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
+                <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
+                  <Image
+                    src="/images/drva/cultural-day/pupil-blue-traditional-whisk.jpg"
+                    alt="DRVA pupil dressed in blue traditional attire holding ceremonial whisk"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                   />
+                </div>
+                <div className="p-4 bg-white border-t border-[#E4E7EB] flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                    Cultural Day
+                  </span>
+                  <span className="text-xs text-[var(--muted)] font-medium">
+                    Ceremonial Whisk &amp; Attire
+                  </span>
                 </div>
               </div>
             </div>
@@ -87,7 +128,7 @@ export default function SchoolLifePage() {
         <section className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-16">
-              <SectionEyebrow text="EXPRESSION & PHYSICAL RESILIENCE" />
+              <SectionEyebrow text="EXPRESSION &amp; PHYSICAL RESILIENCE" />
               <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                 Creativity and movement.
               </h2>
@@ -152,14 +193,14 @@ export default function SchoolLifePage() {
           </div>
         </section>
 
-        {/* 4. Photo-Grid: Reading, Quiz & Celebrations */}
+        {/* 4. Photo-Grid: Debate, Reading, & Quiz */}
         <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[#E4E7EB] items-end">
               <div className="lg:col-span-7">
                 <SectionEyebrow text="ENRICHED EXPERIENCES" />
                 <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
-                  Literacy, quizzes and celebrations.
+                  Debate, literacy and quizzes.
                 </h2>
               </div>
               <div className="lg:col-span-5 lg:pl-6">
@@ -171,7 +212,34 @@ export default function SchoolLifePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Card 1: Reading & Literacy */}
+              {/* Card 1: Debate & Public Speaking */}
+              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
+                <div>
+                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
+                    <PlaceholderFrame
+                      aspectRatio="square"
+                      theme="light"
+                      label={debateFacet.label}
+                      sublabel="Public speaking and debate"
+                      badge={debateFacet.badge}
+                    />
+                  </div>
+                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
+                    {debateFacet.category}
+                  </span>
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
+                    {debateFacet.title}
+                  </h3>
+                  <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
+                    {debateFacet.description}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
+                  Expression &amp; Confidence
+                </div>
+              </div>
+
+              {/* Card 2: Reading & Literacy */}
               <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
                   <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
@@ -198,7 +266,7 @@ export default function SchoolLifePage() {
                 </div>
               </div>
 
-              {/* Card 2: Quiz & Academic Activities */}
+              {/* Card 3: Quiz & Academic Activities */}
               <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
                   <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
@@ -222,40 +290,6 @@ export default function SchoolLifePage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
                   Collaborative Inquiry
-                </div>
-              </div>
-
-              {/* Card 3: School Events & Celebrations */}
-              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
-                <div>
-                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
-                    <PlaceholderFrame
-                      aspectRatio="square"
-                      theme="light"
-                      label={eventsFacet.label}
-                      sublabel="Term assemblies and milestones"
-                      badge={eventsFacet.badge}
-                    />
-                  </div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {eventsFacet.category}
-                  </span>
-                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
-                    {eventsFacet.title}
-                  </h3>
-                  <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
-                    {eventsFacet.description}
-                  </p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs">
-                  <span className="text-[var(--muted)] font-semibold">Shared School Traditions</span>
-                  <Link
-                    href="/gallery"
-                    className="text-[var(--navy)] hover:text-[var(--red)] font-bold transition-colors flex items-center gap-1"
-                  >
-                    <span>View Gallery</span>
-                    <span>&rarr;</span>
-                  </Link>
                 </div>
               </div>
             </div>

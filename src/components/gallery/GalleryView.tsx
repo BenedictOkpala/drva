@@ -32,9 +32,8 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
     const counts: Record<GalleryCategory, number> = {
       All: GALLERY_ITEMS.length,
       "Cultural Day": 0,
-      Graduation: 0,
-      "School Life": 0,
-      Events: 0,
+      Learning: 0,
+      Achievements: 0,
     };
     GALLERY_ITEMS.forEach((item) => {
       counts[item.category] = (counts[item.category] || 0) + 1;

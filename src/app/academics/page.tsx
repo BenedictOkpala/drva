@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
@@ -72,7 +73,7 @@ export default function AcademicsPage() {
           }
         />
 
-        {/* 2. STAGE 01: CRECHE */}
+        {/* 2. CRECHE */}
         <section id="creche" className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -80,7 +81,7 @@ export default function AcademicsPage() {
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-xs font-bold px-2.5 py-1 bg-[var(--navy)] text-white uppercase">
-                    STAGE 01
+                    01
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
                     INFANT &amp; TODDLER CARE
@@ -117,7 +118,7 @@ export default function AcademicsPage() {
                     theme="light"
                     label="Creche Environment"
                     sublabel="Hygienic & peaceful infant discovery space"
-                    badge="STAGE 01 &bull; CRECHE"
+                    badge="CRECHE FOUNDATION"
                   />
                 </div>
               </div>
@@ -125,7 +126,7 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-        {/* 3. STAGE 02: NURSERY */}
+        {/* 3. NURSERY */}
         <section id="nursery" className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -135,9 +136,9 @@ export default function AcademicsPage() {
                   <PlaceholderFrame
                     aspectRatio="hero"
                     theme="light"
-                    label="Nursery Learning Lab"
+                    label="Nursery Learning Space"
                     sublabel="Phonics corners & creative expression stations"
-                    badge="STAGE 02 &bull; NURSERY"
+                    badge="NURSERY STAGE"
                   />
                 </div>
               </div>
@@ -145,8 +146,8 @@ export default function AcademicsPage() {
               {/* Content Side */}
               <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-xs font-bold px-2.5 py-1 bg-[var(--blue)] text-white uppercase">
-                    STAGE 02
+                  <span className="text-xs font-bold px-2.5 py-1 bg-[var(--navy)] text-white uppercase">
+                    02
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
                     EARLY YEARS FOUNDATIONS
@@ -178,7 +179,7 @@ export default function AcademicsPage() {
           </div>
         </section>
 
-        {/* 4. STAGE 03: PRIMARY */}
+        {/* 4. PRIMARY */}
         <section id="primary" className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -186,7 +187,7 @@ export default function AcademicsPage() {
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-xs font-bold px-2.5 py-1 bg-[var(--navy)] text-white uppercase">
-                    STAGE 03
+                    03
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
                     PRIMARY ACADEMIC MASTERY
@@ -215,23 +216,33 @@ export default function AcademicsPage() {
                 </div>
               </div>
 
-              {/* Photo Frame Side */}
+              {/* Photo Side: Real DRVA Photography */}
               <div className="lg:col-span-5">
                 <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="hero"
-                    theme="light"
-                    label="Primary Classroom &amp; Inquiry"
-                    sublabel="Mathematics, science & civic discussions"
-                    badge="STAGE 03 &bull; PRIMARY"
-                  />
+                  <div className="relative w-full aspect-[4/3] bg-[#E4E7EB] overflow-hidden">
+                    <Image
+                      src="/images/drva/academics/pupils-learning-computing.jpg"
+                      alt="DRVA pupils engaged in classroom learning in Sheretti, Abuja"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 500px"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-3 bg-white border-t border-[#E4E7EB] flex items-center justify-between">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                      Learning in practice
+                    </span>
+                    <span className="text-xs text-[var(--muted)] font-medium">
+                      DRVA Classrooms
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 5. STAGE 04: JUNIOR SECONDARY */}
+        {/* 5. JUNIOR SECONDARY */}
         <section id="junior-secondary" className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -241,9 +252,9 @@ export default function AcademicsPage() {
                   <PlaceholderFrame
                     aspectRatio="hero"
                     theme="light"
-                    label="Junior Secondary Environment"
-                    sublabel="Subject-based discovery, labs & character mentorship"
-                    badge="STAGE 04 &bull; JUNIOR SECONDARY"
+                    label="Junior Secondary Learning"
+                    sublabel="Subject-based discovery, inquiry & character mentorship"
+                    badge="JUNIOR SECONDARY"
                   />
                 </div>
               </div>
@@ -252,7 +263,7 @@ export default function AcademicsPage() {
               <div className="lg:col-span-7 order-1 lg:order-2 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-xs font-bold px-2.5 py-1 bg-[var(--navy)] text-white uppercase">
-                    STAGE 04
+                    04
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
                     JUNIOR SECONDARY (JSS1&ndash;JSS3)
@@ -305,23 +316,23 @@ export default function AcademicsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB]">
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-2">
-                  01 INQUIRY-LED
+                  Conceptual Mastery
                 </span>
                 <h3 className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
-                  Conceptual Mastery
+                  Inquiry-Led Foundations
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
                   Pupils are trained to comprehend the &ldquo;why&rdquo; behind
-                  every mathematical theorem, scientific discovery, and grammar rule.
+                  every mathematical theorem, scientific principle, and grammar rule.
                 </p>
               </div>
 
               <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB]">
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-2">
-                  02 ATTENTIVE GUIDANCE
+                  Observant Mentorship
                 </span>
                 <h3 className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
-                  Observant Mentorship
+                  Attentive Guidance
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
                   Educators monitor individual pace, intervene early when help is
@@ -331,10 +342,10 @@ export default function AcademicsPage() {
 
               <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB]">
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-2">
-                  03 INTEGRATED VALUES
+                  Moral Reflection
                 </span>
                 <h3 className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
-                  Moral Reflection
+                  Integrated Values
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
                   Every academic pursuit is connected with humility, ethical
@@ -363,7 +374,7 @@ export default function AcademicsPage() {
               <div className="p-8 bg-slate-900/80 border border-slate-700/80 flex flex-col justify-between">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-2">
-                    SCOPE 01
+                    Core Languages
                   </span>
                   <h3 className="font-heading font-bold text-2xl text-white mb-3">
                     Languages &amp; Humanities
@@ -382,7 +393,7 @@ export default function AcademicsPage() {
               <div className="p-8 bg-slate-900/80 border border-slate-700/80 flex flex-col justify-between">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-2">
-                    SCOPE 02
+                    Numeracy &amp; Inquiry
                   </span>
                   <h3 className="font-heading font-bold text-2xl text-white mb-3">
                     Mathematics &amp; Science
@@ -401,18 +412,18 @@ export default function AcademicsPage() {
               <div className="p-8 bg-slate-900/80 border border-slate-700/80 flex flex-col justify-between">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-2">
-                    SCOPE 03
+                    Creative &amp; Co-Curricular
                   </span>
                   <h3 className="font-heading font-bold text-2xl text-white mb-3">
                     Creative Arts &amp; Skills
                   </h3>
                   <p className="text-sm text-slate-300 leading-relaxed font-normal mb-6">
-                    Visual arts, music performance, drama, ICT literacy, and
-                    practical vocational craft explorations.
+                    Visual arts, music performance, drama, practical computing literacy, and
+                    creative craft explorations.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-                  Hands-on expression, ICT literacy &amp; creative skills.
+                  Hands-on expression, computer literacy &amp; creative skills.
                 </div>
               </div>
             </div>

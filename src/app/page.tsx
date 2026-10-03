@@ -3,11 +3,9 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Introduction } from "@/components/home/Introduction";
 import { LearningJourney } from "@/components/home/LearningJourney";
+import { SchoolStory } from "@/components/home/SchoolStory";
+import { LifeAtDRVA } from "@/components/home/LifeAtDRVA";
 import { Milestone } from "@/components/home/Milestone";
-import { SchoolLife } from "@/components/home/SchoolLife";
-import { WhyDRVA } from "@/components/home/WhyDRVA";
-import { SchoolMessage } from "@/components/home/SchoolMessage";
-import { NewsPreview } from "@/components/home/NewsPreview";
 import { VisitAdmissions } from "@/components/home/VisitAdmissions";
 
 export default function HomePage() {
@@ -17,35 +15,29 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-grow">
-        {/* 2. Hero */}
+        {/* 2. White Hero (Authority typography + Substantial visual area) */}
         <Hero />
 
-        {/* 3. Introduction (Est. October 2016, Sheretti, Abuja) */}
+        {/* 3. Cool Neutral Introduction (#F7F8FA) */}
         <Introduction />
 
-        {/* 4. Connected Learning Journey (Stages 01–04) */}
+        {/* 4. White Connected Learning Journey (Stages 01–04) */}
         <LearningJourney />
 
-        {/* 5. Ten-Year Milestone Commemoration (2016 — 2026) */}
+        {/* 5. Navy School Story & Ethos (#102A43) */}
+        <SchoolStory />
+
+        {/* 6. White Life at DRVA (4 Independent Real Photographs Showcase) */}
+        <LifeAtDRVA />
+
+        {/* 7. Deep Navy 10-Year Milestone: 2016 — 2026 (#0B1D2F) */}
         <Milestone />
 
-        {/* 6. School Life */}
-        <SchoolLife />
-
-        {/* 7. Why DRVA — Four Foundational Pillars */}
-        <WhyDRVA />
-
-        {/* 8. Message from the School Leadership */}
-        <SchoolMessage />
-
-        {/* 9. News & Stories Preview */}
-        <NewsPreview />
-
-        {/* 10. Visit DRVA & Admissions Ending Composition */}
+        {/* 8. Visit DRVA & Admissions Closing Pathway */}
         <VisitAdmissions />
       </main>
 
-      {/* 11. Footer with Official Crest */}
+      {/* 9. Footer with Official Crest */}
       <Footer />
     </div>
   );
