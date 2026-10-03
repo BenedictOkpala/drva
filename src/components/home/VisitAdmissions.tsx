@@ -5,7 +5,7 @@ import { SCHOOL_INFO } from "@/data/schoolData";
 
 export function VisitAdmissions() {
   return (
-    <section className="py-20 sm:py-28 lg:py-30 bg-[#0B1D2F] text-white relative overflow-hidden border-b border-[#24415F]">
+    <section className="py-16 sm:py-22 lg:py-26 bg-[#0B1D2F] text-white relative overflow-hidden border-b border-[#24415F]">
       {/* Background patterns */}
       <div className="absolute inset-0 pattern-fine-grid-dark opacity-25 pointer-events-none" />
 
@@ -42,8 +42,8 @@ export function VisitAdmissions() {
                 <span className="font-heading text-sm font-bold text-white">Creche to JSS3</span>
               </div>
               <div className="p-3.5 bg-slate-900/80 border border-slate-700/80">
-                <span className="text-xs uppercase font-semibold text-slate-400 block mb-1">CAMPUS ACCESS</span>
-                <span className="font-heading text-sm font-bold text-white">By Appointment</span>
+                <span className="text-xs uppercase font-semibold text-slate-400 block mb-1">ENROLMENT</span>
+                <span className="font-heading text-sm font-bold text-white">Admissions Open</span>
               </div>
             </div>
 

@@ -30,9 +30,8 @@ export default function AcademicsPage() {
           breadcrumbLabel="Academics"
           eyebrow="ACADEMICS"
           title="Growing at every stage."
-          subtitle="A disciplined and nurturing educational continuum."
+          subtitle="A disciplined and nurturing learning pathway."
           description="From early steps in our Creche through to Junior Secondary (JSS1–JSS3), DRVA provides a continuous, supportive learning journey in Sheretti, Abuja that fosters deep inquiry, confidence, and enduring moral habits."
-          badge="CURRICULUM &amp; STAGES"
           variant="progressive"
           rightSlot={
             <div className="flex flex-col gap-2 p-5 bg-white border border-[#E4E7EB] shadow-xs w-full lg:max-w-xs">

@@ -45,7 +45,7 @@ export function PageHero({
         } opacity-30 pointer-events-none`}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-15 lg:py-16 relative z-10">
         {/* Breadcrumb row if supplied */}
         {breadcrumbLabel && (
           <nav

@@ -5,7 +5,7 @@ import { MILESTONE_DATA } from "@/data/homeData";
 
 export function Milestone() {
   return (
-    <section className="py-20 sm:py-26 lg:py-30 bg-[#0B1D2F] text-white border-b border-[#24415F] relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#0B1D2F] text-white border-b border-[#24415F] relative overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0 pattern-fine-grid-dark opacity-25 pointer-events-none" />
 

@@ -149,7 +149,7 @@ export function Footer() {
                   {SCHOOL_CONTACT.address.value}
                 </p>
                 <p className="text-slate-400 text-xs mt-1">
-                  Federal Capital Territory, Nigeria. Visits by appointment.
+                  Federal Capital Territory, Nigeria.
                 </p>
               </div>
 

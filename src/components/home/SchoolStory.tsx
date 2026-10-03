@@ -5,7 +5,7 @@ import { SCHOOL_INFO } from "@/data/schoolData";
 
 export function SchoolStory() {
   return (
-    <section className="py-20 sm:py-26 lg:py-30 bg-[#102A43] text-white relative overflow-hidden border-b border-[#24415F]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#102A43] text-white relative overflow-hidden border-b border-[#24415F]">
       {/* Fine grid pattern */}
       <div className="absolute inset-0 pattern-fine-grid-dark opacity-20 pointer-events-none" />
 

@@ -29,7 +29,6 @@ export default function ContactPage() {
           title="We'd love to hear from you."
           subtitle="Connecting prospective families with the DRVA office."
           description="Whether you have questions regarding admissions, wish to book a campus visit, or need administrative guidance, our office is ready to assist you."
-          badge="OFFICE &amp; ADMISSIONS DESK"
           variant="functional"
           rightSlot={
             <div className="p-4 bg-white border border-[#E4E7EB] text-xs shadow-xs space-y-2 w-full lg:max-w-xs">
@@ -43,7 +42,7 @@ export default function ContactPage() {
                 {SCHOOL_INFO.phone}
               </a>
               <p className="text-xs text-[var(--muted)]">
-                Visiting by scheduled appointment
+                Open for admissions enquiries
               </p>
             </div>
           }

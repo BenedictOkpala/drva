@@ -24,7 +24,6 @@ export default function GalleryPage() {
           title="Life at DRVA."
           subtitle="Moments from our classrooms, celebrations, milestones and school community."
           description="A visual window into the daily life, traditions, and memorable events of Deeper Real Vision Academy in Sheretti, Abuja."
-          badge="CAMPUS MOMENTS"
           variant="visual"
           rightSlot={
             <div className="p-4 bg-[#0B1D2F] text-white border border-[#24415F] max-w-xs text-xs">

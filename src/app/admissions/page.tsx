@@ -30,12 +30,11 @@ export default function AdmissionsPage() {
           title="Your journey to DRVA starts here."
           subtitle="A clear, supportive pathway for prospective families."
           description="We understand that selecting a school is an important decision. Our admissions team is dedicated to making the enrollment journey welcoming, transparent, and straightforward for your family in Sheretti, Abuja."
-          badge="ENROLLMENT &amp; GUIDELINES"
           variant="action"
           rightSlot={
             <div className="p-5 bg-white border border-[#E4E7EB] shadow-xs w-full lg:max-w-xs space-y-3">
-              <span className="text-xs uppercase tracking-wider font-bold text-[var(--muted)] block">
-                Quick Action
+              <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)] block">
+                Direct Enquiry
               </span>
               <p className="text-xs text-[var(--ink)]/80 leading-relaxed">
                 Have questions about enrolling your child for Creche, Nursery, Primary, or Junior Secondary (JSS1–JSS3)?

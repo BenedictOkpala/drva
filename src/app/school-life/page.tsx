@@ -37,12 +37,11 @@ export default function SchoolLifePage() {
           title="Beyond the classroom."
           subtitle="A vibrant community of discovery, creativity, athletics, and fellowship."
           description={BEYOND_CLASSROOM_INTRO}
-          badge="BEYOND THE CLASSROOM"
           variant="visual"
           rightSlot={
             <div className="p-4 bg-[#0B1D2F] text-white border border-[#24415F] max-w-xs text-xs">
               <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-1">
-                COMPLEMENTARY ACTIVITIES
+                CO-CURRICULAR ACTIVITIES
               </span>
               <p className="text-slate-300 leading-relaxed text-xs">
                 Debate &bull; Literacy &bull; Quizzes &bull; Creative Arts &bull; Sports &bull; Celebrations
@@ -52,11 +51,11 @@ export default function SchoolLifePage() {
         />
 
         {/* 2. Feature Moment: Cultural Day at DRVA (Real DRVA Photography) */}
-        <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
+        <section className="py-16 sm:py-24 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 pb-8 border-b border-[#E4E7EB] items-end">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 pb-8 border-b border-[#E4E7EB] items-end">
               <div className="lg:col-span-7">
-                <SectionEyebrow text="HERITAGE &amp; COMMUNITY" />
+                <SectionEyebrow text="CULTURE &amp; CELEBRATION" />
                 <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
                   Cultural Day at DRVA.
                 </h2>
@@ -80,7 +79,7 @@ export default function SchoolLifePage() {
             {/* 2 Independent Cultural Day Photographs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Photo 1 */}
-              <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
+              <div className="p-1.5 sm:p-2 bg-white border border-[#E4E7EB] shadow-sm">
                 <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                   <Image
                     src="/images/drva/cultural-day/pupil-traditional-beadwork.png"
@@ -101,7 +100,7 @@ export default function SchoolLifePage() {
               </div>
 
               {/* Photo 2 */}
-              <div className="p-2 sm:p-3 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
+              <div className="p-1.5 sm:p-2 bg-white border border-[#E4E7EB] shadow-sm">
                 <div className="relative w-full aspect-[4/5] bg-[#E4E7EB] overflow-hidden">
                   <Image
                     src="/images/drva/cultural-day/pupil-blue-traditional-whisk.png"

@@ -56,8 +56,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-[#E4E7EB] shadow-[0_1px_4px_rgba(16,42,67,0.06)]"
-          : "bg-white border-b border-[#E4E7EB]"
+          ? "bg-[#0B1D2F]/95 backdrop-blur-md border-b border-[#24415F] shadow-lg"
+          : "bg-[#0B1D2F] border-b border-[#24415F]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,16 +65,16 @@ export function Header() {
           {/* Brand & Real Official School Crest */}
           <Link
             href="/"
-            className="group flex items-center gap-3 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] rounded-sm"
+            className="group flex items-center gap-3 sm:gap-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-sm"
             aria-label="DRVA — Deeper Real Vision Academy Homepage"
           >
-            <SchoolCrest size="sm" priority />
+            <SchoolCrest variant="dark" size="sm" priority />
 
             <div className="flex flex-col">
-              <span className="font-heading text-lg sm:text-xl font-bold tracking-tight text-[var(--navy)] leading-none group-hover:text-[var(--blue)] transition-colors">
+              <span className="font-heading text-lg sm:text-xl font-bold tracking-tight text-white leading-none group-hover:text-[var(--blue-soft)] transition-colors">
                 DRVA
               </span>
-              <span className="text-[11px] tracking-wide text-[var(--muted)] mt-1 font-medium">
+              <span className="text-[11px] tracking-wide text-slate-300 mt-1 font-medium">
                 Deeper Real Vision Academy
               </span>
             </div>
@@ -91,10 +91,10 @@ export function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`text-sm tracking-normal transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] ${
+                  className={`text-sm tracking-normal transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white ${
                     active
-                      ? "text-[var(--navy)] font-semibold"
-                      : "text-[var(--ink)]/80 hover:text-[var(--navy)] font-medium"
+                      ? "text-white font-semibold"
+                      : "text-slate-200 hover:text-white font-medium"
                   }`}
                   aria-current={active ? "page" : undefined}
                 >
@@ -108,11 +108,11 @@ export function Header() {
             })}
           </nav>
 
-          {/* Right Action */}
+          {/* Right Action: DRVA Red CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] shadow-xs"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-[var(--red)] hover:bg-[#991B1B] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-xs"
             >
               Enquire
             </Link>
@@ -122,14 +122,14 @@ export function Header() {
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/contact"
-              className="px-3.5 py-1.5 text-xs font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] transition-colors"
+              className="px-3.5 py-1.5 text-xs font-semibold text-white bg-[var(--red)] hover:bg-[#991B1B] transition-colors shadow-xs"
             >
               Enquire
             </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[var(--navy)] hover:text-[var(--red)] hover:bg-[#F7F8FA] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)]"
+              className="p-2 text-white hover:text-[var(--red)] hover:bg-slate-800/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
             >
@@ -170,11 +170,11 @@ export function Header() {
       {/* Mobile Navigation Drawer Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 top-20 bg-[var(--navy)]/50 backdrop-blur-sm z-40 md:hidden animate-fade-in"
+          className="fixed inset-0 top-20 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-fade-in"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="bg-white border-b border-[#E4E7EB] shadow-xl px-6 py-6 flex flex-col gap-5"
+            className="bg-[#0B1D2F] border-b border-[#24415F] shadow-2xl px-6 py-6 flex flex-col gap-5 text-white"
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col space-y-1" aria-label="Mobile Navigation">
@@ -185,10 +185,10 @@ export function Header() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-base font-semibold py-2.5 border-b border-[#E4E7EB] transition-colors flex items-center justify-between ${
+                    className={`text-base font-semibold py-2.5 border-b border-[#24415F] transition-colors flex items-center justify-between ${
                       active
-                        ? "text-[var(--navy)] font-bold"
-                        : "text-[var(--ink)] hover:text-[var(--navy)]"
+                        ? "text-white font-bold"
+                        : "text-slate-200 hover:text-white"
                     }`}
                   >
                     <span>{link.label}</span>
@@ -202,17 +202,17 @@ export function Header() {
 
             <div className="pt-2 flex flex-col gap-3">
               <div className="flex items-center justify-center gap-2 pb-1">
-                <SchoolCrest size="xs" />
-                <span className="text-xs font-medium text-[var(--navy)]">DRVA &bull; Sheretti, Abuja</span>
+                <SchoolCrest variant="dark" size="xs" />
+                <span className="text-xs font-medium text-slate-300">DRVA &bull; Sheretti, Abuja</span>
               </div>
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full text-center py-3 text-sm font-semibold text-white bg-[var(--navy)] hover:bg-[#1C3C5E] transition-colors"
+                className="w-full text-center py-3 text-sm font-semibold text-white bg-[var(--red)] hover:bg-[#991B1B] transition-colors shadow-xs"
               >
                 Enquire for Admissions
               </Link>
-              <p className="text-center text-xs tracking-wider uppercase text-[var(--muted)] font-medium mt-1">
+              <p className="text-center text-xs tracking-wider uppercase text-slate-400 font-medium mt-1">
                 IN GOD WE TRUST
               </p>
             </div>

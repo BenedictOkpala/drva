@@ -50,10 +50,10 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section className="pt-6 sm:pt-8 lg:pt-10 pb-16 sm:pb-20 lg:pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Category Filter Bar */}
-        <div className="mb-12 border-b border-[#E4E7EB] pb-4">
+        <div className="mb-8 sm:mb-10 border-b border-[#E4E7EB] pb-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center flex-wrap gap-2 sm:gap-3" role="tablist" aria-label="Gallery category filters">
               {GALLERY_CATEGORIES.map((category) => {
@@ -90,11 +90,6 @@ export function GalleryView({ initialCategory = "All" }: GalleryViewProps) {
                   </button>
                 );
               })}
-            </div>
-
-            {/* Displaying count info */}
-            <div className="text-xs text-[var(--muted)] font-medium hidden md:block">
-              Showing {filteredItems.length} {filteredItems.length === 1 ? "moment" : "moments"}
             </div>
           </div>
         </div>

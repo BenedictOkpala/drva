@@ -33,12 +33,11 @@ export default function AboutPage() {
           title="Education with purpose."
           subtitle="A community where children are known, challenged, and guided with care."
           description="Deeper Real Vision Academy is an educational institution in Sheretti, Abuja dedicated to intellectual curiosity, moral values, and personal growth across Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3)."
-          badge="INSTITUTIONAL IDENTITY"
           variant="story"
           rightSlot={
             <div className="p-4 bg-[#F7F8FA] border border-[#E4E7EB] max-w-xs text-xs">
               <span className="text-xs uppercase tracking-wider text-[var(--muted)] font-semibold block mb-1">
-                Educational Continuum
+                Educational Stages
               </span>
               <span className="font-heading text-sm sm:text-base text-[var(--navy)] block mb-2 font-bold">
                 Creche &bull; Nursery &bull; Primary &bull; Junior Secondary
