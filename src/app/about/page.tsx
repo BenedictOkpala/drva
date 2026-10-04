@@ -3,7 +3,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionEyebrow } from "@/components/common/SectionEyebrow";
-import { PlaceholderFrame } from "@/components/common/PlaceholderFrame";
 import { AdmissionsCTA } from "@/components/common/AdmissionsCTA";
 import { SchoolCrest } from "@/components/brand/SchoolCrest";
 import { SchoolAnthemSection } from "@/components/about/SchoolAnthemSection";
@@ -53,22 +52,63 @@ export default function AboutPage() {
         <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              {/* Left Column: Photography Area */}
+              {/* Left Column: Institutional Profile & Fact Summary */}
               <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="relative p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="portrait"
-                    theme="light"
-                    label="Campus & Academic Setting"
-                    sublabel="Peaceful learning environment and campus grounds"
-                    badge="CAMPUS LIFE"
-                  />
-                </div>
+                <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB] space-y-6 shadow-xs">
+                  <div className="flex items-center gap-4 pb-5 border-b border-[#E4E7EB]">
+                    <SchoolCrest size="sm" priority />
+                    <div>
+                      <span className="text-xs uppercase tracking-wider font-bold text-[var(--red)] block">
+                        INSTITUTIONAL FOUNDATION
+                      </span>
+                      <span className="font-heading text-base font-bold text-[var(--navy)]">
+                        Sheretti, Abuja
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Subtitle Under Image */}
-                <div className="mt-4 pt-3 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
-                  <span>DRVA Foundation</span>
-                  <span>Established 2015</span>
+                  <div className="space-y-4 text-xs">
+                    <div>
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] block mb-1">
+                        ESTABLISHED
+                      </span>
+                      <span className="font-heading text-sm font-bold text-[var(--navy)]">
+                        2015
+                      </span>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#E4E7EB]">
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] block mb-1">
+                        CURRENT LEVELS
+                      </span>
+                      <span className="font-heading text-sm font-bold text-[var(--navy)]">
+                        Creche &bull; Nursery &bull; Primary &bull; Junior Secondary (JSS1&ndash;JSS3)
+                      </span>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#E4E7EB]">
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] block mb-1">
+                        FUTURE EXPANSION
+                      </span>
+                      <p className="text-xs text-[var(--ink)]/80 leading-relaxed font-normal">
+                        Looking ahead, DRVA plans to expand into Senior Secondary School, continuing the learning journey through an additional stage of education.
+                      </p>
+                    </div>
+
+                    <div className="pt-3 border-t border-[#E4E7EB]">
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)] block mb-1">
+                        CAMPUS LOCATION
+                      </span>
+                      <p className="text-xs text-[var(--ink)]/80 leading-relaxed font-normal">
+                        Behind St. Anthony Catholic Church, Sheretti, Abuja.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)]">
+                    <span>DRVA Foundation</span>
+                    <span className="font-bold text-[var(--navy)]">In God We Trust</span>
+                  </div>
                 </div>
               </div>
 
@@ -243,48 +283,35 @@ export default function AboutPage() {
         {/* 7. Leadership Composition (Mrs Okpala Priscilla) */}
         <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              {/* Portrait Frame */}
-              <div className="lg:col-span-5">
-                <div className="relative max-w-sm mx-auto lg:max-w-none">
-                  <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                    <PlaceholderFrame
-                      aspectRatio="portrait"
-                      theme="light"
-                      label={SCHOOL_INFO.leadership.name}
-                      sublabel={`${SCHOOL_INFO.leadership.role} • DRVA`}
-                      badge="LEADERSHIP"
-                    />
-                  </div>
-                </div>
+            <div className="max-w-4xl mx-auto p-8 sm:p-12 lg:p-14 bg-[#F7F8FA] border border-[#E4E7EB] shadow-xs">
+              <div className="flex items-center gap-3 mb-6">
+                <SchoolCrest size="xs" />
+                <span className="w-4 h-0.5 bg-[var(--red)]" />
+                <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
+                  SCHOOL LEADERSHIP &amp; STEWARDSHIP
+                </span>
               </div>
 
-              {/* Message */}
-              <div className="lg:col-span-7 space-y-6">
-                <SectionEyebrow text="SCHOOL LEADERSHIP" />
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15]">
-                  Dedicated stewardship.
-                </h2>
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[var(--navy)] tracking-tight leading-[1.15] mb-6">
+                Dedicated stewardship.
+              </h2>
 
-                <div className="space-y-4 text-base sm:text-lg text-[var(--ink)]/85 leading-relaxed font-normal">
-                  <p className="font-heading font-medium text-lg sm:text-xl text-[var(--navy)] leading-relaxed">
-                    &ldquo;{SCHOOL_INFO.leadership.message}&rdquo;
-                  </p>
-                </div>
+              <blockquote className="text-lg sm:text-xl font-heading font-medium text-[var(--navy)] leading-relaxed mb-8">
+                &ldquo;{SCHOOL_INFO.leadership.message}&rdquo;
+              </blockquote>
 
-                <div className="pt-6 border-t border-[#E4E7EB] flex items-center justify-between text-xs">
-                  <div>
-                    <span className="font-heading text-base font-bold text-[var(--navy)] block">
-                      {SCHOOL_INFO.leadership.name}
-                    </span>
-                    <span className="uppercase tracking-wider text-[var(--muted)] font-semibold">
-                      {SCHOOL_INFO.leadership.role}
-                    </span>
-                  </div>
-                  <span className="font-heading font-bold text-sm text-[var(--navy)]">
-                    In God We Trust
+              <div className="pt-6 border-t border-[#E4E7EB] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs">
+                <div>
+                  <span className="font-heading text-base font-bold text-[var(--navy)] block">
+                    {SCHOOL_INFO.leadership.name}
+                  </span>
+                  <span className="uppercase tracking-wider text-[var(--muted)] font-semibold">
+                    {SCHOOL_INFO.leadership.role} &bull; Deeper Real Vision Academy
                   </span>
                 </div>
+                <span className="font-heading font-bold text-sm text-[var(--navy)]">
+                  In God We Trust
+                </span>
               </div>
             </div>
           </div>

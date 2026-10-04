@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionEyebrow } from "@/components/common/SectionEyebrow";
-import { PlaceholderFrame } from "@/components/common/PlaceholderFrame";
 import { AdmissionsCTA } from "@/components/common/AdmissionsCTA";
 import { ACADEMIC_STAGES } from "@/data/schoolData";
 
@@ -75,7 +74,7 @@ export default function AcademicsPage() {
         {/* 2. CRECHE */}
         <section id="creche" className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               {/* Content Side */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-3">
@@ -100,7 +99,7 @@ export default function AcademicsPage() {
                   {creche.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-[#F7F8FA] border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
+                      className="p-3.5 bg-[#F7F8FA] border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)] shrink-0" />
                       <span>{focus}</span>
@@ -109,16 +108,37 @@ export default function AcademicsPage() {
                 </div>
               </div>
 
-              {/* Photo Frame Side */}
+              {/* Stage Overview Plaque */}
               <div className="lg:col-span-5">
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="hero"
-                    theme="light"
-                    label="Creche Environment"
-                    sublabel="Hygienic & peaceful infant discovery space"
-                    badge="CRECHE FOUNDATION"
-                  />
+                <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB] space-y-5 shadow-xs">
+                  <div className="flex items-center justify-between pb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                      STAGE 01 &bull; CRECHE
+                    </span>
+                    <span className="text-xs text-[var(--muted)] font-semibold">
+                      Sheretti, Abuja
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs text-[var(--ink)]/80">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Calm, protective and hygienic environment tailored to infant routines.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Attentive caregiver support focused on emotional security and early developmental milestones.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Gentle sensory discovery, early language exposure and motor skills development.</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
+                    <span>Enrolment Inquiries</span>
+                    <span className="font-bold text-[var(--navy)]">Open</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,17 +148,38 @@ export default function AcademicsPage() {
         {/* 3. NURSERY */}
         <section id="nursery" className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              {/* Photo Frame Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+              {/* Stage Overview Plaque */}
               <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="hero"
-                    theme="light"
-                    label="Nursery Learning Space"
-                    sublabel="Phonics corners & creative expression stations"
-                    badge="NURSERY STAGE"
-                  />
+                <div className="p-6 sm:p-8 bg-white border border-[#E4E7EB] space-y-5 shadow-xs">
+                  <div className="flex items-center justify-between pb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                      STAGE 02 &bull; NURSERY
+                    </span>
+                    <span className="text-xs text-[var(--muted)] font-semibold">
+                      Early Years
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs text-[var(--ink)]/80">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Phonics-based early reading and conversational vocabulary building.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Foundational numeracy, pattern recognition, and counting exercises.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Expressive creative arts, social manners, and collaborative play habits.</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
+                    <span>Classroom Ratio</span>
+                    <span className="font-bold text-[var(--navy)]">Attentive &amp; Observant</span>
+                  </div>
                 </div>
               </div>
 
@@ -166,7 +207,7 @@ export default function AcademicsPage() {
                   {nursery.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-white border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
+                      className="p-3.5 bg-white border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)] shrink-0" />
                       <span>{focus}</span>
@@ -206,7 +247,7 @@ export default function AcademicsPage() {
                   {primary.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-[#F7F8FA] border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
+                      className="p-3.5 bg-[#F7F8FA] border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)] shrink-0" />
                       <span>{focus}</span>
@@ -244,17 +285,38 @@ export default function AcademicsPage() {
         {/* 5. JUNIOR SECONDARY */}
         <section id="junior-secondary" className="py-20 sm:py-28 bg-[#F7F8FA] border-b border-[#E4E7EB] scroll-mt-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-              {/* Photo Frame Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+              {/* Stage Overview Plaque */}
               <div className="lg:col-span-5 order-2 lg:order-1">
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="hero"
-                    theme="light"
-                    label="Junior Secondary Learning"
-                    sublabel="Subject-based discovery, inquiry & character mentorship"
-                    badge="JUNIOR SECONDARY"
-                  />
+                <div className="p-6 sm:p-8 bg-white border border-[#E4E7EB] space-y-5 shadow-xs">
+                  <div className="flex items-center justify-between pb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[var(--navy)]">
+                      STAGE 04 &bull; JUNIOR SECONDARY
+                    </span>
+                    <span className="text-xs text-[var(--muted)] font-semibold">
+                      JSS1 &ndash; JSS3
+                    </span>
+                  </div>
+
+                  <div className="space-y-3 text-xs text-[var(--ink)]/80">
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Rigorous intermediate subjects: mathematics, basic sciences, languages and humanities.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Preparation for Junior Secondary academic requirements and independent inquiry.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <span className="text-[var(--red)] font-bold">&bull;</span>
+                      <span>Character maturity, personal discipline, leadership habits, and civic values.</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
+                    <span>Future Pathway</span>
+                    <span className="font-bold text-[var(--navy)]">Senior Sec. (Planned)</span>
+                  </div>
                 </div>
               </div>
 
@@ -282,7 +344,7 @@ export default function AcademicsPage() {
                   {juniorSecondary.focusAreas.map((focus, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-white border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
+                      className="p-3.5 bg-white border border-[#E4E7EB] text-xs sm:text-sm text-[var(--navy)] font-semibold flex items-center gap-2.5"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--red)] shrink-0" />
                       <span>{focus}</span>

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/common/PageHero";
 import { SectionEyebrow } from "@/components/common/SectionEyebrow";
-import { PlaceholderFrame } from "@/components/common/PlaceholderFrame";
 import { AdmissionsCTA } from "@/components/common/AdmissionsCTA";
 import {
   BEYOND_CLASSROOM_INTRO,
@@ -133,44 +132,52 @@ export default function SchoolLifePage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
               {/* Creative Arts Side */}
-              <div className="lg:col-span-6 space-y-6">
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="portrait"
-                    theme="light"
-                    label={artsFacet.label}
-                    sublabel="Visual art, melody, and craft activities"
-                    badge={artsFacet.badge}
-                  />
-                </div>
+              <div className="p-8 sm:p-10 bg-white border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {artsFacet.category}
-                  </span>
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      {artsFacet.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)]">
+                      {artsFacet.badge}
+                    </span>
+                  </div>
+
                   <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] mb-2">
                     {artsFacet.title}
                   </h3>
-                  <p className="font-heading font-medium text-base text-[var(--muted)] mb-3">
+                  <p className="font-heading font-medium text-base text-[var(--navy)]/80 mb-4">
                     {artsFacet.tagline}
                   </p>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed font-normal">
                     {artsFacet.description}
                   </p>
                 </div>
+
+                <div className="mt-8 pt-5 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)]">
+                  <span>Visual Art &bull; Music &bull; Craft</span>
+                  <span className="font-semibold text-[var(--navy)]">Expression</span>
+                </div>
               </div>
 
               {/* Sports Side */}
-              <div className="lg:col-span-6 space-y-6 lg:pt-10">
+              <div className="p-8 sm:p-10 bg-white border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {sportsFacet.category}
-                  </span>
+                  <div className="flex items-center justify-between pb-4 mb-6 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      {sportsFacet.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)]">
+                      {sportsFacet.badge}
+                    </span>
+                  </div>
+
                   <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[var(--navy)] mb-2">
                     {sportsFacet.title}
                   </h3>
-                  <p className="font-heading font-medium text-base text-[var(--muted)] mb-3">
+                  <p className="font-heading font-medium text-base text-[var(--navy)]/80 mb-4">
                     {sportsFacet.tagline}
                   </p>
                   <p className="text-sm sm:text-base text-[var(--ink)]/80 leading-relaxed font-normal">
@@ -178,21 +185,16 @@ export default function SchoolLifePage() {
                   </p>
                 </div>
 
-                <div className="p-2 sm:p-3 bg-white border border-[#E4E7EB] shadow-sm">
-                  <PlaceholderFrame
-                    aspectRatio="wide"
-                    theme="light"
-                    label={sportsFacet.label}
-                    sublabel="Movement games and outdoor physical activity"
-                    badge={sportsFacet.badge}
-                  />
+                <div className="mt-8 pt-5 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)]">
+                  <span>Movement &bull; Athletics &bull; Games</span>
+                  <span className="font-semibold text-[var(--navy)]">Sportsmanship</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 4. Photo-Grid: Debate, Reading, & Quiz */}
+        {/* 4. Enriched Co-Curriculars: Debate, Reading, & Quiz */}
         <section className="py-20 sm:py-28 bg-white border-b border-[#E4E7EB]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 pb-8 border-b border-[#E4E7EB] items-end">
@@ -212,82 +214,70 @@ export default function SchoolLifePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1: Debate & Public Speaking */}
-              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
+              <div className="p-8 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
-                    <PlaceholderFrame
-                      aspectRatio="square"
-                      theme="light"
-                      label={debateFacet.label}
-                      sublabel="Public speaking and debate"
-                      badge={debateFacet.badge}
-                    />
+                  <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      {debateFacet.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)]">
+                      {debateFacet.badge}
+                    </span>
                   </div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {debateFacet.category}
-                  </span>
-                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-3">
                     {debateFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {debateFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
+                <div className="mt-8 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
                   Expression &amp; Confidence
                 </div>
               </div>
 
               {/* Card 2: Reading & Literacy */}
-              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
+              <div className="p-8 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
-                    <PlaceholderFrame
-                      aspectRatio="square"
-                      theme="light"
-                      label={readingFacet.label}
-                      sublabel="Guided reading and literature"
-                      badge={readingFacet.badge}
-                    />
+                  <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      {readingFacet.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)]">
+                      {readingFacet.badge}
+                    </span>
                   </div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {readingFacet.category}
-                  </span>
-                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-3">
                     {readingFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {readingFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
+                <div className="mt-8 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
                   Language &amp; Comprehension
                 </div>
               </div>
 
               {/* Card 3: Quiz & Academic Activities */}
-              <div className="p-6 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
+              <div className="p-8 bg-[#F7F8FA] border border-[#E4E7EB] flex flex-col justify-between shadow-xs">
                 <div>
-                  <div className="mb-5 p-1 bg-white border border-[#E4E7EB]">
-                    <PlaceholderFrame
-                      aspectRatio="square"
-                      theme="light"
-                      label={quizFacet.label}
-                      sublabel="Collaborative team quizzes and puzzles"
-                      badge={quizFacet.badge}
-                    />
+                  <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold">
+                      {quizFacet.category}
+                    </span>
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[var(--muted)]">
+                      {quizFacet.badge}
+                    </span>
                   </div>
-                  <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
-                    {quizFacet.category}
-                  </span>
-                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-2">
+                  <h3 className="font-heading font-bold text-2xl text-[var(--navy)] mb-3">
                     {quizFacet.title}
                   </h3>
                   <p className="text-sm text-[var(--ink)]/80 leading-relaxed font-normal">
                     {quizFacet.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
+                <div className="mt-8 pt-4 border-t border-[#E4E7EB] text-xs font-semibold text-[var(--muted)]">
                   Collaborative Inquiry
                 </div>
               </div>
@@ -298,39 +288,25 @@ export default function SchoolLifePage() {
         {/* 5. Community & Fellowship */}
         <section className="py-20 sm:py-28 bg-[#0B1D2F] text-white border-b border-[#24415F]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-6 space-y-6">
-                <SectionEyebrow text="COMMUNITY &amp; FELLOWSHIP" theme="dark" />
-                <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
-                  A supportive school family.
-                </h2>
-                <p className="font-heading font-medium text-lg text-slate-300">
-                  Cultivating lasting bonds between pupils, educators, and families.
-                </p>
-                <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-                  At DRVA, school life is anchored in a caring community where every child
-                  is recognized and encouraged. Together with parents, our educators guide
-                  learners with patience, high expectations, and moral clarity.
-                </p>
-                <div className="pt-4 border-t border-slate-700 flex flex-wrap items-center gap-6 text-xs text-slate-400">
-                  <span>Motto: In God We Trust</span>
-                  <span>&bull;</span>
-                  <span>Parent-Teacher Partnership</span>
-                  <span>&bull;</span>
-                  <span>Sheretti, Abuja</span>
-                </div>
-              </div>
-
-              <div className="lg:col-span-6">
-                <div className="p-2 sm:p-3 bg-slate-900/80 border border-slate-700 shadow-xl">
-                  <PlaceholderFrame
-                    aspectRatio="wide"
-                    theme="dark"
-                    label="School Community &amp; Fellowship"
-                    sublabel="Pupil growth and community gatherings"
-                    badge="FELLOWSHIP"
-                  />
-                </div>
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <SectionEyebrow text="COMMUNITY &amp; FELLOWSHIP" theme="dark" centered />
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15]">
+                A supportive school family.
+              </h2>
+              <p className="font-heading font-medium text-lg sm:text-xl text-slate-200">
+                Cultivating lasting bonds between pupils, educators, and families.
+              </p>
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+                At DRVA, school life is anchored in a caring community where every child
+                is recognized and encouraged. Together with parents, our educators guide
+                learners with patience, high expectations, and moral clarity.
+              </p>
+              <div className="pt-6 border-t border-slate-700/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+                <span>Motto: In God We Trust</span>
+                <span>&bull;</span>
+                <span>Parent-Teacher Partnership</span>
+                <span>&bull;</span>
+                <span>Sheretti, Abuja</span>
               </div>
             </div>
           </div>
