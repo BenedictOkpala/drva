@@ -18,24 +18,27 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on Escape key
+  // Close mobile menu on Escape key and handle body scroll lock
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setMobileMenuOpen(false);
       }
     };
+
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
     } else {
       document.body.style.overflow = "";
     }
+
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [mobileMenuOpen]);
+
 
   const navLinks = [
     { label: "About", href: "/about" },
@@ -54,10 +57,8 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-[#0B1D2F]/95 backdrop-blur-md border-b border-[#24415F] shadow-lg"
-          : "bg-[#0B1D2F] border-b border-[#24415F]"
+      className={`sticky top-0 z-50 w-full transition-colors duration-200 bg-[#0B1D2F] border-b border-[#24415F] ${
+        scrolled ? "shadow-lg shadow-black/20" : ""
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,7 +119,7 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button & Quick CTA */}
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/contact"
@@ -128,10 +129,11 @@ export function Header() {
             </Link>
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white hover:text-[var(--red)] hover:bg-slate-800/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              className="min-w-[40px] min-h-[40px] p-2 text-white hover:text-[var(--red)] hover:bg-slate-800/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white flex items-center justify-center rounded-sm"
               aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation-drawer"
             >
               {mobileMenuOpen ? (
                 <svg
@@ -140,6 +142,7 @@ export function Header() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth="2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -154,6 +157,7 @@ export function Header() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth="2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -170,11 +174,15 @@ export function Header() {
       {/* Mobile Navigation Drawer Overlay */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 top-20 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-fade-in"
+          id="mobile-navigation-drawer"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation Menu"
+          className="fixed inset-x-0 top-20 bottom-0 z-50 bg-black/60 md:hidden flex flex-col justify-start"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="bg-[#0B1D2F] border-b border-[#24415F] shadow-2xl px-6 py-6 flex flex-col gap-5 text-white"
+            className="w-full bg-[#0B1D2F] border-b border-[#24415F] shadow-2xl px-6 py-6 flex flex-col gap-5 text-white max-h-[calc(100dvh-5rem)] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col space-y-1" aria-label="Mobile Navigation">
