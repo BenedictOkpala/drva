@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SchoolCrest } from "@/components/brand/SchoolCrest";
@@ -17,6 +17,55 @@ const navLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const menuButton = menuButtonRef.current;
+    document.body.style.overflow = "hidden";
+    headerRef.current?.querySelector<HTMLAnchorElement>(
+      "#mobile-navigation-menu a"
+    )?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setMobileMenuOpen(false);
+      }
+      if (event.key === "Tab") {
+        const controls = Array.from(
+          headerRef.current?.querySelectorAll<HTMLElement>("a[href], button") ?? []
+        ).filter((control) => control.getClientRects().length > 0);
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    const desktopQuery = window.matchMedia("(min-width: 768px)");
+    const handleBreakpoint = (event: MediaQueryListEvent) => {
+      if (event.matches) setMobileMenuOpen(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    desktopQuery.addEventListener("change", handleBreakpoint);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      desktopQuery.removeEventListener("change", handleBreakpoint);
+      if (menuButton?.isConnected && menuButton.getClientRects().length > 0) {
+        menuButton.focus();
+      }
+    };
+  }, [mobileMenuOpen]);
 
   const isActive = (href: string) => {
     if (!pathname) return false;
@@ -25,7 +74,8 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-[#0B1D2F] border-b border-[#24415F]">
+    <>
+    <header ref={headerRef} className="sticky top-0 z-50 w-full bg-[#0B1D2F] border-b border-[#24415F]">
       {/* Top Navigation Row */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -94,6 +144,7 @@ export function Header() {
               Enquire
             </Link>
             <button
+              ref={menuButtonRef}
               type="button"
               onClick={() => setMobileMenuOpen((open) => !open)}
               className="w-11 h-11 min-w-[44px] min-h-[44px] p-2.5 text-white hover:text-[var(--red)] hover:bg-slate-800/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white flex items-center justify-center rounded-sm"
@@ -142,7 +193,7 @@ export function Header() {
         <nav
           id="mobile-navigation-menu"
           aria-label="Mobile Navigation"
-          className="md:hidden border-t border-[#24415F] bg-[#0B1D2F] px-4 sm:px-6 py-6"
+          className="md:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-[#24415F] bg-[#0B1D2F] px-4 sm:px-6 py-6"
         >
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
@@ -178,5 +229,15 @@ export function Header() {
         </nav>
       )}
     </header>
+    {mobileMenuOpen && (
+      <button
+        type="button"
+        tabIndex={-1}
+        aria-label="Close navigation menu backdrop"
+        className="fixed inset-x-0 top-20 bottom-0 z-40 bg-black/60 md:hidden"
+        onClick={() => setMobileMenuOpen(false)}
+      />
+    )}
+    </>
   );
 }
