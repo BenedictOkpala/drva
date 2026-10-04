@@ -27,7 +27,7 @@ export function VisitAdmissions() {
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl">
               We welcome prospective families to discover our school in Sheretti,
-              Abuja. Whether you are enrolling for Creche, Nursery, Primary, or
+              Abuja. Whether you are enquiring for Creche, Nursery, Primary, or
               Junior Secondary (JSS1&ndash;JSS3), our office is ready to assist you.
             </p>
 
@@ -42,8 +42,8 @@ export function VisitAdmissions() {
                 <span className="font-heading text-sm font-bold text-white">Creche to JSS3</span>
               </div>
               <div className="p-3.5 bg-slate-900/80 border border-slate-700/80">
-                <span className="text-xs uppercase font-semibold text-slate-400 block mb-1">ENROLMENT</span>
-                <span className="font-heading text-sm font-bold text-white">Admissions Open</span>
+                <span className="text-xs uppercase font-semibold text-slate-400 block mb-1">ENQUIRIES</span>
+                <span className="font-heading text-sm font-bold text-white">Admissions Desk</span>
               </div>
             </div>
 
@@ -53,13 +53,13 @@ export function VisitAdmissions() {
                 href="/admissions"
                 className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold tracking-wide text-[var(--navy)] bg-white hover:bg-[#F7F8FA] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-xs"
               >
-                Review admissions process
+                Admissions information
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-7 py-3.5 text-sm font-semibold tracking-wide text-white hover:text-[var(--blue-soft)] bg-slate-900/80 border border-slate-700 hover:border-slate-500 transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
-                Contact &amp; book a visit &rarr;
+                Contact DRVA &rarr;
               </Link>
             </div>
           </div>

@@ -104,12 +104,12 @@ export default function AdmissionsPage() {
               <div className="lg:col-span-7">
                 <SectionEyebrow text="ESSENTIAL INFORMATION" />
                 <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
-                  Criteria, fees and timelines.
+                  Placement, fees and enquiries.
                 </h2>
               </div>
               <div className="lg:col-span-5 lg:pl-6">
                 <p className="text-xs sm:text-sm uppercase tracking-wider text-[var(--muted)] font-semibold">
-                  Clear, transparent guidance for prospective parents and guardians.
+                  Clear, direct guidance for prospective parents and guardians.
                 </p>
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function AdmissionsPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <SectionEyebrow text="NEXT STEPS" theme="dark" centered />
             <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15] mt-4 mb-6">
-              Ready to take the next step?
+              Ready to learn more?
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto mb-10">
               Connect directly with our admissions desk on {SCHOOL_INFO.phone} or send an enquiry.
@@ -197,7 +197,7 @@ export default function AdmissionsPage() {
                 href="/contact"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-sm font-semibold tracking-wide text-white hover:text-slate-200 bg-slate-900/80 border border-slate-700 hover:border-slate-500 transition-all"
               >
-                Enquiry form &amp; location &rarr;
+                Contact DRVA &rarr;
               </Link>
             </div>
           </div>

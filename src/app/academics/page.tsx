@@ -43,7 +43,7 @@ export default function AcademicsPage() {
                   className="flex items-center justify-between p-2 hover:bg-[#F7F8FA] text-[var(--navy)] font-semibold transition-colors"
                 >
                   <span>01. Creche</span>
-                  <span className="text-[var(--muted)] text-xs font-normal">Infant Care</span>
+                  <span className="text-[var(--muted)] text-xs font-normal">Early Care</span>
                 </a>
                 <a
                   href="#nursery"
@@ -82,7 +82,7 @@ export default function AcademicsPage() {
                     01
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
-                    INFANT &amp; TODDLER CARE
+                    EARLY LEARNING &amp; CARE
                   </span>
                 </div>
 
@@ -123,21 +123,21 @@ export default function AcademicsPage() {
                   <div className="space-y-3 text-xs text-[var(--ink)]/80">
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Calm, protective and hygienic environment tailored to infant routines.</span>
+                      <span>Early learning and care designed to give young children a supportive beginning to school life.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Attentive caregiver support focused on emotional security and early developmental milestones.</span>
+                      <span>Safe, calm environment supporting gentle routines, emotional security and sensory discovery.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Gentle sensory discovery, early language exposure and motor skills development.</span>
+                      <span>Attentive guidance and steady communication with parents.</span>
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
-                    <span>Enrolment Inquiries</span>
-                    <span className="font-bold text-[var(--navy)]">Open</span>
+                    <span>Admissions Enquiries</span>
+                    <span className="font-bold text-[var(--navy)]">08036135006</span>
                   </div>
                 </div>
               </div>
@@ -164,21 +164,21 @@ export default function AcademicsPage() {
                   <div className="space-y-3 text-xs text-[var(--ink)]/80">
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Phonics-based early reading and conversational vocabulary building.</span>
+                      <span>Early-years foundations for communication, early literacy and conversational habits.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Foundational numeracy, pattern recognition, and counting exercises.</span>
+                      <span>Foundational numeracy, counting awareness, and guided learning through play.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Expressive creative arts, social manners, and collaborative play habits.</span>
+                      <span>Creative expression, social manners, and collaborative classroom participation.</span>
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-[#E4E7EB] flex items-center justify-between text-xs text-[var(--muted)] font-medium">
-                    <span>Classroom Ratio</span>
-                    <span className="font-bold text-[var(--navy)]">Attentive &amp; Observant</span>
+                    <span>Educational Level</span>
+                    <span className="font-bold text-[var(--navy)]">Early Years</span>
                   </div>
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function AcademicsPage() {
                     03
                   </span>
                   <span className="text-xs tracking-wider uppercase font-bold text-[var(--navy)]">
-                    PRIMARY ACADEMIC MASTERY
+                    PRIMARY FOUNDATIONS
                   </span>
                 </div>
 
@@ -301,15 +301,15 @@ export default function AcademicsPage() {
                   <div className="space-y-3 text-xs text-[var(--ink)]/80">
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Rigorous intermediate subjects: mathematics, basic sciences, languages and humanities.</span>
+                      <span>DRVA currently serves learners through JSS1–JSS3 as they continue their academic development.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Preparation for Junior Secondary academic requirements and independent inquiry.</span>
+                      <span>Core academic disciplines covering sciences, mathematics, languages, social and civic studies.</span>
                     </div>
                     <div className="flex items-start gap-2.5">
                       <span className="text-[var(--red)] font-bold">&bull;</span>
-                      <span>Character maturity, personal discipline, leadership habits, and civic values.</span>
+                      <span>Emphasis on personal responsibility, moral values, and readiness for future learning.</span>
                     </div>
                   </div>
 
@@ -361,15 +361,15 @@ export default function AcademicsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14 pb-8 border-b border-[#E4E7EB] items-end">
               <div className="lg:col-span-7">
-                <SectionEyebrow text="PEDAGOGICAL APPROACH" />
+                <SectionEyebrow text="EDUCATIONAL APPROACH" />
                 <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-[var(--navy)] tracking-tight leading-[1.15] mt-3">
-                  How we cultivate understanding.
+                  How we support learning.
                 </h2>
               </div>
               <div className="lg:col-span-5 lg:pl-6">
                 <p className="text-sm text-[var(--muted)] leading-relaxed">
-                  Our teaching approach ensures knowledge is grasped conceptually,
-                  tested practically, and retained through disciplined practice.
+                  Our approach supports intellectual curiosity, moral clarity,
+                  and steady development across every stage of learning.
                 </p>
               </div>
             </div>
@@ -377,27 +377,27 @@ export default function AcademicsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB]">
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-2">
-                  Conceptual Mastery
+                  Foundational Understanding
                 </span>
                 <h3 className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
-                  Inquiry-Led Foundations
+                  Core Concepts
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
-                  Pupils are trained to comprehend the &ldquo;why&rdquo; behind
-                  every mathematical theorem, scientific principle, and grammar rule.
+                  Pupils build clear understanding of core concepts across reading,
+                  mathematics, and science inquiry.
                 </p>
               </div>
 
               <div className="p-6 sm:p-8 bg-[#F7F8FA] border border-[#E4E7EB]">
                 <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-2">
-                  Observant Mentorship
+                  Attentive Guidance
                 </span>
                 <h3 className="font-heading font-bold text-xl text-[var(--navy)] mb-2">
-                  Attentive Guidance
+                  Dedicated Mentorship
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
-                  Educators monitor individual pace, intervene early when help is
-                  needed, and provide stretch opportunities for advanced discovery.
+                  Educators observe learners closely, encouraging steady effort and
+                  supporting individual progress.
                 </p>
               </div>
 
@@ -409,8 +409,8 @@ export default function AcademicsPage() {
                   Integrated Values
                 </h3>
                 <p className="text-sm text-[var(--ink)]/80 leading-relaxed">
-                  Every academic pursuit is connected with humility, ethical
-                  responsibility, and service to the broader community.
+                  Learning is paired with honesty, mutual respect, humility,
+                  and personal responsibility.
                 </p>
               </div>
             </div>
@@ -421,12 +421,12 @@ export default function AcademicsPage() {
         <section className="py-20 sm:py-28 bg-[#0B1D2F] text-white border-b border-[#24415F]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-14">
-              <SectionEyebrow text="SUBJECTS &amp; ENRICHMENT" theme="dark" />
+              <SectionEyebrow text="SUBJECT DISCIPLINES" theme="dark" />
               <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.15] mt-3">
                 Curriculum structure.
               </h2>
               <p className="mt-3 text-xs uppercase tracking-wider text-slate-400 font-semibold">
-                Balanced educational scope across core academic disciplines
+                Broad educational scope across foundational disciplines
               </p>
             </div>
 
@@ -435,7 +435,7 @@ export default function AcademicsPage() {
               <div className="p-8 bg-slate-900/80 border border-slate-700/80 flex flex-col justify-between">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-2">
-                    Core Languages
+                    Languages
                   </span>
                   <h3 className="font-heading font-bold text-2xl text-white mb-3">
                     Languages &amp; Humanities
@@ -446,7 +446,7 @@ export default function AcademicsPage() {
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-                  Grammar, phonics, reading fluency &amp; civic education.
+                  Reading fluency, grammar, writing &amp; civic studies.
                 </div>
               </div>
 
@@ -454,18 +454,18 @@ export default function AcademicsPage() {
               <div className="p-8 bg-slate-900/80 border border-slate-700/80 flex flex-col justify-between">
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[var(--blue-soft)] font-bold block mb-2">
-                    Numeracy &amp; Inquiry
+                    Mathematics &amp; Science
                   </span>
                   <h3 className="font-heading font-bold text-2xl text-white mb-3">
-                    Mathematics &amp; Science
+                    Numeracy &amp; Sciences
                   </h3>
                   <p className="text-sm text-slate-300 leading-relaxed font-normal mb-6">
                     Foundational numeracy, mental arithmetic, problem solving,
-                    experimental science, and environmental discovery.
+                    basic science, and environmental discovery.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-                  Arithmetic, scientific inquiry &amp; problem-solving.
+                  Arithmetic, problem-solving &amp; scientific inquiry.
                 </div>
               </div>
 
@@ -479,12 +479,12 @@ export default function AcademicsPage() {
                     Creative Arts &amp; Skills
                   </h3>
                   <p className="text-sm text-slate-300 leading-relaxed font-normal mb-6">
-                    Visual arts, music performance, drama, practical computing literacy, and
-                    creative craft explorations.
+                    Visual arts, craft activities, music, and collaborative
+                    co-curricular pursuits.
                   </p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-xs text-slate-400">
-                  Hands-on expression, computer literacy &amp; creative skills.
+                  Hands-on expression, creativity &amp; co-curricular skills.
                 </div>
               </div>
             </div>
@@ -493,13 +493,13 @@ export default function AcademicsPage() {
 
         {/* 8. Admissions CTA */}
         <AdmissionsCTA
-          eyebrow="ACADEMIC ENROLLMENT"
-          heading="Begin your child's academic journey."
-          italicHeading="Creche, Nursery, Primary & Junior Secondary admissions open."
-          description="Speak with our admissions team on 08036135006 to discuss placement assessments and tour schedules."
+          eyebrow="ADMISSIONS ENQUIRIES"
+          heading="Begin your child's educational journey."
+          italicHeading="Creche, Nursery, Primary & Junior Secondary enquiries."
+          description="Speak with our school desk on 08036135006 to learn more about enrollment across our academic stages."
           primaryCtaText="Begin an enquiry"
           primaryCtaHref="/contact"
-          secondaryCtaText="Review admissions process"
+          secondaryCtaText="Admissions information"
           secondaryCtaHref="/admissions"
         />
       </main>

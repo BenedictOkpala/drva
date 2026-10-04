@@ -55,10 +55,10 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Creche",
     subtitle: "A safe, peaceful and nurturing beginning.",
     description:
-      "An intimate, calm environment tailored to early infant growth. Dedicated caregivers prioritize emotional security, sensory discovery, and gentle developmental care in a hygienic, supportive setting.",
+      "An early learning and care stage designed to give young children a supportive beginning to school life in a safe, caring setting.",
     stageBadge: "Stage 01",
     ageRange: "Stage 01",
-    focusAreas: ["Sensory Development", "Caregiver Bonding", "Early Motor Skills", "Calm Routine"],
+    focusAreas: ["Early Language Play", "Caregiver Bonding", "Sensory Discovery", "Gentle Early Care"],
     anchor: "/academics#creche",
   },
   {
@@ -67,10 +67,10 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Nursery",
     subtitle: "Curiosity, play and strong foundational habits.",
     description:
-      "Joyful exploration designed to spark a natural love for learning. Children build early literacy, phonics, number awareness, expressive arts, and collaborative social habits within attentive classrooms.",
+      "An early-years stage where children begin building foundations for communication, learning and classroom participation.",
     stageBadge: "Stage 02",
     ageRange: "Stage 02",
-    focusAreas: ["Phonics & Language", "Foundational Numeracy", "Creative Expression", "Social Habits"],
+    focusAreas: ["Phonics & Communication", "Foundational Numeracy", "Creative Expression", "Social Habits"],
     anchor: "/academics#nursery",
   },
   {
@@ -79,10 +79,10 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Primary",
     subtitle: "Confidence, core knowledge and character.",
     description:
-      "A structured curriculum that encourages young pupils to think thoughtfully, communicate clearly, and take pride in their academic growth, moral reflection, and personal diligence.",
+      "A foundational academic stage supporting pupils as they develop knowledge, confidence and readiness for further learning.",
     stageBadge: "Stage 03",
     ageRange: "Stage 03",
-    focusAreas: ["Critical Inquiry", "Moral & Civic Values", "STEM & Humanities", "Attentive Mentorship"],
+    focusAreas: ["Reading & Language", "Numeracy & Mathematics", "Basic Science", "Moral & Civic Values"],
     anchor: "/academics#primary",
   },
   {
@@ -91,10 +91,10 @@ export const PROGRAMMES: ProgrammeItem[] = [
     title: "Junior Secondary",
     subtitle: "Subject mastery and purposeful readiness through JSS3.",
     description:
-      "Bridging foundational primary learning with intermediate academic disciplines across JSS1 to JSS3. Students develop structured inquiry, disciplined study habits, and personal responsibility.",
+      "DRVA currently serves learners through JSS1–JSS3 as they continue their academic development and prepare for the next stage of education.",
     stageBadge: "JSS1 – JSS3",
     ageRange: "JSS1 – JSS3",
-    focusAreas: ["Intermediate Sciences & Math", "Language & Literature", "Social & Civic Studies", "Independent Study Habits"],
+    focusAreas: ["Intermediate Sciences & Math", "Language & Literature", "Social & Civic Studies", "Structured Study Habits"],
     anchor: "/academics#junior-secondary",
   },
 ];
@@ -119,7 +119,7 @@ export const PILLARS: ValuePillar[] = [
     title: "Individual Attention",
     summary: "Every child is known, observed, and supported.",
     elaboration:
-      "With balanced class environments and observant educators, no pupil is overlooked. We identify strengths early, support emerging needs, and provide room for each child to grow.",
+      "With attentive class environments and observant educators, no pupil is overlooked. We identify strengths early, support emerging needs, and provide room for each child to grow.",
   },
   {
     number: "04",
@@ -134,9 +134,9 @@ export const SCHOOL_MOMENTS: StoryPreview[] = [
   {
     category: "Athletics & Sports",
     tag: "PHYSICAL ACTIVITY",
-    title: "Sports & Movement Showcases",
+    title: "Sports & Movement Activities",
     excerpt:
-      "Pupils participate in games, movement exercises, and athletic teamwork celebrating sportsmanship, physical coordination, and healthy activity.",
+      "Pupils participate in games, movement exercises, and outdoor recreation that build physical wellbeing and sportsmanship.",
     dateOrStatus: "School Life",
     href: "/school-life",
   },
@@ -152,9 +152,9 @@ export const SCHOOL_MOMENTS: StoryPreview[] = [
   {
     category: "Notice Board",
     tag: "ADMISSIONS DESK",
-    title: "Admissions Information for Creche, Nursery, Primary & JSS",
+    title: "Admissions Enquiries for Creche, Nursery, Primary & JSS",
     excerpt:
-      "Prospective families seeking enrollment guidelines, placement details, and campus appointment schedules can connect directly with our school desk on 08036135006.",
+      "Prospective families seeking enrollment guidelines and stage placement details can connect directly with our school desk on 08036135006.",
     dateOrStatus: "Admissions Desk",
     href: "/admissions",
   },

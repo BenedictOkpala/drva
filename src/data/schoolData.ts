@@ -55,9 +55,9 @@ export const SCHOOL_CONTACT = {
     note: "Direct telephone line for school and admissions enquiries.",
   },
   officeHours: {
-    label: "School Office",
-    value: "Monday – Friday, Term Time",
-    note: "General and admissions enquiries.",
+    label: "Enquiries Desk",
+    value: "08036135006",
+    note: "Call the school desk for admissions and general enquiries.",
   },
 };
 
@@ -148,24 +148,24 @@ export const ACADEMIC_STAGES: AcademicStageDetail[] = [
     subtitle: "A safe, peaceful and nurturing beginning.",
     stageCode: "Stage 01",
     overview:
-      "Our Creche provides an intimate, calm, and hygienic environment where infants receive attentive care, emotional warmth, and gentle developmental guidance.",
+      "An early learning and care stage designed to give young children a supportive beginning to school life in a safe and caring environment.",
     environmentHighlights: [
-      "Calm, hygienic sleep and care spaces",
-      "Attentive caregivers",
-      "Sensory discovery and motor development",
-      "Close communication with parents",
+      "Safe and supportive care setting",
+      "Gentle early routines",
+      "Early language and sensory exposure",
+      "Close parent communication",
     ],
     focusAreas: [
-      "Sensory & Motor Development",
+      "Early Language & Sound Play",
       "Caregiver Bonding & Comfort",
-      "Early Sound & Visual Play",
-      "Gentle Developmental Rhythms",
+      "Sensory Discovery",
+      "Early Developmental Care",
     ],
     provisionalFocus: [
-      "Sensory & Motor Development",
+      "Early Language & Sound Play",
       "Caregiver Bonding & Comfort",
-      "Early Sound & Visual Play",
-      "Gentle Developmental Rhythms",
+      "Sensory Discovery",
+      "Early Developmental Care",
     ],
   },
   {
@@ -175,24 +175,24 @@ export const ACADEMIC_STAGES: AcademicStageDetail[] = [
     subtitle: "Curiosity, play and strong foundational habits.",
     stageCode: "Stage 02",
     overview:
-      "The Nursery stage bridges early discovery with structured learning readiness. Through guided play, early phonics, number discovery, and creative arts, young minds build joyful school habits.",
+      "An early-years stage where children begin building foundations for communication, learning and classroom participation.",
     environmentHighlights: [
-      "Resource-rich learning spaces",
-      "Storytelling and early phonics corners",
-      "Creative art, movement, and music",
-      "Guided cooperative social play",
+      "Early literacy and phonics",
+      "Foundational numeracy and counting",
+      "Creative expression and movement",
+      "Collaborative social play",
     ],
     focusAreas: [
-      "Phonics & Language Readiness",
-      "Foundational Numeracy & Shapes",
-      "Creative Expression & Music",
-      "Social-Emotional Habits & Manners",
+      "Phonics & Communication",
+      "Foundational Numeracy",
+      "Creative Expression",
+      "Social Habits & Manners",
     ],
     provisionalFocus: [
-      "Phonics & Language Readiness",
-      "Foundational Numeracy & Shapes",
-      "Creative Expression & Music",
-      "Social-Emotional Habits & Manners",
+      "Phonics & Communication",
+      "Foundational Numeracy",
+      "Creative Expression",
+      "Social Habits & Manners",
     ],
   },
   {
@@ -202,24 +202,24 @@ export const ACADEMIC_STAGES: AcademicStageDetail[] = [
     subtitle: "Confidence, core knowledge and character.",
     stageCode: "Stage 03",
     overview:
-      "Our Primary curriculum builds foundational subject mastery within a supportive community. Pupils deepen their understanding of core disciplines, build critical inquiry habits, and develop personal diligence.",
+      "A foundational academic stage supporting pupils as they develop knowledge, confidence and readiness for further learning.",
     environmentHighlights: [
-      "Equipped primary classrooms",
-      "Mathematical reasoning and science inquiry",
-      "Language development and reading comprehension",
-      "Moral education and character development",
+      "Core literacy and grammar",
+      "Mathematics and reasoning",
+      "Basic science inquiry",
+      "Moral and civic understanding",
     ],
     focusAreas: [
-      "Core Literacy, Grammar & Reading",
-      "Mathematics & Quantitative Reasoning",
-      "Basic Science & Practical Inquiry",
-      "Civic Studies & Moral Education",
+      "Language, Reading & Grammar",
+      "Mathematics & Quantitative Skills",
+      "Basic Science",
+      "Civic Studies & Values",
     ],
     provisionalFocus: [
-      "Core Literacy, Grammar & Reading",
-      "Mathematics & Quantitative Reasoning",
-      "Basic Science & Practical Inquiry",
-      "Civic Studies & Moral Education",
+      "Language, Reading & Grammar",
+      "Mathematics & Quantitative Skills",
+      "Basic Science",
+      "Civic Studies & Values",
     ],
   },
   {
@@ -229,24 +229,24 @@ export const ACADEMIC_STAGES: AcademicStageDetail[] = [
     subtitle: "Subject mastery and purposeful readiness through JSS3.",
     stageCode: "JSS1 – JSS3",
     overview:
-      "Junior Secondary at DRVA provides academic continuity from primary education through JSS3. Students encounter expanded subject disciplines, structured inquiry, and disciplined study habits designed for secondary readiness.",
+      "DRVA currently serves learners through JSS1–JSS3 as they continue their academic development and prepare for the next stage of education.",
     environmentHighlights: [
-      "Dedicated Junior Secondary learning spaces",
-      "Subject-based instructional timetable",
-      "Analytical inquiry and group discussions",
-      "Leadership opportunities and moral mentorship",
+      "Subject-based academic disciplines",
+      "Intermediate sciences and mathematics",
+      "Language and humanities",
+      "Personal responsibility and study habits",
     ],
     focusAreas: [
-      "Core Sciences & Intermediate Mathematics",
-      "English Language & Literature Studies",
+      "Intermediate Sciences & Mathematics",
+      "English Language & Literature",
       "Social & Civic Studies",
-      "Pre-Vocational & Practical Skills",
+      "Structured Study Habits",
     ],
     provisionalFocus: [
-      "Core Sciences & Intermediate Mathematics",
-      "English Language & Literature Studies",
+      "Intermediate Sciences & Mathematics",
+      "English Language & Literature",
       "Social & Civic Studies",
-      "Pre-Vocational & Practical Skills",
+      "Structured Study Habits",
     ],
   },
 ];
@@ -272,7 +272,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "ORAL EXPRESSION",
     tagline: "Fostering articulate thought and reasoned presentation.",
     description:
-      "Pupils learn to construct clear arguments, listen respectfully to opposing views, and present their ideas before peers with clarity and confidence.",
+      "Pupils learn to express ideas clearly, listen respectfully to others, and build confidence presenting before peers and teachers.",
     aspectRatio: "wide",
     label: "Debate & Public Speaking",
     badge: "EXPRESSION",
@@ -283,7 +283,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "LITERARY DISCOVERY",
     tagline: "Cultivating a lifelong appreciation for books and language.",
     description:
-      "Guided reading sessions and storytelling encourage learners to explore diverse literature, develop vocabulary, and deepen comprehension habits.",
+      "Reading sessions and language activities encourage learners to explore books, develop vocabulary, and deepen comprehension.",
     aspectRatio: "portrait",
     label: "Reading & Literacy",
     badge: "LITERACY",
@@ -294,7 +294,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "INTELLECTUAL INQUIRY",
     tagline: "Encouraging curiosity and knowledge recall across subjects.",
     description:
-      "Team quizzes, mental arithmetic challenges, and knowledge competitions make learning collaborative, stimulating, and fun for all learners.",
+      "Collaborative quizzes and subject activities help pupils engage actively with their lessons and celebrate learning milestones.",
     aspectRatio: "square",
     label: "Quiz & Academic Activities",
     badge: "INQUIRY",
@@ -305,7 +305,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "CREATIVE PRACTICE",
     tagline: "Giving visual form and musical melody to imagination.",
     description:
-      "Drawing, painting, hands-on craft projects, and musical participation allow pupils to express their creativity and appreciate aesthetic detail.",
+      "Drawing, craft activities, and music participation allow pupils to express their creativity and explore artistic interests.",
     aspectRatio: "portrait",
     label: "Creative Arts & Expression",
     badge: "ARTS",
@@ -316,7 +316,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "PHYSICAL WELLBEING",
     tagline: "Building coordination, stamina, and healthy sportsmanship.",
     description:
-      "Structured games, movement exercises, and outdoor recreation help pupils stay active, learn teamwork, and build physical resilience.",
+      "Games, movement exercises, and outdoor physical recreation help pupils stay active, learn teamwork, and develop healthy habits.",
     aspectRatio: "wide",
     label: "Sports & Physical Activity",
     badge: "MOVEMENT",
@@ -327,7 +327,7 @@ export const SCHOOL_LIFE_ACTIVITIES: SchoolActivityArea[] = [
     category: "COMMUNITY TRADITIONS",
     tagline: "Bringing pupils, educators, and families together.",
     description:
-      "Milestones, cultural presentations, and term assemblies celebrate pupil effort and reinforce our shared school community values.",
+      "School celebrations, Cultural Day presentations, and term milestones bring our school family together and reinforce shared values.",
     aspectRatio: "wide",
     label: "School Events & Assemblies",
     badge: "CELEBRATIONS",
@@ -352,34 +352,34 @@ export const ADMISSIONS_JOURNEY: AdmissionsStep[] = [
   {
     step: "01",
     title: "Enquire",
-    subtitle: "Begin the conversation",
+    subtitle: "Connect with our desk",
     description:
-      "Contact our admissions desk on 08036135006 or visit our campus in Sheretti, Abuja to discuss enrollment across Creche, Nursery, Primary, or Junior Secondary.",
-    actionNote: "Phone enquiry line: 08036135006",
+      "Contact the admissions desk on 08036135006 or visit our campus in Sheretti, Abuja for information on Creche, Nursery, Primary, or Junior Secondary (JSS1–JSS3).",
+    actionNote: "Phone line: 08036135006",
   },
   {
     step: "02",
-    title: "Visit the School",
-    subtitle: "Experience DRVA firsthand",
+    title: "Visit Campus",
+    subtitle: "Learn more in person",
     description:
-      "Schedule a campus walk to observe our learning spaces, meet educators, and experience the warm, purposeful atmosphere.",
-    actionNote: "Arranged by appointment through the school office.",
+      "Prospective families wishing to see our campus in Sheretti, Abuja can connect with our administrative team to arrange a visit.",
+    actionNote: "Contact the school office.",
   },
   {
     step: "03",
-    title: "Apply & Review",
-    subtitle: "Complete documentation",
+    title: "Admissions Guidance",
+    subtitle: "Guidance & placement",
     description:
-      "Submit formal registration details and previous academic or developmental records for stage placement review.",
-    actionNote: "Reviewed by the admissions desk.",
+      "Receive enrollment guidance, requirements, and stage placement information directly from the school administration.",
+    actionNote: "School administrative desk.",
   },
   {
     step: "04",
-    title: "Join DRVA",
-    subtitle: "Welcome to our school family",
+    title: "Enrolment",
+    subtitle: "Join our school family",
     description:
-      "Upon offer acceptance, receive the welcome pack, uniform guidelines, and term calendar as we prepare for your child's first day.",
-    actionNote: "Orientation and start-of-term guidance.",
+      "Complete enrollment steps and prepare for your child's educational journey at DRVA.",
+    actionNote: "Deeper Real Vision Academy.",
   },
 ];
 
@@ -395,32 +395,32 @@ export interface EssentialSectionInfo {
 
 export const ADMISSIONS_SECTIONS: EssentialSectionInfo[] = [
   {
-    title: "Entry Guidelines & Placement",
-    eyebrow: "CRITERIA",
+    title: "Stage Placement & Levels",
+    eyebrow: "EDUCATIONAL SCOPE",
     description:
-      "Placement guidelines for Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3) entrance review and transfer requests.",
-    statusNote: "Contact the admissions desk for session placement guidance.",
+      "DRVA serves learners across Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3). Connect with our desk for placement details.",
+    statusNote: "Call 08036135006 for placement information",
   },
   {
-    title: "Tuition & Fees Schedule",
-    eyebrow: "FINANCIAL INFORMATION",
+    title: "School Fees & Requirements",
+    eyebrow: "FEES & ENQUIRIES",
     description:
-      "Tuition fees, learning resources, uniforms, and payment schedules for the academic session across all levels.",
-    statusNote: "Provided directly by the school administrative office.",
+      "Information regarding school fees and enrollment requirements is provided directly by the school administrative office.",
+    statusNote: "Direct enquiry on 08036135006",
   },
   {
-    title: "Academic Session Calendar",
-    eyebrow: "CALENDAR",
+    title: "Campus Location",
+    eyebrow: "LOCATION",
     description:
-      "Term start and end dates, mid-term breaks, examination windows, and holiday observances for the school year.",
-    statusNote: "Issued to enrolled families at the start of each term.",
+      "DRVA is located Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria.",
+    statusNote: "Sheretti, Abuja",
   },
   {
-    title: "Required Registration Documents",
-    eyebrow: "DOCUMENTATION",
+    title: "Admissions Enquiries",
+    eyebrow: "ADMISSIONS DESK",
     description:
-      "Birth certificate copies, immunization/health records, passport photographs, and previous school academic reports (for Primary & JSS entrants).",
-    statusNote: "Checklist provided upon registration request.",
+      "Our school administration is available to answer any questions from prospective parents and guardians.",
+    statusNote: "Phone: 08036135006",
   },
 ];
 
@@ -431,22 +431,21 @@ export const ADMISSIONS_FAQS = [
   {
     question: "What educational levels does DRVA currently serve?",
     answer:
-      "DRVA currently serves children across four stages: Creche, Nursery, Primary, and Junior Secondary School through JSS3 (JSS1 – JSS3). Looking ahead, DRVA plans to expand into Senior Secondary School.",
+      "DRVA currently serves children across Creche, Nursery, Primary, and Junior Secondary (JSS1–JSS3). Looking ahead, DRVA plans to expand into Senior Secondary School.",
   },
   {
-    question: "How can parents arrange a campus visit?",
+    question: "How can parents learn more about the school or arrange a visit?",
     answer:
-      "Campus visits are scheduled by appointment. Please call the school on 08036135006 to arrange a convenient time with our administrative team.",
+      "Parents and guardians can call our school desk on 08036135006 for information about DRVA and visiting our campus in Sheretti, Abuja.",
   },
   {
-    question: "What is the admissions process for Junior Secondary (JSS1 – JSS3)?",
+    question: "How can families enquire about admissions for Junior Secondary (JSS1–JSS3)?",
     answer:
-      "Junior Secondary admissions involve submission of previous academic records, an admissions consultation, and stage placement review.",
+      "For Junior Secondary enquiries and stage placement details, please contact the school desk on 08036135006.",
   },
   {
     question: "Where is Deeper Real Vision Academy located?",
     answer:
-      "DRVA is located Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria. Full directions and appointment details can be confirmed by calling 08036135006.",
+      "DRVA is located Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria. For directions and enquiries, call 08036135006.",
   },
 ];
-
