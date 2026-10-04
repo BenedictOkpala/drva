@@ -13,9 +13,8 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  // Verified location destination query for Google Maps navigation
-  const mapsSearchUrl =
-    "https://www.google.com/maps/search/?api=1&query=Behind+St.+Anthony+Catholic+Church,+Sheretti,+Abuja";
+  // Verified Google Maps listing for Deeper Real Vision Academy
+  const mapsUrl = SCHOOL_INFO.mapsUrl;
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -185,7 +184,7 @@ export default function ContactPage() {
                 {/* Prominent Get Directions Action */}
                 <div className="pt-2">
                   <a
-                    href={mapsSearchUrl}
+                    href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2.5 px-8 py-4 text-sm font-semibold tracking-wide text-white bg-[var(--navy)] hover:bg-[#1C3C5E] active:scale-[0.99] transition-all duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] shadow-xs"
@@ -242,7 +241,7 @@ export default function ContactPage() {
                         Admissions desk: {SCHOOL_INFO.phone}
                       </span>
                       <a
-                        href={mapsSearchUrl}
+                        href={mapsUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[var(--blue-soft)] hover:text-white font-bold transition-colors inline-flex items-center gap-1"

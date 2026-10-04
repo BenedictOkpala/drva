@@ -24,6 +24,7 @@ export const SCHOOL_INFO = {
   addressLine1: "Behind St. Anthony Catholic Church",
   addressLine2: "Sheretti, Abuja, Nigeria",
   cityState: "Sheretti, Abuja",
+  mapsUrl: "https://maps.app.goo.gl/jUPjJtZ7EGmwXEry9",
   phone: "08036135006",
   phoneTel: "tel:08036135006",
   email: "drvacademyng@gmail.com",
@@ -49,6 +50,7 @@ export const SCHOOL_CONTACT = {
   address: {
     label: "Campus Location",
     value: "Behind St. Anthony Catholic Church, Sheretti, Abuja, Nigeria",
+    mapsUrl: "https://maps.app.goo.gl/jUPjJtZ7EGmwXEry9",
     note: "Official school premises in Sheretti, Abuja.",
   },
   phone: {
