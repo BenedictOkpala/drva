@@ -65,7 +65,7 @@ export function PageHero({
           </nav>
         )}
 
-        {variant === "story" || variant === "progressive" || variant === "action" || variant === "functional" ? (
+        {rightSlot || variant === "story" || variant === "progressive" || variant === "visual" || variant === "action" || variant === "functional" ? (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-8">
               {/* Eyebrow & Badge */}

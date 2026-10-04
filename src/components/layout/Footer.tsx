@@ -143,6 +143,18 @@ export function Footer() {
 
               <div className="pt-3 border-t border-slate-800">
                 <span className="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block mb-1">
+                  {SCHOOL_CONTACT.email.label}
+                </span>
+                <a
+                  href={SCHOOL_CONTACT.email.mailto}
+                  className="text-white hover:text-[var(--blue-soft)] font-medium text-xs sm:text-sm transition-colors break-all inline-block"
+                >
+                  {SCHOOL_CONTACT.email.value}
+                </a>
+              </div>
+
+              <div className="pt-3 border-t border-slate-800">
+                <span className="text-[10px] uppercase tracking-wider font-semibold text-slate-400 block mb-1">
                   {SCHOOL_CONTACT.address.label}
                 </span>
                 <p className="text-white font-medium text-sm">

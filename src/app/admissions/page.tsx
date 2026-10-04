@@ -183,7 +183,14 @@ export default function AdmissionsPage() {
               Ready to learn more?
             </h2>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl mx-auto mb-10">
-              Connect directly with our admissions desk on {SCHOOL_INFO.phone} or send an enquiry.
+              Connect directly with our admissions desk on {SCHOOL_INFO.phone} or email{" "}
+              <a
+                href={SCHOOL_INFO.emailMailto}
+                className="text-[var(--blue-soft)] hover:text-white underline font-semibold transition-colors"
+              >
+                {SCHOOL_INFO.email}
+              </a>
+              .
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -85,6 +85,22 @@ export default function ContactPage() {
                     </span>
                   </div>
 
+                  {/* Official Email */}
+                  <div className="pt-4 border-t border-[#E4E7EB]">
+                    <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
+                      {SCHOOL_CONTACT.email.label}
+                    </span>
+                    <a
+                      href={SCHOOL_CONTACT.email.mailto}
+                      className="font-heading text-lg text-[var(--navy)] font-bold hover:text-[var(--red)] transition-colors break-all inline-block"
+                    >
+                      {SCHOOL_CONTACT.email.value}
+                    </a>
+                    <span className="text-xs text-[var(--muted)] mt-1 block">
+                      {SCHOOL_CONTACT.email.note}
+                    </span>
+                  </div>
+
                   {/* Campus Address */}
                   <div className="pt-4 border-t border-[#E4E7EB]">
                     <span className="text-xs uppercase tracking-wider text-[var(--red)] font-bold block mb-1">
@@ -110,6 +126,13 @@ export default function ContactPage() {
                         className="font-bold text-[var(--navy)] underline hover:text-[var(--red)]"
                       >
                         {SCHOOL_INFO.phone}
+                      </a>{" "}
+                      or email{" "}
+                      <a
+                        href={SCHOOL_INFO.emailMailto}
+                        className="font-bold text-[var(--navy)] underline hover:text-[var(--red)]"
+                      >
+                        {SCHOOL_INFO.email}
                       </a>
                       .
                     </p>

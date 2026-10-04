@@ -10,6 +10,7 @@
  * - Future Expansion: Senior Secondary School (Future Plan)
  * - Motto: IN GOD WE TRUST
  * - Phone: 08036135006
+ * - Email: drvacademyng@gmail.com
  * - Leadership: Mrs Okpala Priscilla (School Leadership)
  * - Milestone: Since 2015 (Growing with every generation)
  */
@@ -25,6 +26,8 @@ export const SCHOOL_INFO = {
   cityState: "Sheretti, Abuja",
   phone: "08036135006",
   phoneTel: "tel:08036135006",
+  email: "drvacademyng@gmail.com",
+  emailMailto: "mailto:drvacademyng@gmail.com",
   founded: "2015",
   foundedYear: 2015,
   milestoneYears: "Since 2015",
@@ -53,6 +56,12 @@ export const SCHOOL_CONTACT = {
     value: "08036135006",
     tel: "tel:08036135006",
     note: "Direct telephone line for school and admissions enquiries.",
+  },
+  email: {
+    label: "Official Email",
+    value: "drvacademyng@gmail.com",
+    mailto: "mailto:drvacademyng@gmail.com",
+    note: "Official school enquiries and admissions correspondence.",
   },
   officeHours: {
     label: "Enquiries Desk",
